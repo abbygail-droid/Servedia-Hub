@@ -1,0 +1,403 @@
+<!-- ===== Fine Lix Fix · Variant B · BOTTOM FUNNEL (goes below the GHL form) ===== -->
+<style>
+/* ===== Brand tokens (Integrated Med Spa) ===== */
+:root{
+  --primary:#085A6A;
+  --primary-dark:#053E49;
+  --btn-teal:#1B5A6B;
+  --bronze:#9C693C;
+  --bronze-dark:#80522B;
+  --cream:#F3EFE5;
+  --surface:#FFFFFF;
+  --text:#171717;
+  --muted:#5A6873;
+  --line:#E0E3E6;
+  --problem:#7A3E3E;
+  --gold:#E2B98F;
+}
+
+/* ===== Custom Element Standardization ===== */
+.pb-fix,.pb-results,.pb-providers,.pb-reviews,.pb-trust,.pb-faq,.pb-final,.pb-map,.pb-footer{
+  display:block!important;width:100%!important;max-width:100%!important;clear:both!important;float:none!important;position:relative!important;
+  margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;
+  font-family:'Comfortaa',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);line-height:1.65;}
+.pb-fix *,.pb-results *,.pb-providers *,.pb-reviews *,.pb-trust *,.pb-faq *,.pb-final *,.pb-map *,.pb-footer *{box-sizing:border-box!important;}
+.pb-fix h2,.pb-results h2,.pb-providers h2,.pb-reviews h2,.pb-faq h2,.pb-final h2,.pb-fix h3,.pb-providers h3,.pb-trust h3{font-family:'Comfortaa',sans-serif;font-weight:400;line-height:1.2;margin:0 0 .5em;color:var(--primary);}
+.pb-fix p,.pb-results p,.pb-providers p,.pb-reviews p,.pb-trust p,.pb-faq p,.pb-final p,.pb-footer p{margin:0 0 1em;}
+
+.pb-wrap{max-width:1040px;margin:0 auto;padding:0 20px;}
+.pb-wrap--narrow{max-width:760px;}
+.pb-center,.pb-center h2,.pb-center p,.pb-center span{text-align:center!important;}
+.pb-eyebrow{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:12px;}
+.pb-title{font-size:32px;margin-bottom:14px;}
+.pb-sub{color:var(--muted);max-width:640px;margin:0 auto 36px!important;font-size:16px;}
+
+/* ===== Buttons ===== */
+.pb-btn{display:inline-block;background:var(--bronze);color:#FFFFFF;font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;letter-spacing:0.02em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;padding:19px 38px;border-radius:30px;box-shadow:0 8px 22px rgba(156,105,60,.35);transition:transform .15s ease,box-shadow .15s ease,background .2s ease;}
+.pb-btn:hover{background:var(--bronze-dark);transform:translateY(-2px);box-shadow:0 12px 28px rgba(156,105,60,.45);}
+.pb-btn-note{display:block;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;color:var(--muted);margin-top:12px;}
+
+/* ===== 1. Problem → fix ===== */
+.pb-fix{background:var(--surface);padding:68px 24px;}
+.pb-fix-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-bottom:36px;}
+.pb-fix-card{flex:1 1 290px;max-width:320px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 10px 26px rgba(23,23,23,.05);}
+.pb-fix-card__problem{background:var(--cream);padding:18px 22px;border-bottom:1px solid var(--line);}
+.pb-fix-card__tag{display:block;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
+.pb-fix-card__problem .pb-fix-card__tag{color:var(--problem);}
+.pb-fix-card__problem p{margin:0!important;font-size:15px;line-height:1.45;color:var(--text);}
+.pb-fix-card__solution{padding:20px 22px 24px;}
+.pb-fix-card__solution .pb-fix-card__tag{color:var(--primary);}
+.pb-fix-card__solution h3{font-size:18px;margin-bottom:8px;}
+.pb-fix-card__solution p{margin:0!important;font-size:15px;line-height:1.5;color:var(--muted);}
+
+/* ===== 2. Results carousel ===== */
+.pb-results{background:var(--cream);padding:64px 24px 56px;}
+.pb-stage{position:relative;width:100%;max-width:1100px;height:500px;margin:0 auto;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.pb-slide{position:absolute;left:50%;top:50%;width:60%;max-width:620px;height:460px;opacity:0;pointer-events:none;transform:translate(-50%,-50%) scale(.72);transition:transform .55s cubic-bezier(.22,.61,.36,1),opacity .45s ease;z-index:1;}
+.pb-slide__img{width:100%;height:100%;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 18px 45px rgba(8,90,106,.15);border:1px solid rgba(8,90,106,.08);}
+.pb-slide__img img{width:100%;height:100%;object-fit:contain;display:block;background:#fff;}
+.pb-slide.active{opacity:1;transform:translate(-50%,-50%) scale(1);z-index:5;pointer-events:auto;}
+.pb-slide.prev{opacity:.35;transform:translate(-112%,-50%) scale(.82);z-index:2;pointer-events:auto;cursor:pointer;}
+.pb-slide.next{opacity:.35;transform:translate(12%,-50%) scale(.82);z-index:2;pointer-events:auto;cursor:pointer;}
+.pb-slide.hidden-left{opacity:0;transform:translate(-145%,-50%) scale(.65);}
+.pb-slide.hidden-right{opacity:0;transform:translate(45%,-50%) scale(.65);}
+.pb-arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border:none;border-radius:50%;background:var(--btn-teal);color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;line-height:1;cursor:pointer;z-index:20;box-shadow:0 8px 22px rgba(0,0,0,.16);transition:background .2s ease;}
+.pb-arrow:hover{background:var(--bronze);}
+.pb-arrow--prev{left:4%;}
+.pb-arrow--next{right:4%;}
+.pb-dots{display:flex;justify-content:center;align-items:center;gap:7px;margin-top:14px;}
+.pb-dot{width:8px;height:8px;padding:0;border:none;border-radius:50%;background:#D5D9E0;cursor:pointer;transition:width .25s ease,background .25s ease;}
+.pb-dot.active{width:22px;border-radius:10px;background:var(--btn-teal);}
+.pb-disclaimer{display:block;color:var(--muted);font-size:13px;font-style:italic;margin-top:16px;}
+
+/* ===== 3. Providers ===== */
+.pb-providers{background:var(--surface);padding:68px 24px;}
+.pb-provider{display:grid;grid-template-columns:.85fr 1.15fr;align-items:center;gap:36px;background:var(--primary);border-radius:20px;padding:34px;box-shadow:0 15px 35px rgba(0,0,0,.12);margin:0 auto 28px;max-width:1000px;}
+.pb-provider:last-child{margin-bottom:0;}
+.pb-provider--flip{grid-template-columns:1.15fr .85fr;}
+.pb-provider--flip .pb-provider__img{order:2;}
+.pb-provider__img{display:flex;justify-content:center;}
+.pb-provider__img img{width:100%;max-width:340px;height:380px;object-fit:cover;object-position:center top;display:block;border-radius:14px;box-shadow:0 12px 28px rgba(0,0,0,.25);}
+.pb-provider__body{color:#fff;text-align:left!important;}
+.pb-provider__body h3{color:#fff;font-size:28px;margin-bottom:4px;}
+.pb-provider__cred{display:block;margin-bottom:16px;color:var(--gold);font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;}
+.pb-provider__body p{color:rgba(255,255,255,.92);font-size:15px;line-height:1.65;margin:0 0 12px;}
+.pb-provider__tags{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 16px;}
+.pb-provider__tags span{font-family:'Montserrat',sans-serif;font-weight:600;font-size:12px;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(243,239,229,.3);border-radius:20px;padding:5px 12px;}
+.pb-provider__quote{margin-top:6px;padding-left:14px;border-left:3px solid var(--gold);color:#fff;font-size:14px;font-style:italic;}
+
+/* ===== 4. Reviews ===== */
+.pb-reviews{background:var(--cream);padding:64px 24px;}
+.pb-reviews__rating{display:inline-block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:var(--bronze-dark);background:#fff;border:1px solid var(--line);border-radius:30px;padding:8px 18px;margin-bottom:32px;}
+.pb-reviews__rating b{color:#f59e0b;letter-spacing:2px;}
+.pb-review-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+.pb-review{flex:1 1 290px;max-width:320px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;text-align:left!important;}
+.pb-review__stars{color:#f59e0b;font-size:15px;letter-spacing:2px;margin-bottom:12px;}
+.pb-review__text{color:var(--text);font-size:14px;line-height:1.55;margin:0 0 18px!important;flex-grow:1;text-align:left!important;}
+.pb-review__foot{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-family:'Montserrat',sans-serif;border-top:1px solid var(--line);padding-top:12px;}
+.pb-review__name{font-weight:700;color:#1e293b;}
+.pb-g{font-weight:700;font-size:12px;}
+.g-blue{color:#4285F4;}.g-red{color:#EA4335;}.g-yellow{color:#FBBC05;}.g-green{color:#34A853;}
+
+/* ===== 5. Trust band ===== */
+.pb-trust{background:var(--primary-dark);padding:46px 24px;}
+.pb-trust-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;max-width:1040px;margin:0 auto;padding:0 20px;}
+.pb-trust-item{flex:1 1 210px;max-width:240px;text-align:center!important;padding:10px 8px;}
+.pb-trust-item h3{color:var(--gold);font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;margin-bottom:6px;}
+.pb-trust-item p{color:var(--cream);font-size:14px;line-height:1.5;margin:0!important;}
+
+/* ===== 6. FAQ ===== */
+.pb-faq{background:var(--surface);padding:64px 24px;}
+.pb-faq-item{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden;}
+.pb-faq-item summary{list-style:none;cursor:pointer;padding:18px 48px 18px 20px;position:relative;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--primary);text-align:left!important;}
+.pb-faq-item summary::-webkit-details-marker{display:none;}
+.pb-faq-item summary::after{content:'+';position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:600;color:var(--bronze);}
+.pb-faq-item[open] summary::after{content:'–';}
+.pb-faq-item p{padding:0 20px 18px;margin:0!important;color:var(--text);font-size:15px;line-height:1.6;text-align:left!important;}
+
+/* ===== 7. Final CTA ===== */
+.pb-final{background:var(--primary);padding:70px 24px 76px;}
+.pb-final .pb-eyebrow{color:var(--gold);}
+.pb-final .pb-title{color:#fff;}
+.pb-final .pb-sub{color:var(--cream);}
+.pb-choice{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;max-width:720px;margin:0 auto 30px;}
+.pb-choice__opt{flex:1 1 280px;border-radius:14px;padding:20px 22px;text-align:left!important;font-size:15px;line-height:1.5;}
+.pb-choice__opt strong{display:block;font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
+.pb-choice__opt--a{background:rgba(255,255,255,.06);border:1px solid rgba(243,239,229,.2);color:#B9C9CE;}
+.pb-choice__opt--b{background:rgba(226,185,143,.14);border:1px solid var(--gold);color:#fff;}
+.pb-choice__opt--b strong{color:var(--gold);}
+.pb-final__price{font-family:'Montserrat',sans-serif;margin-bottom:22px;}
+.pb-final__now{display:block;font-weight:800;font-size:46px;color:var(--cream);line-height:1;}
+.pb-final__was{display:block;color:#A6B8BE;font-size:15px;margin-top:6px;}
+.pb-final .pb-btn-note{color:#A6B8BE;}
+
+/* ===== 8. Map + footer ===== */
+.pb-map{background:var(--primary-dark);padding:44px 20px 40px;}
+.pb-map__box{width:100%;max-width:650px;margin:0 auto;overflow:hidden;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25);background:#fff;}
+.pb-map__box iframe{display:block;width:100%!important;height:350px;margin:0 auto;border:0;}
+.pb-map__addr{display:block;text-align:center!important;color:var(--cream);font-family:'Montserrat',sans-serif;font-weight:600;font-size:15px;margin-top:16px;}
+.pb-footer{background:var(--primary-dark);border-top:1px solid rgba(243,239,229,.12);padding:34px 24px 30px;color:#A6B8BE;font-size:14px;}
+.pb-footer,.pb-footer p{text-align:center!important;}
+.pb-footer__logo{display:inline-block;background:rgba(255,255,255,.95);border-radius:8px;padding:8px 16px;margin:0 auto 16px;}
+.pb-footer__logo img{max-width:130px;max-height:46px;display:block;margin:0 auto;object-fit:contain;}
+.pb-footer a{color:var(--cream);text-decoration:none;}
+
+@media(max-width:820px){
+  .pb-provider,.pb-provider--flip{grid-template-columns:1fr;gap:22px;padding:26px 20px;}
+  .pb-provider--flip .pb-provider__img{order:0;}
+  .pb-provider__img img{max-width:280px;height:320px;}
+  .pb-provider__body,.pb-provider__body h3,.pb-provider__body p{text-align:center!important;}
+  .pb-provider__tags{justify-content:center;}
+  .pb-provider__quote{padding-left:0;border-left:none;}
+}
+@media(max-width:767px){
+  .pb-stage{height:380px;}
+  .pb-slide{width:80%;height:340px;}
+  .pb-arrow--prev{left:2px;}
+  .pb-arrow--next{right:2px;}
+}
+@media(max-width:660px){
+  .pb-fix,.pb-results,.pb-providers,.pb-reviews,.pb-faq,.pb-final{padding-top:48px!important;padding-bottom:48px!important;}
+  .pb-final{padding-bottom:110px!important;}
+  .pb-wrap{padding:0 16px;}
+  .pb-title{font-size:25px;}
+  .pb-btn{font-size:15px;padding:16px 24px;width:100%;max-width:340px;}
+  .pb-final__now{font-size:40px;}
+  .pb-map__box iframe{height:280px;}
+}
+</style>
+
+<!-- ===== 1. PROBLEM → FIX — answer "will it work for me?" ===== -->
+<section class="pb-fix">
+  <div class="pb-wrap pb-center">
+    <span class="pb-eyebrow">Still deciding?</span>
+    <h2 class="pb-title">Here's Exactly What Fine Lix Fix Fixes</h2>
+    <p class="pb-sub">Every concern below has the same root cause, and the same solution: getting your skin to rebuild its own collagen.</p>
+    <div class="pb-fix-grid">
+      <div class="pb-fix-card">
+        <div class="pb-fix-card__problem"><span class="pb-fix-card__tag">✕ The problem</span><p>Fine lines, enlarged pores and skin that's lost its firmness.</p></div>
+        <div class="pb-fix-card__solution"><span class="pb-fix-card__tag">✓ The fix</span><h3>Visible Collagen &amp; Texture Transformation</h3><p>Microneedling activates your skin's natural healing response, boosting collagen to smooth fine lines, refine pores and restore firmness and elasticity.</p></div>
+      </div>
+      <div class="pb-fix-card">
+        <div class="pb-fix-card__problem"><span class="pb-fix-card__tag">✕ The problem</span><p>No time for long appointments or days of recovery.</p></div>
+        <div class="pb-fix-card__solution"><span class="pb-fix-card__tag">✓ The fix</span><h3>Quick Sessions, Powerful Results</h3><p>Each session takes 1 hour 15 minutes, with same-day bookings available. Expect slight redness for a few hours, then get back to your day.</p></div>
+      </div>
+      <div class="pb-fix-card">
+        <div class="pb-fix-card__problem"><span class="pb-fix-card__tag">✕ The problem</span><p>Not knowing what your skin actually needs, so nothing you buy works.</p></div>
+        <div class="pb-fix-card__solution"><span class="pb-fix-card__tag">✓ The fix</span><h3>A Plan Built From Your Skin Scan</h3><p>Your $199 package includes a full skin consultation, VISIA imaging analysis (valued at $50) and a custom 4-session plan.</p></div>
+      </div>
+    </div>
+    <button class="pb-btn js-pb-cta">Claim My $199 Spot</button>
+  </div>
+</section>
+
+<!-- ===== 2. RESULTS — proof ===== -->
+<section class="pb-results">
+  <div class="pb-wrap pb-center">
+    <span class="pb-eyebrow">Real results</span>
+    <h2 class="pb-title">Real Client Transformations</h2>
+    <p class="pb-sub">Visible results achieved with microneedling at Integrated Med Spa.</p>
+  </div>
+  <div class="pb-stage" id="pbStage">
+    <div class="pb-slide"><div class="pb-slide__img"><img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ab68d3c7e654f1003c3b0df.png" alt="Microneedling result 1" loading="lazy"></div></div>
+    <div class="pb-slide"><div class="pb-slide__img"><img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ab68d3c3ae3da26fb61ac92.png" alt="Microneedling result 2" loading="lazy"></div></div>
+    <div class="pb-slide"><div class="pb-slide__img"><img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ab68d3c70f8593c32921abe.png" alt="Microneedling result 3" loading="lazy"></div></div>
+    <button class="pb-arrow pb-arrow--prev" type="button" aria-label="Previous result">‹</button>
+    <button class="pb-arrow pb-arrow--next" type="button" aria-label="Next result">›</button>
+  </div>
+  <div class="pb-dots" id="pbDots" aria-label="Result gallery navigation"></div>
+  <div class="pb-center"><span class="pb-disclaimer">Individual experiences and results may vary.</span></div>
+</section>
+
+<!-- ===== 3. PROVIDERS — "who's treating my skin?" ===== -->
+<section class="pb-providers">
+  <div class="pb-wrap pb-center">
+    <span class="pb-eyebrow">Expert care &amp; guidance</span>
+    <h2 class="pb-title">The Experts Treating Your Skin</h2>
+    <p class="pb-sub">Our licensed Master Estheticians deliver personalized, results-driven skin care in a relaxing environment.</p>
+  </div>
+  <div class="pb-wrap">
+    <div class="pb-provider">
+      <div class="pb-provider__img"><img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ac50209195f9172edab695c.jpeg" alt="Amanda Alves, Licensed Master Esthetician" loading="lazy"></div>
+      <div class="pb-provider__body">
+        <h3>Amanda Alves</h3>
+        <span class="pb-provider__cred">Licensed Master Esthetician · NIMA Graduate</span>
+        <div class="pb-provider__tags"><span>Microneedling</span><span>Chemical peels</span><span>Custom facials</span><span>Laser treatments</span></div>
+        <p>Amanda combines in-depth knowledge of skin health with a results-driven approach, tailoring each treatment to her clients' unique needs. Known for her warm, outgoing personality, she loves helping clients feel confident, radiant and beautiful in their own skin.</p>
+        <div class="pb-provider__quote">"My goal is to combine clinical expertise with genuine connection so you leave feeling confident and radiant."</div>
+      </div>
+    </div>
+    <div class="pb-provider pb-provider--flip">
+      <div class="pb-provider__img"><img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ac5020922bc27f58f972870.png" alt="Kim McConkie, Utah Licensed Master Esthetician" loading="lazy"></div>
+      <div class="pb-provider__body">
+        <h3>Kim McConkie</h3>
+        <span class="pb-provider__cred">Utah Licensed Master Esthetician</span>
+        <div class="pb-provider__tags"><span>Microneedling</span><span>Chemical peels</span><span>Dermaplaning</span><span>Treatment planning</span></div>
+        <p>Kim specializes in corrective, results-driven skincare. She takes time to understand each client's concerns and builds a plan that helps them work toward healthy, beautiful skin at every stage of life, and keeps up her education so her care stays current.</p>
+        <div class="pb-provider__quote">"I love helping every client work toward healthy, beautiful skin while making sure they feel completely cared for and confident."</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. REVIEWS — social proof ===== -->
+<section class="pb-reviews">
+  <div class="pb-wrap pb-center">
+    <span class="pb-eyebrow">Client love</span>
+    <h2 class="pb-title">What Our Clients Say</h2>
+    <span class="pb-reviews__rating"><b>★★★★★</b> &nbsp;5-star Google reviews from Integrated Med Spa clients</span>
+    <div class="pb-review-grid">
+      <div class="pb-review"><div class="pb-review__stars">★★★★★</div><p class="pb-review__text">"I had such an amazing experience at Integrated Med Spa. From the moment I walked in, everyone was so kind and welcoming. I especially appreciated how personalized the entire experience felt..."</p><div class="pb-review__foot"><span class="pb-review__name">Jaci S</span><span class="pb-g"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span></div></div>
+      <div class="pb-review"><div class="pb-review__stars">★★★★★</div><p class="pb-review__text">"Love this place! Stepping from a busy road to inside a nice building, it was a pleasant transition... Very relaxing, she got rid of a few knots, and my body felt soothed after the experience."</p><div class="pb-review__foot"><span class="pb-review__name">Arr eye uhn</span><span class="pb-g"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span></div></div>
+      <div class="pb-review"><div class="pb-review__stars">★★★★★</div><p class="pb-review__text">"I have had MANY massages over the years, and I have never had one like this today... powerful, but gentle... My body and my emotions feel treated and restored."</p><div class="pb-review__foot"><span class="pb-review__name">Sheryl Aird</span><span class="pb-g"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span></div></div>
+      <div class="pb-review"><div class="pb-review__stars">★★★★★</div><p class="pb-review__text">"Mindy is the absolute best!!! I have never consistently gone to someone... She is so in tune with my body, is amazing with pressure and precision..."</p><div class="pb-review__foot"><span class="pb-review__name">April Olsen</span><span class="pb-g"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span></div></div>
+      <div class="pb-review"><div class="pb-review__stars">★★★★★</div><p class="pb-review__text">"I have been a customer for years. Ann is so great. The work she does on my deformed back muscles keeps me functioning in life. The facility is clean and pleasant..."</p><div class="pb-review__foot"><span class="pb-review__name">Cheryl Densley</span><span class="pb-g"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. TRUST BAND ===== -->
+<section class="pb-trust">
+  <div class="pb-trust-grid">
+    <div class="pb-trust-item"><h3>15 Years</h3><p>Serving clients in Bountiful, Utah.</p></div>
+    <div class="pb-trust-item"><h3>Licensed Experts</h3><p>Treatments by licensed Master Estheticians.</p></div>
+    <div class="pb-trust-item"><h3>VISIA Imaging</h3><p>See what's happening below the surface before you start.</p></div>
+    <div class="pb-trust-item"><h3>Minimal Downtime</h3><p>Slight redness for a few hours, then back to your day.</p></div>
+  </div>
+</section>
+
+<!-- ===== 6. FAQ — remaining objections ===== -->
+<section class="pb-faq">
+  <div class="pb-wrap pb-wrap--narrow">
+    <div class="pb-center">
+      <span class="pb-eyebrow">Frequent questions</span>
+      <h2 class="pb-title">What You Should Know</h2>
+    </div>
+    <div style="margin-top:28px;">
+      <details class="pb-faq-item"><summary>What is the Fine Lix Fix?</summary><p>Fine Lix Fix is a professional microneedling treatment that stimulates collagen production to improve skin texture, tone and clarity. Your starter package includes a personalized consultation, advanced VISIA skin imaging and a customized 4-session treatment plan designed for your skin.</p></details>
+      <details class="pb-faq-item"><summary>What's included for $199?</summary><p>A full skin consultation, VISIA imaging analysis (valued at $50) and a custom 4-session Fine Lix Fix plan. The regular value is $399.</p></details>
+      <details class="pb-faq-item"><summary>Is it safe?</summary><p>Yes. Microneedling is a non-invasive procedure performed by licensed Master Estheticians at Integrated Med Spa, which has served clients for 15 years, and it requires minimal downtime.</p></details>
+      <details class="pb-faq-item"><summary>How many sessions do I need?</summary><p>The Fine Lix Fix plan includes 4 sessions for optimal results. Most clients see visible improvements after the first session, with benefits building through the series.</p></details>
+      <details class="pb-faq-item"><summary>Is there downtime?</summary><p>Minimal to none. You may have slight redness for a few hours after treatment, but you can return to normal activities right away.</p></details>
+      <details class="pb-faq-item"><summary>Where are you located?</summary><p>Integrated Med Spa is located at 458 N 500 W, Bountiful, Utah 84010.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. FINAL CTA — the choice ===== -->
+<section class="pb-final">
+  <div class="pb-wrap pb-center">
+    <span class="pb-eyebrow">Your choice</span>
+    <h2 class="pb-title">Keep Covering It Up, or Finally Fix It</h2>
+    <p class="pb-sub">Fine lines, pores and texture don't fix themselves. The sooner you start, the sooner your skin starts rebuilding.</p>
+    <div class="pb-choice">
+      <div class="pb-choice__opt pb-choice__opt--a"><strong>Option 1</strong>Keep buying products that sit on the surface and hope the next one is different.</div>
+      <div class="pb-choice__opt pb-choice__opt--b"><strong>Option 2</strong>Lock in your $199 Fine Lix Fix starter package and treat the cause.</div>
+    </div>
+    <div class="pb-final__price"><span class="pb-final__now">$199</span><span class="pb-final__was">Regular value <s>$399</s></span></div>
+    <button class="pb-btn js-pb-cta">Yes, Claim My $199 Spot</button>
+    <span class="pb-btn-note">Only 12 spots at this price</span>
+  </div>
+</section>
+
+<!-- ===== 8. MAP ===== -->
+<section class="pb-map">
+  <div class="pb-map__box">
+    <iframe src="https://maps.google.com/maps?q=458%20N%20500%20W%20Bountiful%20Utah%2084010&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Integrated Med Spa location" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+  <span class="pb-map__addr">458 N 500 W, Bountiful, UT 84010</span>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<section class="pb-footer">
+  <div class="pb-wrap">
+    <div style="text-align:center!important;"><div class="pb-footer__logo"><img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ab031554091fa65e6976647.png" alt="Integrated Med Spa" onerror="this.parentElement.style.display='none'"></div></div>
+    <p><a href="#">Integrated Med Spa</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a></p>
+    <p style="margin-top:8px;">Copyright 2026. All Rights Reserved.</p>
+  </div>
+</section>
+
+<script>
+/* CTA buttons: scroll to the GHL form above */
+(function(){
+  var FORM_SELECTOR = '#form-HMC5o9FxCH';
+  var ctas = document.querySelectorAll('.js-pb-cta');
+  for (var i = 0; i < ctas.length; i++) {
+    ctas[i].addEventListener('click', function(){
+      var el = document.querySelector(FORM_SELECTOR);
+      if (el) { el.scrollIntoView({behavior:'smooth', block:'center'}); }
+    });
+  }
+})();
+
+/* Results carousel */
+(function(){
+  var stage = document.getElementById('pbStage');
+  if (!stage) return;
+  var slides = Array.prototype.slice.call(stage.querySelectorAll('.pb-slide'));
+  var dotsBox = document.getElementById('pbDots');
+  var current = 0, touchStartX = 0;
+
+  slides.forEach(function(slide, index){
+    var dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'pb-dot';
+    dot.setAttribute('aria-label', 'View result ' + (index + 1));
+    dot.addEventListener('click', function(){ current = index; update(); });
+    dotsBox.appendChild(dot);
+  });
+  var dots = Array.prototype.slice.call(dotsBox.querySelectorAll('.pb-dot'));
+
+  function update(){
+    var total = slides.length, prev = (current - 1 + total) % total, next = (current + 1) % total;
+    slides.forEach(function(slide, index){
+      slide.classList.remove('active', 'prev', 'next', 'hidden-left', 'hidden-right');
+      if (index === current) slide.classList.add('active');
+      else if (index === prev) slide.classList.add('prev');
+      else if (index === next) slide.classList.add('next');
+      else slide.classList.add((index - current + total) % total < total / 2 ? 'hidden-right' : 'hidden-left');
+    });
+    dots.forEach(function(dot, index){ dot.classList.toggle('active', index === current); });
+  }
+  function nextSlide(){ current = (current + 1) % slides.length; update(); }
+  function prevSlide(){ current = (current - 1 + slides.length) % slides.length; update(); }
+
+  stage.querySelector('.pb-arrow--next').addEventListener('click', nextSlide);
+  stage.querySelector('.pb-arrow--prev').addEventListener('click', prevSlide);
+  slides.forEach(function(slide){
+    slide.addEventListener('click', function(){
+      if (slide.classList.contains('prev')) prevSlide();
+      if (slide.classList.contains('next')) nextSlide();
+    });
+  });
+  stage.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].screenX; }, {passive:true});
+  stage.addEventListener('touchend', function(e){
+    var diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) < 45) return;
+    if (diff > 0) nextSlide(); else prevSlide();
+  }, {passive:true});
+  update();
+})();
+
+/* GHL DOM unpadding engine */
+(function(){
+  var SEL='.inner,.c-wrapper,.section,.row,.container,.inner-container,[id^="section-"],[id^="row-"],[id^="col-"],[class*="c-section"],[class*="c-row"],[class*="c-column"]';
+  function unpad(){
+    document.documentElement.style.setProperty('overflow-x','hidden','important');
+    document.body.style.setProperty('margin','0','important');
+    document.body.style.setProperty('padding','0','important');
+    document.body.style.setProperty('max-width','100%','important');
+    document.querySelectorAll(SEL).forEach(function(el){
+      el.style.setProperty('padding-left','0','important');
+      el.style.setProperty('padding-right','0','important');
+      el.style.setProperty('margin-left','0','important');
+      el.style.setProperty('margin-right','0','important');
+      el.style.setProperty('width','100%','important');
+      el.style.setProperty('max-width','100%','important');
+    });
+  }
+  document.addEventListener('DOMContentLoaded',unpad);
+  window.addEventListener('load',unpad);
+  setTimeout(unpad,400);setTimeout(unpad,1200);
+})();
+</script>

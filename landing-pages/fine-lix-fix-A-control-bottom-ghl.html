@@ -1,0 +1,612 @@
+<!-- ===== BENEFITS ===== -->
+<section class="benefits">
+  <div class="benefits__inner">
+    <span class="eyebrow">Why Choose Fine Lix Fix</span>
+    <h2 class="section-title">Comprehensive Skin Resurfacing</h2>
+    <p class="section-sub">Experience targeted collagen activation designed to refine, tighten, and restore your skin.</p>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="benefit-card__icon">1</div>
+        <h4 class="benefit-card__title">Visible Collagen &amp; Texture Transformation</h4>
+        <p class="benefit-card__desc">Microneedling activates your skin's natural healing response, boosting collagen production to smooth fine lines, refine pores, and restore firmness and elasticity for noticeably younger-looking skin.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__icon">2</div>
+        <h4 class="benefit-card__title">Quick Sessions, Powerful Results</h4>
+        <p class="benefit-card__desc">Each 1-hour 15-minute appointment fits seamlessly into your schedule—same-day bookings available—while delivering professional-strength results you'd expect from a dermatology clinic.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__icon">3</div>
+        <h4 class="benefit-card__title">Complete Starter Package with Expert Imaging</h4>
+        <p class="benefit-card__desc">Your $199 offer includes a full skin consultation, VISIA imaging analysis (valued at $50), and a custom 4-session plan—all the tools you need to see real transformation.</p>
+      </div>
+    </div>
+    <div style="margin-top:36px;">
+      <button class="btn-cta" onclick="(function(){var el=document.querySelector('#form-HMC5o9FxCH');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});}})()">CLAIM YOUR OFFER TODAY</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section class="results">
+  <div class="results__inner">
+    <style>
+    .bi-results-carousel {
+      width: 100%;
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 25px 15px 32px;
+      box-sizing: border-box;
+      font-family: 'Comfortaa', Arial, sans-serif;
+    }
+    .bi-results-heading { text-align: center; margin-bottom: 26px; }
+    .bi-results-heading h2 { margin: 0 0 8px; color: #085A6A; font-size: 28px; font-weight: 400; }
+    .bi-results-heading p { margin: 0; color: #5A6873; font-size: 15px; }
+
+    .bi-carousel-stage {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bi-result-slide {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 60%;
+      max-width: 620px;
+      height: 460px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(.72);
+      transition: transform .55s cubic-bezier(.22,.61,.36,1), opacity .45s ease;
+      z-index: 1;
+    }
+    .bi-result-image {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(8, 90, 106, .15);
+      border: 1px solid rgba(8, 90, 106, .08);
+    }
+    .bi-result-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #ffffff;
+    }
+    .bi-result-slide.active { opacity: 1; transform: translate(-50%, -50%) scale(1); z-index: 5; pointer-events: auto; }
+    .bi-result-slide.prev { opacity: .35; transform: translate(-112%, -50%) scale(.82); z-index: 2; pointer-events: auto; cursor: pointer; }
+    .bi-result-slide.next { opacity: .35; transform: translate(12%, -50%) scale(.82); z-index: 2; pointer-events: auto; cursor: pointer; }
+    .bi-result-slide.hidden-left { opacity: 0; transform: translate(-145%, -50%) scale(.65); }
+    .bi-result-slide.hidden-right { opacity: 0; transform: translate(45%, -50%) scale(.65); }
+
+    .bi-carousel-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 46px; height: 46px; border: none; border-radius: 50%;
+      background: var(--btn-teal); color: #FFFFFF;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; cursor: pointer; z-index: 20;
+      box-shadow: 0 8px 22px rgba(0,0,0,.16); transition: background .2s ease;
+    }
+    .bi-carousel-arrow:hover { background: var(--bronze); }
+    .bi-carousel-prev { left: 4%; }
+    .bi-carousel-next { right: 4%; }
+
+    .bi-carousel-dots { display: flex; justify-content: center; align-items: center; gap: 7px; margin-top: 14px; }
+    .bi-carousel-dot { width: 8px; height: 8px; padding: 0; border: none; border-radius: 50%; background: #D5D9E0; cursor: pointer; transition: width .25s ease, background .25s ease; }
+    .bi-carousel-dot.active { width: 22px; border-radius: 10px; background: var(--btn-teal); }
+
+    @media (max-width: 767px) {
+      .bi-carousel-stage { height: 380px; }
+      .bi-result-slide { width: 80%; height: 340px; }
+      .bi-carousel-prev { left: 2px; }
+      .bi-carousel-next { right: 2px; }
+    }
+    </style>
+
+    <div class="bi-results-carousel">
+      <div class="bi-results-heading">
+        <h2>Real Client Transformations</h2>
+        <p>Explore visible results achieved with microneedling at Integrated Med Spa.</p>
+      </div>
+
+      <div class="bi-carousel-stage" id="biCarouselStage">
+        <!-- IMAGE 1 -->
+        <div class="bi-result-slide">
+          <div class="bi-result-image">
+            <img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ab68d3c7e654f1003c3b0df.png" alt="Microneedling result 1" loading="lazy">
+          </div>
+        </div>
+
+        <!-- IMAGE 2 -->
+        <div class="bi-result-slide">
+          <div class="bi-result-image">
+            <img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ab68d3c3ae3da26fb61ac92.png" alt="Microneedling result 2" loading="lazy">
+          </div>
+        </div>
+
+        <!-- IMAGE 3 -->
+        <div class="bi-result-slide">
+          <div class="bi-result-image">
+            <img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ab68d3c70f8593c32921abe.png" alt="Microneedling result 3" loading="lazy">
+          </div>
+        </div>
+
+        <button class="bi-carousel-arrow bi-carousel-prev" type="button" aria-label="Previous result">‹</button>
+        <button class="bi-carousel-arrow bi-carousel-next" type="button" aria-label="Next result">›</button>
+      </div>
+
+      <div class="bi-carousel-dots" id="biCarouselDots" aria-label="Result gallery navigation"></div>
+    </div>
+    <p class="results__disclaimer" style="text-align:center;color:var(--muted);font-size:13px;font-style:italic;margin-top:16px;">Individual experiences and results may vary.</p>
+  </div>
+</section>
+
+<!-- ===== MEET YOUR PROVIDERS ===== -->
+<section class="bi-providers-wrapper" style="padding: 60px 20px; background-color: var(--cream);">
+  <style>
+  .bi-providers-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: 'Comfortaa', Arial, sans-serif;
+  }
+  .bi-providers-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .bi-providers-eyebrow {
+    color: var(--bronze);
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .bi-providers-title {
+    color: var(--primary);
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0 0 10px;
+  }
+  .bi-providers-sub {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .bi-providers-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .bi-provider-card {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 35px;
+    background: #085A6A;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+  }
+  .bi-provider-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .bi-provider-image img {
+    width: 100%;
+    max-width: 340px;
+    height: 380px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  }
+  .bi-provider-content {
+    color: #ffffff;
+  }
+  .bi-provider-name {
+    margin: 0 0 4px;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 400;
+  }
+  .bi-provider-credentials {
+    margin-bottom: 16px;
+    color: #F3EFE5;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .bi-provider-copy {
+    color: rgba(255,255,255,0.92);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .bi-provider-copy p {
+    margin: 0 0 12px;
+  }
+  .bi-provider-quote {
+    margin-top: 18px;
+    padding-left: 14px;
+    border-left: 3px solid var(--bronze);
+    color: #ffffff;
+    font-size: 14px;
+    font-style: italic;
+  }
+
+  @media (max-width: 820px) {
+    .bi-provider-card {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+    .bi-provider-image img {
+      max-width: 280px;
+      height: 320px;
+    }
+    .bi-provider-quote {
+      padding-left: 0;
+      border-left: none;
+    }
+  }
+  </style>
+
+  <div class="bi-providers-container">
+    <div class="bi-providers-header">
+      <div class="bi-providers-eyebrow">Expert Care &amp; Guidance</div>
+      <h2 class="bi-providers-title">Meet Your Providers</h2>
+      <p class="bi-providers-sub">Our licensed Master Estheticians are dedicated to delivering personalized, results-driven skin care in a relaxing environment.</p>
+    </div>
+
+    <div class="bi-providers-grid">
+      <!-- PROVIDER 1: AMANDA ALVES -->
+      <div class="bi-provider-card">
+        <div class="bi-provider-image">
+          <img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ac50209195f9172edab695c.jpeg" alt="Amanda Alves - Master Esthetician" loading="lazy">
+        </div>
+        <div class="bi-provider-content">
+          <h3 class="bi-provider-name">Amanda Alves</h3>
+          <div class="bi-provider-credentials">Licensed Master Esthetician · NIMA Graduate</div>
+          <div class="bi-provider-copy">
+            <p>Amanda is a Licensed Master Esthetician and NIMA graduate with a passion for advanced skincare, laser treatments, and personalized client experiences. Her expertise includes customized facials, chemical peels, microneedling, brow artistry, and waxing. Combining in-depth knowledge of skin health with a results-driven approach, Amanda tailors each treatment to meet her clients' unique needs.</p>
+            <p>Known for her warm, outgoing personality, Amanda enjoys building genuine connections with her clients and helping them feel confident, radiant, and beautiful in their own skin.</p>
+          </div>
+          <div class="bi-provider-quote">
+            “My goal is to combine clinical expertise with genuine connection so you leave feeling confident and radiant.”
+          </div>
+        </div>
+      </div>
+
+      <!-- PROVIDER 2: KIM MCCONKIE -->
+      <div class="bi-provider-card">
+        <div class="bi-provider-image">
+          <img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ac5020922bc27f58f972870.png" alt="Kim McConkie - Master Esthetician" loading="lazy">
+        </div>
+        <div class="bi-provider-content">
+          <h3 class="bi-provider-name">Kim McConkie</h3>
+          <div class="bi-provider-credentials">Utah Licensed Master Esthetician</div>
+          <div class="bi-provider-copy">
+            <p>Kim is a Utah licensed Master Esthetician with a passion for corrective, results-driven skincare in a comfortable, relaxing environment. She specializes in customized treatments including chemical peels, microneedling, dermaplaning, and personalized treatment planning. Kim loves getting to know her clients, understanding their individual skin concerns, and creating a plan that helps them work toward healthy, beautiful skin at every stage of life.</p>
+            <p>As a former business owner, Kim brings years of experience building meaningful client relationships and providing exceptional service. She is passionate about continuing her education in an ever-evolving field so she can offer knowledgeable, thoughtful, effective care.</p>
+          </div>
+          <div class="bi-provider-quote">
+            “I love helping every client work toward healthy, beautiful skin while making sure they feel completely cared for and confident.”
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENT REVIEWS ===== -->
+<section class="reviews-section-wrapper" style="background-color: #ffffff; padding: 50px 20px; display: flex; justify-content: center;">
+  <style>
+    .reviews-container { max-width: 1050px; width: 100%; text-align: center; font-family:'Comfortaa', sans-serif;}
+    .reviews-header h2 { color: #085A6A; font-size: 28px; font-weight: 400; margin-bottom: 8px; }
+    .reviews-header p { color: var(--bronze); font-size: 15px; margin-bottom: 32px; font-family:'Montserrat', sans-serif; font-weight:600; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .reviews-grid { grid-template-columns: 1fr; } }
+    .review-card { background: var(--cream); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; justify-space-between; text-align: left; }
+    .stars { color: #f59e0b; font-size: 15px; letter-spacing: 2px; margin-bottom: 12px; }
+    .review-text { color: var(--text); font-size: 14px; line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-family:'Montserrat', sans-serif;}
+    .author-name { font-weight: 700; color: #1e293b; }
+    .google-logo { font-weight: 600; font-size: 12px; }
+    .g-blue { color: #4285F4; } .g-red { color: #EA4335; } .g-yellow { color: #FBBC05; } .g-green { color: #34A853; }
+  </style>
+
+  <div class="reviews-container">
+    <div class="reviews-header">
+      <h2>See What Our Clients Say</h2>
+      <p>Real 5-Star Reviews from Integrated Med Spa Clients</p>
+    </div>
+
+    <div class="reviews-grid">
+      <!-- Box 1 -->
+      <div class="review-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">"I had such an amazing experience at Integrated Med Spa. From the moment I walked in, everyone was so kind and welcoming. I especially appreciated how personalized the entire experience felt..."</p>
+        <div class="card-footer">
+          <span class="author-name">Jaci S</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="review-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">"Love this place! Stepping from a busy road to inside a nice building, it was a pleasant transition... Very relaxing, she got rid of a few knots, and my body felt soothed after the experience."</p>
+        <div class="card-footer">
+          <span class="author-name">Arr eye uhn</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="review-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">"I have had MANY massages over the years, and I have never had one like this today... powerful, but gentle... My body and my emotions feel treated and restored."</p>
+        <div class="card-footer">
+          <span class="author-name">Sheryl Aird</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="review-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">"Mindy is the absolute best!!! I have never consistently gone to someone... She is so in tune with my body, is amazing with pressure and precision..."</p>
+        <div class="card-footer">
+          <span class="author-name">April Olsen</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Box 5 -->
+      <div class="review-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">"I have been a customer for years. Ann is so great. The work she does on my deformed back muscles keeps me functioning in life. The facility is clean and pleasant..."</p>
+        <div class="card-footer">
+          <span class="author-name">Cheryl Densley</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Box 6 -->
+      <div class="review-card">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="review-text">"Professional, clean, and incredible care. Everyone takes the time to answer questions and ensure you are comfortable. Highly recommend Integrated Med Spa!"</p>
+        <div class="card-footer">
+          <span class="author-name">Satisfied Client</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" style="background:var(--cream);padding:60px 24px;">
+  <div class="faq__inner" style="max-width:780px;margin:0 auto;padding:0 15px;">
+    <span class="eyebrow" style="text-align:center;">Frequent Questions</span>
+    <h2 class="section-title" style="text-align:center;">What You Should Know</h2>
+    <div style="margin-top:28px;">
+      <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;">
+        <button class="faq-q" style="width:100%;background:none;border:none;cursor:pointer;padding:18px 20px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--primary);display:flex;justify-content:space-between;align-items:center;">What is the Fine Lix Fix?<span class="ic" style="color:var(--bronze);font-size:20px;">+</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height .3s ease;"><p style="padding:0 20px 18px;margin:0;color:var(--text);font-size:15px;">Fine Lix Fix is a professional microneedling treatment that stimulates collagen production to improve skin texture, tone, and clarity. Your starter package includes a personalized consultation, advanced VISIA skin imaging, and a customized 4-session treatment plan designed specifically for your skin.</p></div>
+      </div>
+      <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;">
+        <button class="faq-q" style="width:100%;background:none;border:none;cursor:pointer;padding:18px 20px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--primary);display:flex;justify-content:space-between;align-items:center;">Is it safe?<span class="ic" style="color:var(--bronze);font-size:20px;">+</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height .3s ease;"><p style="padding:0 20px 18px;margin:0;color:var(--text);font-size:15px;">Yes. Microneedling is a safe, non-invasive procedure performed by licensed medical aestheticians at Integrated Med Spa, which has served clients for 15 years. It's FDA-recognized and requires minimal downtime.</p></div>
+      </div>
+      <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;">
+        <button class="faq-q" style="width:100%;background:none;border:none;cursor:pointer;padding:18px 20px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--primary);display:flex;justify-content:space-between;align-items:center;">How many sessions do I need?<span class="ic" style="color:var(--bronze);font-size:20px;">+</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height .3s ease;"><p style="padding:0 20px 18px;margin:0;color:var(--text);font-size:15px;">The Fine Lix Fix package includes 4 sessions for optimal results. Most clients see visible improvements after the first session, with cumulative benefits building through the series.</p></div>
+      </div>
+      <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;">
+        <button class="faq-q" style="width:100%;background:none;border:none;cursor:pointer;padding:18px 20px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--primary);display:flex;justify-content:space-between;align-items:center;">Is there downtime?<span class="ic" style="color:var(--bronze);font-size:20px;">+</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height .3s ease;"><p style="padding:0 20px 18px;margin:0;color:var(--text);font-size:15px;">Microneedling has minimal to no downtime. You may experience slight redness for a few hours post-treatment, but you can return to normal activities immediately.</p></div>
+      </div>
+      <div class="faq-item" style="background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden;">
+        <button class="faq-q" style="width:100%;background:none;border:none;cursor:pointer;padding:18px 20px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--primary);display:flex;justify-content:space-between;align-items:center;">Where are you located?<span class="ic" style="color:var(--bronze);font-size:20px;">+</span></button>
+        <div class="faq-answer" style="max-height:0;overflow:hidden;transition:max-height .3s ease;"><p style="padding:0 20px 18px;margin:0;color:var(--text);font-size:15px;">Integrated Med Spa is located at 458 N 500 W Bountiful Utah 84010.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta" style="background:var(--primary);padding:70px 24px;text-align:center;">
+  <div class="final-cta__inner" style="max-width:760px;margin:0 auto;padding:0 15px;">
+    <span class="eyebrow" style="color:var(--cream);">Reserve Your Fine Lix Fix Special</span>
+    <h2 style="color:#fff;font-size:32px;margin-bottom:12px;">Ready For Radiant, Renewed Skin?</h2>
+    <p style="color:#F3EFE5;font-size:16px;margin-bottom:10px;">Claim your introductory package today for only $199.</p>
+    <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:32px;color:var(--cream);margin:6px 0 2px;">$199</div>
+    <div style="color:#A6B8BE;text-decoration:line-through;font-size:15px;margin-bottom:24px;">Regular Value $399</div>
+    <div>
+      <button class="btn-cta" onclick="(function(){var el=document.querySelector('#form-HMC5o9FxCH');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});}})()">CLAIM YOUR Fine Lix Fix NOW</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP SECTION ===== -->
+<section class="map-section" style="padding:40px 20px;display:flex;justify-content:center;background-color:#053E49;">
+  <div class="blu-map-wrap" style="width:100%;max-width:650px;margin:0 auto;overflow:hidden;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.25);background:#ffffff;">
+    <iframe src="https://maps.google.com/maps?q=458%20N%20500%20W%20Bountiful%20Utah%2084010&t=&z=15&ie=UTF8&iwloc=&output=embed" style="display:block;width:100%!important;height:350px;margin:0 auto;border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<section class="footer" style="background:var(--primary-dark);padding:40px 24px 30px;text-align:center;color:#A6B8BE;font-size:14px;">
+  <div class="footer__inner" style="max-width:880px;margin:0 auto;padding:0 15px;">
+    <div style="text-align:center!important;width:100%!important;display:block!important;margin:0 auto!important;">
+      <div class="footer__logo-card" style="display:inline-block;margin:0 auto;background:rgba(255,255,255,0.95);border-radius:8px;padding:8px 16px;">
+        <img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ab031554091fa65e6976647.png" style="max-width:130px;max-height:46px;display:block;margin:0 auto;object-fit:contain;" onerror="this.parentElement.style.display='none'">
+      </div>
+    </div>
+    <p style="color:#F3EFE5;font-size:15px;margin:18px 0 10px;">458 N 500 W, Bountiful, UT 84010</p>
+    <p><a href="#" style="color:#F3EFE5;text-decoration:none;">Integrated Med Spa</a> &nbsp;|&nbsp; <a href="#" style="color:#F3EFE5;text-decoration:none;">Privacy Policy</a> &nbsp;|&nbsp; <a href="#" style="color:#F3EFE5;text-decoration:none;">Terms &amp; Conditions</a></p>
+    <p style="margin-top:8px;">Copyright 2026. All Rights Reserved.</p>
+  </div>
+</section>
+
+<script>
+/* Countdown Timer Script */
+(function() {
+  var totalSecs = 10 * 60 + 23;
+  function updateTimer() {
+    var h = Math.floor(totalSecs / 3600);
+    var m = Math.floor((totalSecs % 3600) / 60);
+    var s = totalSecs % 60;
+
+    var elH = document.getElementById('t-hours');
+    var elM = document.getElementById('t-mins');
+    var elS = document.getElementById('t-secs');
+
+    if(elH) elH.textContent = h < 10 ? '0' + h : h;
+    if(elM) elM.textContent = m < 10 ? '0' + m : m;
+    if(elS) elS.textContent = s < 10 ? '0' + s : s;
+
+    if(totalSecs > 0) {
+      totalSecs--;
+    } else {
+      totalSecs = 10 * 60 + 23; // Loop
+    }
+  }
+  setInterval(updateTimer, 1000);
+  updateTimer();
+})();
+
+/* Results Carousel Script */
+(function () {
+  const stage = document.getElementById('biCarouselStage');
+  if (!stage) return;
+
+  const slides = Array.from(stage.querySelectorAll('.bi-result-slide'));
+  const prevButton = stage.querySelector('.bi-carousel-prev');
+  const nextButton = stage.querySelector('.bi-carousel-next');
+  const dotsContainer = document.getElementById('biCarouselDots');
+
+  let current = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  slides.forEach((slide, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'bi-carousel-dot';
+    dot.setAttribute('aria-label', 'View result ' + (index + 1));
+    dot.addEventListener('click', function () {
+      current = index;
+      updateCarousel();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsContainer.querySelectorAll('.bi-carousel-dot'));
+
+  function updateCarousel() {
+    const total = slides.length;
+    const previous = (current - 1 + total) % total;
+    const next = (current + 1) % total;
+
+    slides.forEach((slide, index) => {
+      slide.classList.remove('active', 'prev', 'next', 'hidden-left', 'hidden-right');
+      if (index === current) slide.classList.add('active');
+      else if (index === previous) slide.classList.add('prev');
+      else if (index === next) slide.classList.add('next');
+      else {
+        let diff = (index - current + total) % total;
+        if (diff < total / 2) slide.classList.add('hidden-right');
+        else slide.classList.add('hidden-left');
+      }
+    });
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === current);
+    });
+  }
+
+  function nextSlide() { current = (current + 1) % slides.length; updateCarousel(); }
+  function previousSlide() { current = (current - 1 + slides.length) % slides.length; updateCarousel(); }
+
+  if(nextButton) nextButton.addEventListener('click', nextSlide);
+  if(prevButton) prevButton.addEventListener('click', previousSlide);
+
+  slides.forEach(function (slide) {
+    slide.addEventListener('click', function () {
+      if (slide.classList.contains('prev')) previousSlide();
+      if (slide.classList.contains('next')) nextSlide();
+    });
+  });
+
+  stage.addEventListener('touchstart', function (e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+  stage.addEventListener('touchend', function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) < 45) return;
+    if (diff > 0) nextSlide(); else previousSlide();
+  }, { passive: true });
+
+  updateCarousel();
+})();
+
+/* FAQ Accordion */
+(function(){
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=q.parentElement;
+      var ans=item.querySelector('.faq-answer');
+      var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(it){
+        it.classList.remove('open');
+        var a=it.querySelector('.faq-answer');
+        if(a) a.style.maxHeight=null;
+      });
+      if(!open){
+        item.classList.add('open');
+        ans.style.maxHeight=ans.scrollHeight+'px';
+      }
+    });
+  });
+})();
+
+/* DOM Unpadding Engine */
+(function(){
+  var SEL='.inner,.c-wrapper,.section,.row,.container,.inner-container,[id^="section-"],[id^="row-"],[id^="col-"],[class*="c-section"],[class*="c-row"],[class*="c-column"]';
+  function unpad(){
+    document.documentElement.style.setProperty('overflow-x','hidden','important');
+    document.body.style.setProperty('margin','0','important');
+    document.body.style.setProperty('padding','0','important');
+    document.body.style.setProperty('max-width','100%','important');
+    document.querySelectorAll(SEL).forEach(function(el){
+      el.style.setProperty('padding-left','0','important');
+      el.style.setProperty('padding-right','0','important');
+      el.style.setProperty('margin-left','0','important');
+      el.style.setProperty('margin-right','0','important');
+      el.style.setProperty('width','100%','important');
+      el.style.setProperty('max-width','100%','important');
+    });
+  }
+  document.addEventListener('DOMContentLoaded',unpad);
+  window.addEventListener('load',unpad);
+  setTimeout(unpad,400);setTimeout(unpad,1200);
+})();
+</script>
