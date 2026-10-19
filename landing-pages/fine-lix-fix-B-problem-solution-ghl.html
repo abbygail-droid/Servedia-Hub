@@ -38,11 +38,11 @@ p{margin:0 0 1em;}
 img{max-width:100%;display:block;}
 
 /* ===== Custom Element Standardization ===== */
-.scarcity-banner,.hero,.offer-strip,.ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-offer,.ps-steps,.ps-faq,.ps-final,.ps-sticky{
+.scarcity-banner,.hero,.offer-strip,.ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-results,.ps-offer,.ps-steps,.ps-faq,.ps-final,.ps-sticky{
   display:block!important;width:100%!important;max-width:100%!important;clear:both!important;float:none!important;
   margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;}
-.scarcity-banner,.hero,.offer-strip,.ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-offer,.ps-steps,.ps-faq,.ps-final{position:relative!important;}
-.scarcity-banner *,.hero *,.offer-strip *,.ps-problem *,.ps-agitate *,.ps-solution *,.ps-compare *,.ps-offer *,.ps-steps *,.ps-faq *,.ps-final *,.ps-sticky *{box-sizing:border-box!important;}
+.scarcity-banner,.hero,.offer-strip,.ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-results,.ps-offer,.ps-steps,.ps-faq,.ps-final{position:relative!important;}
+.scarcity-banner *,.hero *,.offer-strip *,.ps-problem *,.ps-agitate *,.ps-solution *,.ps-compare *,.ps-results *,.ps-offer *,.ps-steps *,.ps-faq *,.ps-final *,.ps-sticky *{box-sizing:border-box!important;}
 
 .wrap{max-width:1000px;margin:0 auto;padding:0 20px;}
 .wrap--narrow{max-width:760px;}
@@ -126,6 +126,17 @@ img{max-width:100%;display:block;}
 .compare__col--before li span:first-child{color:var(--problem);}
 .compare__col--after li span:first-child{color:#E2B98F;}
 
+/* ===== Before & After gallery ===== */
+.ps-results{background:var(--surface);padding:64px 24px;}
+.ba-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;align-items:flex-start;}
+.ba-card{flex:1 1 400px;max-width:470px;margin:0;border-radius:16px;overflow:hidden;background:#111;border:1px solid var(--line);box-shadow:0 10px 26px rgba(23,23,23,.08);position:relative;}
+.ba-card img{width:100%;height:auto;display:block;}
+.ba-card.is-broken{display:none;}
+.ba-tag{position:absolute;top:10px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 10px;border-radius:20px;}
+.ba-tag--before{left:10px;background:rgba(255,255,255,.9);color:var(--text);}
+.ba-tag--after{right:10px;background:var(--bronze);color:#fff;}
+.ba-note{display:block;color:var(--muted);font-size:12px;margin-top:20px;}
+
 /* ===== Offer / value stack ===== */
 .ps-offer{background:var(--surface);padding:68px 24px;}
 .offer-card{max-width:620px;margin:0 auto;border:2px solid var(--bronze);border-radius:22px;overflow:hidden;box-shadow:0 18px 40px rgba(23,23,23,.08);}
@@ -192,7 +203,7 @@ img{max-width:100%;display:block;}
   .hero__desc{font-size:16px;}
   .hero__offer-price{font-size:24px;}
   .section-title{font-size:25px;}
-  .ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-offer,.ps-steps,.ps-faq,.ps-final{padding-top:48px!important;padding-bottom:48px!important;}
+  .ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-results,.ps-offer,.ps-steps,.ps-faq,.ps-final{padding-top:48px!important;padding-bottom:48px!important;}
   .wrap{padding:0 16px;}
   .offer-card__body{padding:26px 18px 28px;}
   .offer-price__now{font-size:42px;}
@@ -339,6 +350,27 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
+<!-- ===== 5b. BEFORE & AFTER — proof before the offer =====
+     Upload the 5 images in landing-pages/images/fine-lix-fix/ to GHL Media,
+     then replace each src below with its GHL URL. Cards whose image fails to
+     load hide themselves; if all fail, the whole section hides. -->
+<section class="ps-results">
+  <div class="wrap center">
+    <span class="eyebrow">Real change</span>
+    <h2 class="section-title">See the Difference for Yourself</h2>
+    <p class="section-sub">Smoother texture, more even tone and a fresher, firmer-looking complexion.</p>
+    <div class="ba-grid">
+      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-1.jpg" alt="Before and after: smoother, brighter skin" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
+      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-2.jpg" alt="Before and after: more even, radiant tone" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
+      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-3.jpg" alt="Before and after: reduced redness and refined texture" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
+      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-4.jpg" alt="Before and after: softer-looking lines" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
+      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-5.jpg" alt="Before and after: firmer, fresher-looking skin" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
+    </div>
+    <span class="ba-note">Individual results vary.</span>
+    <div style="margin-top:26px;"><button class="btn-cta js-cta">I Want Results Like These</button></div>
+  </div>
+</section>
+
 <!-- ===== 6. OFFER — value stack + urgency ===== -->
 <section class="ps-offer" id="offer">
   <div class="wrap center">
@@ -456,6 +488,12 @@ img{max-width:100%;display:block;}
 </div>
 
 <script>
+// Hide a before/after card whose image can't load; hide the section if none load.
+function psHideBa(img){
+  var card = img.closest('.ba-card'); if (card) card.classList.add('is-broken');
+  var sec = document.querySelector('.ps-results');
+  if (sec && !sec.querySelector('.ba-card:not(.is-broken)')) sec.style.setProperty('display', 'none', 'important');
+}
 (function(){
   // Same form target as the control funnel so A/B conversions are comparable.
   var FORM_SELECTOR = '#form-HMC5o9FxCH';
