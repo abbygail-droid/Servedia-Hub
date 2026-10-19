@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fine Lix Fix Microneedling | Integrated Med Spa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0!important;padding:0!important;width:100%!important;max-width:100%!important;overflow-x:hidden!important;}
+</style>
+<style>
+/* ===== GHL container targeting (Layer 2) ===== */
+.inner,.c-wrapper,.section,.row,.container,.inner-container,
+[id^="section-"],[id^="row-"],[id^="col-"],[class*="c-section"],[class*="c-row"],[class*="c-column"]{
+  padding-left:0!important;padding-right:0!important;margin-left:0!important;margin-right:0!important;
+  width:100%!important;max-width:100%!important;}
+
+/* ===== Brand tokens (Integrated Med Spa) ===== */
+:root{
+  --primary:#085A6A;       /* deep teal */
+  --primary-dark:#053E49;  /* darker teal */
+  --btn-teal:#1B5A6B;      /* button teal */
+  --bronze:#9C693C;        /* bronze / caramel accent */
+  --bronze-dark:#80522B;
+  --cream:#F3EFE5;          /* warm cream surface */
+  --surface:#FFFFFF;
+  --text:#171717;          /* near-black body text */
+  --muted:#5A6873;
+  --line:#E0E3E6;
+}
+*{box-sizing:border-box;}
+body{font-family:'Comfortaa',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text);background:var(--surface);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+h1,h2,h3,h4,h5,h6{font-family:'Comfortaa',sans-serif;font-weight:400;line-height:1.2;letter-spacing:0;margin:0 0 .5em;color:var(--primary);}
+p{margin:0 0 1em;}
+img{max-width:100%;display:block;}
+
+/* ===== Custom Element Standardization ===== */
+.scarcity-banner,.hero,.offer-strip,.benefits,.results,.how,.stats,.urgency,.faq,.final-cta,.footer{
+  display:block!important;width:100%!important;max-width:100%!important;clear:both!important;float:none!important;position:relative!important;
+  margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;}
+.scarcity-banner *,.hero *,.offer-strip *,.benefits *,.results *,.how *,.stats *,.urgency *,.faq *,.final-cta *,.footer *{box-sizing:border-box!important;}
+
+/* ===== Buttons ===== */
+.btn-cta{display:inline-block;background:var(--btn-teal);color:#FFFFFF;font-family:'Montserrat',sans-serif;font-weight:700;font-size:17px;letter-spacing:0.01em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;padding:18px 36px;border-radius:30px;box-shadow:0 8px 22px rgba(8,90,106,.25);transition:transform .15s ease,box-shadow .15s ease,background .2s ease;}
+.btn-cta:hover{background:var(--bronze);transform:translateY(-2px);box-shadow:0 12px 28px rgba(156,105,60,.35);}
+
+/* ===== Scarcity banner ===== */
+.scarcity-banner{background:var(--primary-dark);color:#fff;padding:12px 20px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;letter-spacing:1px;text-transform:uppercase;}
+.scarcity-banner,.scarcity-banner p,.scarcity-banner span,.scarcity-banner strong{text-align:center!important;}
+.scarcity-banner strong{color:var(--bronze);}
+
+/* ===== Hero ===== */
+.hero{background:var(--primary);padding:54px 24px 70px;overflow:hidden;}
+.hero__bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;pointer-events:none;display:block;opacity:0.45;}
+.hero__overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(8,90,106,0.65),rgba(5,62,73,0.85));z-index:1;pointer-events:none;}
+.hero__inner{max-width:820px;margin:0 auto;position:relative;z-index:2;padding:0 15px;}
+.hero,.hero__inner,.hero__title,.hero__sub,.hero__desc,.hero__pricing,.hero__badge,.hero__price-was,.hero__price-label,.hero__trust,.hero h1,.hero h2,.hero h3,.hero p,.hero span{text-align:center!important;}
+.hero__badge{display:inline-block;background:rgba(243,239,229,.18);border:1px solid var(--cream);color:var(--cream);font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:30px;margin-bottom:22px;}
+.hero__title{color:#fff;font-size:38px;line-height:1.2;margin-bottom:16px;}
+.hero__desc{color:#F3EFE5;font-size:16px;max-width:680px;margin:0 auto 24px;line-height:1.6;}
+.hero__pricing{margin:6px auto 20px;}
+.hero__price{font-family:'Montserrat',sans-serif;font-weight:800;font-size:42px;color:var(--cream);line-height:1;}
+.hero__price-was{display:block;color:#A6B8BE;font-size:16px;margin-top:6px;text-decoration:line-through;}
+.hero__price-label{display:block;color:#fff;font-weight:600;font-size:14px;letter-spacing:1px;text-transform:uppercase;margin-top:4px;}
+.hero__trust{color:#A6B8BE;font-size:14px;letter-spacing:.5px;margin-top:20px;}
+
+/* ===== Countdown Timer ===== */
+.timer-container{background:rgba(255,255,255,0.12);border:1px solid rgba(243,239,229,0.3);border-radius:12px;padding:12px 20px;max-width:460px;margin:18px auto;display:flex;justify-content:center;align-items:center;gap:15px;color:#FFFFFF;font-family:'Montserrat',sans-serif;}
+.timer-block{text-align:center;}
+.timer-val{font-size:22px;font-weight:800;color:var(--cream);display:block;line-height:1;}
+.timer-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1px;opacity:0.8;}
+
+/* ===== Offer strip ===== */
+.offer-strip{background:var(--bronze);color:#FFFFFF;padding:16px 24px;}
+.offer-strip,.offer-strip p,.offer-strip span,.offer-strip strong{text-align:center!important;}
+.offer-strip__inner{max-width:900px;margin:0 auto;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;letter-spacing:.4px;padding:0 10px;}
+
+/* ===== Benefits ===== */
+.benefits{background:var(--surface);padding:64px 24px;}
+.benefits__inner{max-width:1080px;margin:0 auto;padding:0 15px;}
+.benefits,.benefits__inner,.benefits__title,.benefits__sub,.benefits__eyebrow,.benefits h2,.benefits h3,.benefits p{text-align:center!important;}
+.eyebrow{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:12px;}
+.section-title{font-size:30px;margin-bottom:14px;}
+.section-sub{color:var(--muted);max-width:660px;margin:0 auto 40px;font-size:16px;}
+.benefit-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;}
+.benefit-card{flex:1 1 300px;max-width:340px;background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:32px 24px;}
+.benefit-card,.benefit-card__title,.benefit-card h4{text-align:center!important;margin-left:auto!important;margin-right:auto!important;}
+.benefit-card__icon{width:50px;height:50px;border-radius:50%;background:var(--primary);color:#FFFFFF;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:20px;}
+.benefit-card__title{font-size:18px;margin-bottom:10px;}
+.benefit-card__desc{color:var(--text);font-size:15px;line-height:1.5;}
+
+@media(max-width:660px){
+  body{font-size:15px;}
+  .hero{padding:40px 16px 50px;}
+  .hero__title{font-size:26px;}
+  .hero__desc{font-size:15px;}
+  .hero__price{font-size:34px;}
+  .section-title{font-size:24px;}
+  .btn-cta{font-size:15px;padding:15px 24px;width:100%;max-width:320px;}
+}
+</style>
+</head>
+<body style="margin:0!important;padding:0!important;overflow-x:hidden!important;">
+
+<!-- ===== SCARCITY BANNER ===== -->
+<section class="scarcity-banner">
+  <span>⚡ ONLY FOR THE FIRST 12 PEOPLE WHO CLAIM IT — <strong>12 SPOTS AVAILABLE</strong></span>
+</section>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <img class="hero__bg" src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ab68d777e654f1003c3b590.png" alt="" aria-hidden="true" onerror="this.style.display='none'">
+  <div class="hero__overlay"></div>
+  <div class="hero__inner">
+    <div style="text-align:center!important;width:100%!important;display:block!important;margin:0 auto 24px!important;">
+      <div class="hero__logo-card" style="display:inline-block;margin:0 auto;background:rgba(255,255,255,0.95);border-radius:12px;padding:10px 22px;">
+        <img src="https://assets.cdn.filesafe.space/3VG63SogRNhCYtD3iPD0/media/6ab031554091fa65e6976647.png" style="max-width:180px;max-height:60px;display:block;margin:0 auto;object-fit:contain;" onerror="this.parentElement.style.display='none'">
+      </div>
+    </div>
+    <span class="hero__badge">Professional Microneedling · Fine Lix Fix</span>
+    <h1 class="hero__title">Smoother, Firmer, Radiant Skin—Without Surgery or Extended Downtime</h1>
+    <p class="hero__desc">Fine Lix Fix is professional-grade microneedling designed to stimulate your skin's natural collagen production and resurface your complexion from within. This proven treatment visibly improves skin texture, tone, and clarity—delivering youthful radiance with minimal downtime. Your starter package includes a personalized consultation, advanced VISIA skin imaging, and a tailored 4-session plan customized to your skin's unique needs.</p>
+    
+    <div class="hero__pricing">
+      <span class="hero__price">FOR ONLY $199</span>
+      <span class="hero__price-was">Regularly $399</span>
+      <span class="hero__price-label">Complete Starter Package</span>
+    </div>
+
+    <!-- Countdown Timer Section -->
+    <div class="timer-container" id="heroTimer">
+      <div class="timer-block"><span class="timer-val" id="t-hours">00</span><span class="timer-lbl">Hours</span></div>
+      <div>:</div>
+      <div class="timer-block"><span class="timer-val" id="t-mins">10</span><span class="timer-lbl">Minutes</span></div>
+      <div>:</div>
+      <div class="timer-block"><span class="timer-val" id="t-secs">23</span><span class="timer-lbl">Seconds</span></div>
+    </div>
+
+    <button class="btn-cta" onclick="(function(){var el=document.querySelector('#form-HMC5o9FxCH');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});}})()">CLAIM YOUR Fine Lix Fix NOW</button>
+
+    <p class="hero__trust">No. 1 in Bountiful for Microneedling · Bountiful, UT</p>
+  </div>
+</section>
+
+<!-- ===== OFFER STRIP ===== -->
+<section class="offer-strip">
+  <div class="offer-strip__inner">Fine Lix Fix $199 Treatment Value $399 · Only 12 Spots Left</div>
+</section>
