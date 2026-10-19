@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Surgical Facelift | Jule's Fibroblast and Body Contour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/qqj8vqy.css">
+<style>
+html,body{margin:0!important;padding:0!important;width:100%!important;max-width:100%!important;overflow-x:hidden!important;}
+</style>
+<style>
+/* ===== GHL container targeting (Layer 2) ===== */
+.inner,.c-wrapper,.section,.row,.container,.inner-container,
+[id^="section-"],[id^="row-"],[id^="col-"],[class*="c-section"],[class*="c-row"],[class*="c-column"]{
+  padding-left:0!important;padding-right:0!important;margin-left:0!important;margin-right:0!important;
+  width:100%!important;max-width:100%!important;}
+
+/* ===== Brand tokens (Jule's Fibroblast and Body Contour) ===== */
+:root{
+  --cream:#F6F2ED;         /* base white/cream */
+  --charcoal:#323232;      /* deep text/accent */
+  --mocha:#7C523C;         /* warm brown accent */
+  --blush:#E0BFB8;         /* dusty rose highlight */
+  --terracotta:#DEA193;    /* soft terracotta */
+  --surface:#FFFFFF;
+  --text:#323232;
+  --muted:#666666;
+  --line:#E5E0DA;
+}
+*{box-sizing:border-box;}
+body{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:300;color:var(--text);background:var(--cream);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased;letter-spacing:0.03em;}
+h1,h2,h3,h4{font-family:'ivypresto-display','Cormorant Garamond','Playfair Display',serif;font-weight:100;line-height:1.15;letter-spacing:0.03em;margin:0 0 .5em;color:var(--charcoal);}
+h1 i, h2 i, h3 i, h4 i{font-style:italic;}
+p{margin:0 0 1em;}
+img{max-width:100%;display:block;}
+
+/* ===== Layer 3 — Custom element standardization ===== */
+.scarcity-banner,.hero,.offer-strip,.benefits,.results,.how,.stats,.urgency,.faq,.final-cta,.footer{
+  display:block!important;width:100%!important;max-width:100%!important;clear:both!important;float:none!important;position:relative!important;
+  margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;}
+.scarcity-banner *,.hero *,.offer-strip *,.benefits *,.results *,.how *,.stats *,.urgency *,.faq *,.final-cta *,.footer *{box-sizing:border-box!important;}
+
+/* ===== Buttons ===== */
+.btn-cta{display:inline-block;background:var(--charcoal);color:var(--cream);font-family:'Montserrat',sans-serif;font-weight:500;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--charcoal);cursor:pointer;padding:18px 36px;border-radius:0px;transition:all .25s ease;}
+.btn-cta:hover{background:var(--mocha);border-color:var(--mocha);color:#fff;}
+
+/* ===== Scarcity banner ===== */
+.scarcity-banner{background:var(--charcoal);color:var(--cream);padding:12px 20px;font-family:'Montserrat',sans-serif;font-weight:300;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;}
+.scarcity-banner,.scarcity-banner p,.scarcity-banner span,.scarcity-banner strong{text-align:center!important;}
+.scarcity-banner strong{color:var(--terracotta);font-weight:600;}
+
+/* ===== Hero ===== */
+.hero{background:var(--cream);padding:40px 24px 60px;overflow:hidden;}
+.hero__bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;pointer-events:none;display:block;opacity:0.35;}
+.hero__overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(246,242,237,0.7),rgba(246,242,237,0.92));z-index:1;pointer-events:none;}
+.hero__inner{max-width:820px;margin:0 auto;position:relative;z-index:2;padding:0 15px;}
+.hero,.hero__inner,.hero__title,.hero__sub,.hero__desc,.hero__pricing,.hero__badge,.hero__price-was,.hero__price-label,.hero__trust,.hero h1,.hero h2,.hero h3,.hero p,.hero span{text-align:center!important;}
+.hero__badge{display:inline-block;background:rgba(224,191,184,0.3);border:1px solid var(--terracotta);color:var(--mocha);font-family:'Montserrat',sans-serif;font-weight:400;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 18px;margin-bottom:20px;}
+.hero__title{color:var(--charcoal);font-size:44px;line-height:1.15;margin-bottom:16px;}
+.hero__desc{color:var(--charcoal);font-size:16px;max-width:680px;margin:0 auto 24px;line-height:1.7;font-weight:300;}
+.hero__pricing{margin:10px auto 20px;}
+.hero__price{font-family:'ivypresto-display',serif;font-weight:100;font-size:42px;color:var(--mocha);line-height:1;}
+.hero__price-was{display:block;color:var(--muted);font-size:15px;margin-top:4px;text-decoration:line-through;}
+.hero__price-label{display:block;color:var(--charcoal);font-weight:400;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;}
+.hero__trust{color:var(--mocha);font-size:14px;letter-spacing:0.05em;margin-top:20px;font-weight:400;}
+
+/* Countdown Timer */
+.timer-container{margin:24px auto;padding:16px;background:rgba(255,255,255,0.6);border:1px solid var(--blush);max-width:480px;}
+.timer-title{font-family:'Montserrat',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--mocha);margin-bottom:8px;display:block;font-weight:500;}
+.timer-clock{font-family:'ivypresto-display',serif;font-size:28px;color:var(--charcoal);letter-spacing:0.05em;font-weight:100;}
+
+/* ===== Offer strip ===== */
+.offer-strip{background:var(--terracotta);color:var(--charcoal);padding:14px 24px;}
+.offer-strip,.offer-strip p,.offer-strip span,.offer-strip strong{text-align:center!important;}
+.offer-strip__inner{max-width:900px;margin:0 auto;font-family:'Montserrat',sans-serif;font-weight:400;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;}
+
+/* ===== Benefits ===== */
+.benefits{background:var(--surface);padding:70px 24px;}
+.benefits__inner{max-width:1080px;margin:0 auto;padding:0 15px;}
+.benefits,.benefits__inner,.benefits__title,.benefits__sub,.benefits__eyebrow,.benefits h2,.benefits h3,.benefits p{text-align:center!important;}
+.eyebrow{display:block;font-family:'Montserrat',sans-serif;font-weight:400;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mocha);margin-bottom:10px;}
+.section-title{font-size:36px;margin-bottom:14px;}
+.section-sub{color:var(--muted);max-width:660px;margin:0 auto 40px;font-size:16px;font-weight:300;}
+.benefit-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;}
+.benefit-card{flex:1 1 300px;max-width:340px;background:var(--cream);border:1px solid var(--line);padding:36px 28px;}
+.benefit-card,.benefit-card__title,.benefit-card h4{text-align:center!important;margin-left:auto!important;margin-right:auto!important;}
+.benefit-card__icon{width:44px;height:44px;border-radius:50%;background:var(--blush);color:var(--charcoal);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'ivypresto-display',serif;font-weight:100;font-size:20px;}
+.benefit-card__title{font-size:22px;margin-bottom:12px;}
+.benefit-card__desc{color:var(--muted);font-size:15px;line-height:1.6;font-weight:300;}
+
+/* ===== Results ===== */
+.results{background:var(--cream);padding:70px 24px;}
+.results__inner{max-width:900px;margin:0 auto;padding:0 15px;}
+.results,.results__inner,.results__title,.results__sub,.results__eyebrow,.results__disclaimer,.results h2,.results h3,.results p{text-align:center!important;}
+.results__disclaimer{color:var(--muted);font-size:13px;margin-top:24px;font-style:italic;}
+
+/* ===== How / Plan ===== */
+.how{background:var(--surface);padding:70px 24px;}
+.how__inner{max-width:820px;margin:0 auto;padding:0 15px;}
+.how,.how__inner,.how__title,.how__subtitle,.how__eyebrow,.how h2,.how h3,.how p{text-align:center!important;}
+.how__body{color:var(--muted);font-size:16px;max-width:720px;margin:0 auto;line-height:1.8;font-weight:300;}
+
+/* ===== Stats / Trust band ===== */
+.stats{background:var(--charcoal);padding:50px 24px;color:var(--cream);}
+.stats__inner{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:30px;justify-content:center;padding:0 15px;}
+.stats,.stats__inner,.stat,.stat__num,.stat__label,.stats h2,.stats p{text-align:center!important;}
+.stat{flex:1 1 240px;max-width:300px;}
+.stat__num{font-family:'ivypresto-display',serif;font-weight:100;font-size:24px;color:var(--terracotta);letter-spacing:0.05em;margin-bottom:6px;}
+.stat__label{color:#d5d5d5;font-size:14px;font-weight:300;}
+
+/* ===== Urgency ===== */
+.urgency{background:var(--cream);padding:56px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.urgency__inner{max-width:760px;margin:0 auto;padding:0 15px;}
+.urgency,.urgency__inner,.urgency h2,.urgency p,.urgency span{text-align:center!important;}
+.urgency h2{color:var(--charcoal);font-size:32px;margin-bottom:10px;}
+.urgency p{color:var(--muted);font-size:16px;margin-bottom:20px;}
+.urgency__spots{display:inline-block;background:rgba(224,191,184,0.3);border:1px solid var(--terracotta);color:var(--mocha);font-family:'Montserrat',sans-serif;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;font-size:13px;padding:8px 20px;margin-bottom:24px;}
+
+/* ===== FAQ ===== */
+.faq{background:var(--surface);padding:70px 24px;}
+.faq__inner{max-width:780px;margin:0 auto;padding:0 15px;}
+.faq,.faq__inner,.faq__title,.faq__sub,.faq__eyebrow,.faq h2,.faq h3{text-align:center!important;}
+.faq-item{background:var(--cream);border:1px solid var(--line);margin-bottom:12px;overflow:hidden;text-align:left;}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;padding:18px 22px;font-family:'Montserrat',sans-serif;font-weight:400;font-size:16px;color:var(--charcoal);display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;}
+.faq-q .ic{flex-shrink:0;font-size:20px;color:var(--mocha);transition:transform .25s ease;}
+.faq-item.open .faq-q .ic{transform:rotate(45deg);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-answer p{padding:0 22px 20px;margin:0;color:var(--muted);font-size:15px;text-align:left;font-weight:300;}
+
+/* ===== Final CTA ===== */
+.final-cta{background:var(--cream);padding:70px 24px;border-top:1px solid var(--line);}
+.final-cta__inner{max-width:760px;margin:0 auto;padding:0 15px;}
+.final-cta,.final-cta__inner,.final-cta__title,.final-cta__sub,.final-cta__eyebrow,.final-cta__was,.final-cta h2,.final-cta h3,.final-cta p{text-align:center!important;}
+.final-cta h2{color:var(--charcoal);font-size:36px;margin-bottom:12px;}
+.final-cta p{color:var(--muted);font-size:16px;margin-bottom:10px;}
+.final-cta__price{font-family:'ivypresto-display',serif;font-weight:100;font-size:38px;color:var(--mocha);margin:4px 0;}
+.final-cta__was{color:var(--muted);text-decoration:line-through;font-size:15px;margin-bottom:24px;}
+
+/* ===== Footer ===== */
+.footer{background:var(--charcoal);padding:48px 24px 40px;}
+.footer__inner{max-width:880px;margin:0 auto;padding:0 15px;}
+.footer,.footer p,.footer span,.footer a{text-align:center!important;color:#b0b0b0;font-size:13px;font-weight:300;}
+.footer a{color:#e0e0e0;text-decoration:none;}
+.footer__addr{color:var(--cream);font-size:14px;margin:18px 0 10px;}
+.footer__disc{font-size:11px;color:#888;max-width:680px;margin:18px auto 0;line-height:1.6;}
+
+/* ===== Responsive ===== */
+@media(max-width:900px){.section-title{font-size:30px;}.hero__title{font-size:36px;}}
+@media(max-width:660px){
+  body{font-size:15px;}
+  .hero{padding:36px 15px 48px;}
+  .hero__title{font-size:28px;}
+  .hero__desc{font-size:15px;}
+  .hero__price{font-size:34px;}
+  .section-title{font-size:24px;}
+  .final-cta h2{font-size:26px;}
+  .stat{flex:1 1 100%;}
+  .btn-cta{padding:16px 24px;font-size:13px;width:100%;max-width:100%;}
+}
+</style>
+</head>
+<body style="margin:0!important;padding:0!important;overflow-x:hidden!important;">
+
+<!-- ===== SCARCITY BANNER ===== -->
+<section class="scarcity-banner">
+  <span>ONLY FOR THE FIRST 12 PEOPLE WHO CLAIM IT — <strong>ONLY 3 SPOTS LEFT</strong></span>
+</section>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <img class="hero__bg" src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cbfe974a9da6eec6cd1a.png" alt="" aria-hidden="true">
+  <div class="hero__overlay"></div>
+  <div class="hero__inner">
+    <div style="text-align:center!important;width:100%!important;display:block!important;margin:0 auto 20px!important;">
+      <div style="display:inline-block;margin:0 auto;">
+        <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/68fba2f08678a4d468968028.png" alt="Jule's Fibroblast and Body Contour" width="237" height="184" style="width:auto;max-width:220px;height:auto;max-height:130px;display:block;margin:0 auto;object-fit:contain;mix-blend-mode:multiply;">
+      </div>
+    </div>
+    <span class="hero__badge">Non-Surgical Facelift · Microneedling + PRF</span>
+    <h1 class="hero__title">Look Lifted. Look Refreshed. <i>Naturally Beautiful.</i></h1>
+    <p class="hero__desc">Transform your appearance without surgery—our Full-Face Microneedling with PRF (Platelet-Rich Fibrin) uses your body's own growth factors to stimulate collagen, tighten skin, and restore your glow. No surgery, no downtime, plus a FREE customized consultation &amp; treatment plan and a BONUS Red Light Therapy + Hydrating Mask for a luminous finish.</p>
+
+    <div class="hero__pricing">
+      <span class="hero__price">$499</span>
+      <span class="hero__price-was">Regularly $1,200</span>
+      <span class="hero__price-label">Introductory Session</span>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="timer-container">
+      <span class="timer-title">Offer Expires In:</span>
+      <div class="timer-clock" id="heroCountdown">00:10:23</div>
+    </div>
+
+    <button class="btn-cta" onclick="(function(){var el=document.querySelector('#form-l5uva8w_OS');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});}})()">Claim Your Non-Surgical Facelift Now</button>
+
+    <p class="hero__trust">No. 1 in Whittier for Non-Surgical Facelifts · Whittier, CA</p>
+  </div>
+</section>
+
+<!-- ===== OFFER STRIP ===== -->
+<section class="offer-strip">
+  <div class="offer-strip__inner">Introductory Session $499 <span style="opacity:.75;">(Regularly $1,200)</span> · Only 3 of 12 Spots Left</div>
+</section>
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '704939249339808');
+fbq('track', 'PageView');
+</script>
+
+<!-- ===== BENEFITS ===== -->
+<section class="benefits">
+  <div class="benefits__inner">
+    <span class="eyebrow">Proven Anti-Aging Results</span>
+    <h2 class="section-title">Where You'll See The Difference</h2>
+    <p class="section-sub">Experience collagen stimulation, smooth tightening, and a naturally restored glow.</p>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="benefit-card__icon">1</div>
+        <h4 class="benefit-card__title">Firmer, Tighter Skin</h4>
+        <p class="benefit-card__desc">Skip the surgery and recovery time. Full-Face Microneedling with PRF stimulates collagen using your body's own growth factors to firm and tighten skin and restore your glow, all without a scalpel.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__icon">2</div>
+        <h4 class="benefit-card__title">No Downtime, Immediate Results</h4>
+        <p class="benefit-card__desc">Walk in, transform your skin, walk out—and get back to your life the same day. Return to work, workouts, and social events immediately without restrictions.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__icon">3</div>
+        <h4 class="benefit-card__title">Personalized Treatment Plan</h4>
+        <p class="benefit-card__desc">Every face is unique. Your session includes a FREE customized consultation &amp; treatment plan, plus a BONUS Red Light Therapy + Hydrating Mask for a luminous finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section class="results">
+  <div class="results__inner">
+    <style>
+    .bi-results-carousel {
+      width: 100%;
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 10px 0 25px;
+      box-sizing: border-box;
+    }
+    .bi-results-heading { text-align: center; margin-bottom: 24px; }
+    .bi-results-heading h2 { margin: 0 0 6px; font-size: 32px; }
+    .bi-results-heading p { margin: 0; color: var(--muted); font-size: 15px; font-weight: 300; }
+
+    .bi-carousel-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bi-result-slide {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 54%;
+      max-width: 580px;
+      height: 440px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(.72);
+      transition: transform .55s cubic-bezier(.22,.61,.36,1), opacity .45s ease;
+      z-index: 1;
+    }
+    .bi-result-image {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .bi-result-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #ffffff;
+    }
+    .bi-result-slide.active {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      z-index: 5;
+      pointer-events: auto;
+    }
+    .bi-result-slide.prev {
+      opacity: .35;
+      transform: translate(-112%, -50%) scale(.82);
+      z-index: 2;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    .bi-result-slide.next {
+      opacity: .35;
+      transform: translate(12%, -50%) scale(.82);
+      z-index: 2;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    .bi-result-slide.hidden-left { opacity: 0; transform: translate(-145%, -50%) scale(.65); }
+    .bi-result-slide.hidden-right { opacity: 0; transform: translate(45%, -50%) scale(.65); }
+
+    .bi-carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border: none;
+      background: var(--charcoal);
+      color: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 20;
+      transition: background .2s ease;
+    }
+    .bi-carousel-arrow:hover { background: var(--mocha); }
+    .bi-carousel-prev { left: 2%; }
+    .bi-carousel-next { right: 2%; }
+
+    .bi-carousel-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .bi-carousel-dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: var(--line);
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .bi-carousel-dot.active {
+      width: 22px;
+      border-radius: 10px;
+      background: var(--mocha);
+    }
+
+    @media (max-width: 767px) {
+      .bi-carousel-stage { height: 380px; }
+      .bi-result-slide { width: 85%; height: 340px; }
+      .bi-result-slide.prev { opacity: .2; transform: translate(-105%, -50%) scale(.78); }
+      .bi-result-slide.next { opacity: .2; transform: translate(5%, -50%) scale(.78); }
+    }
+    </style>
+
+    <div class="bi-results-carousel">
+      <div class="bi-results-heading">
+        <span class="eyebrow">Real Transformations</span>
+        <h2>Client Results</h2>
+        <p>Real results from Jule's Fibroblast and Body Contour.</p>
+      </div>
+
+      <div class="bi-carousel-stage" id="biCarouselStage">
+        <!-- IMAGE 1 -->
+        <div class="bi-result-slide">
+          <div class="bi-result-image">
+            <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cbfe15ef56c94e4d1a34.png" alt="Client treatment result" loading="lazy">
+          </div>
+        </div>
+
+        <!-- IMAGE 2 -->
+        <div class="bi-result-slide">
+          <div class="bi-result-image">
+            <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cbfe53ee44f56b3b9ebd.png" alt="Client treatment result" loading="lazy">
+          </div>
+        </div>
+
+        <!-- IMAGE 3 -->
+        <div class="bi-result-slide">
+          <div class="bi-result-image">
+            <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cbfe7e654f1003ca61ce.png" alt="Client treatment result" loading="lazy">
+          </div>
+        </div>
+
+        <button class="bi-carousel-arrow bi-carousel-prev" type="button" aria-label="Previous result">‹</button>
+        <button class="bi-carousel-arrow bi-carousel-next" type="button" aria-label="Next result">›</button>
+      </div>
+
+      <div class="bi-carousel-dots" id="biCarouselDots" aria-label="Result gallery navigation"></div>
+    </div>
+
+    <p class="results__disclaimer">Individual experiences and results may vary. Images represent actual client outcomes.</p>
+  </div>
+</section>
+
+<!-- ===== MEET THE FOUNDER ===== -->
+<section class="bi-founder-wrapper" style="padding: 60px 20px; background-color: var(--surface);">
+  <style>
+  .bi-founder-wrapper { display: flex; justify-content: center; }
+  .bi-founder {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 35px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 50px;
+    background: var(--charcoal);
+    color: var(--cream);
+    box-sizing: border-box;
+  }
+  .bi-founder-image { width: 100%; display: flex; justify-content: center; }
+  .bi-founder-image img { width: 100%; max-width: 420px; height: auto; display: block; }
+  .bi-founder-eyebrow { margin-bottom: 8px; color: var(--terracotta); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 400; }
+  .bi-founder-name { margin: 0 0 4px; color: #ffffff; font-size: 36px; font-weight: 100; }
+  .bi-founder-credentials { margin-bottom: 20px; color: var(--blush); font-size: 14px; font-weight: 400; }
+  .bi-founder-copy { color: rgba(255,255,255,0.9); font-size: 15px; line-height: 1.75; font-weight: 300; }
+  .bi-founder-copy p { margin: 0 0 14px; }
+  .bi-founder-points { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 20px; }
+  .bi-founder-point { display: flex; align-items: center; gap: 8px; color: #ffffff; font-size: 13px; font-weight: 400; }
+  .bi-founder-check { color: var(--terracotta); font-size: 14px; }
+  .bi-founder-quote { margin-top: 22px; padding-left: 16px; border-left: 2px solid var(--terracotta); color: #ffffff; font-size: 15px; font-style: italic; font-weight: 300; }
+
+  @media (max-width: 767px) {
+    .bi-founder { grid-template-columns: 1fr; gap: 24px; padding: 30px 20px; text-align: center; }
+    .bi-founder-image img { width: 85%; max-width: 320px; }
+    .bi-founder-points { justify-content: center; }
+    .bi-founder-quote { padding-left: 0; border-left: none; }
+  }
+  </style>
+
+  <div class="bi-founder">
+    <div class="bi-founder-image">
+      <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cc3f15ef56c94e4d208a.webp" alt="Julissa Ejercito RN, BSN" loading="lazy">
+    </div>
+
+    <div class="bi-founder-content">
+      <div class="bi-founder-eyebrow">Meet Our Founder</div>
+      <h2 class="bi-founder-name">Julissa Ejercito <i>RN, BSN</i></h2>
+      <div class="bi-founder-credentials">Founder &amp; Advanced Aesthetic Nurse Practitioner</div>
+
+      <div class="bi-founder-copy">
+        <p>Julissa Ejercito is a Registered Nurse with over 4 years of dedicated experience in advanced non-surgical aesthetics and body contouring.</p>
+        <p>At Jule's Fibroblast and Body Contour, she specializes in creating personalized treatment strategies that prioritize safety, precision, and naturally enhanced results tailored to your unique features.</p>
+      </div>
+
+      <div class="bi-founder-points">
+        <div class="bi-founder-point"><span class="bi-founder-check">✓</span> Registered Nurse (RN, BSN)</div>
+        <div class="bi-founder-point"><span class="bi-founder-check">✓</span> 4+ Years Advanced Aesthetic Experience</div>
+        <div class="bi-founder-point"><span class="bi-founder-check">✓</span> Specialized in Non-Surgical Rejuvenation</div>
+      </div>
+
+      <div class="bi-founder-quote">“Enhancing your natural beauty with precision, medical expertise, and care.”</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENT REVIEWS ===== -->
+<section class="reviews-section-wrapper" style="background-color: var(--cream); padding: 60px 20px; display: flex; justify-content: center;">
+  <style>
+    .reviews-container { max-width: 1050px; width: 100%; text-align: center; padding: 0 15px; }
+    .reviews-header h2 { color: var(--charcoal); font-size: 32px; margin-bottom: 6px; }
+    .reviews-header p { color: var(--mocha); font-size: 14px; margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .reviews-grid { grid-template-columns: 1fr; } }
+    .review-card { background: #ffffff; border: 1px solid var(--line); padding: 24px; display: flex; flex-direction: column; justify-content: space-between; text-align: left; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
+    .review-text { color: var(--text); font-size: 14px; line-height: 1.6; font-style: italic; margin-bottom: 20px; flex-grow: 1; font-weight: 300; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; font-size: 13px; border-top: 1px solid var(--line); padding-top: 12px; }
+    .author-name { font-weight: 500; color: var(--charcoal); }
+    .google-logo { font-weight: 600; font-size: 12px; }
+    .g-blue { color: #4285F4; } .g-red { color: #EA4335; } .g-yellow { color: #FBBC05; } .g-green { color: #34A853; }
+  </style>
+
+  <div class="reviews-container">
+    <div class="reviews-header">
+      <h2>See What Our Clients Say</h2>
+      <p>★ ★ ★ ★ ★ 4.9 Rating from 34 Google Reviews</p>
+    </div>
+
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"I recently had my first Perfect Derma Peel with Jules, and I'm loving the results so far. Jules is wonderful—she explains the entire process step by step, which made me feel very comfortable and confident throughout the treatment."</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">Ana G</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"Jules was wonderful. She thoroughly explained the procedure that she feels would work best for my skin. She's very knowledgeable and pricing is reasonable vs other places I've been to. I would definitely come back."</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">P Vee</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"My hyperpigmentation has cleared up, my skin feels a bit tighter, and I look more refreshed overall. She is friendly, professional, and made me feel completely comfortable throughout the entire process."</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">Karen L</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"Love coming to Jules... I'm obsessed with how much my skin has improved. It's been 3 weeks since my first treatment and I've noticed the difference in the texture and fine lines!"</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">Rochelle Alvarez</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"Had a great experience! My first time having treatment done and Jules was wonderful in comfort answering questions and providing real customer care."</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">Sandra Benites</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Review 6 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"I received a facial peel from Jules's spa! And it was the best decision I ever made. I struggled with acne and inflammation but after this peel and with the guidance of Jules on my skincare routine, I have not had issues!"</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">Brenda Garibay</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW / PLAN ===== -->
+<section class="how">
+  <div class="how__inner">
+    <span class="eyebrow">Your Personalized Experience</span>
+    <h2 class="section-title">Designed Around You</h2>
+    <p class="how__body">Your introductory session begins with a FREE customized consultation &amp; treatment plan. We evaluate your unique skin, areas of laxity, and facial contours. From there, we perform Full-Face Microneedling with PRF made from your own blood's growth factors to stimulate collagen, tighten, and restore your glow without surgery or downtime, finished with a BONUS Red Light Therapy + Hydrating Mask.</p>
+  </div>
+</section>
+
+<!-- ===== STATS / TRUST BAND ===== -->
+<section class="stats">
+  <div class="stats__inner">
+    <div class="stat">
+      <div class="stat__num">PRF Powered</div>
+      <div class="stat__label">Uses your body's own growth factors.</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num">Registered Nurse</div>
+      <div class="stat__label">Administered by an experienced RN with 4+ years in advanced aesthetics.</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num">Zero Downtime</div>
+      <div class="stat__label">Return to work, exercise, and daily life immediately.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== URGENCY ===== -->
+<section class="urgency">
+  <div class="urgency__inner">
+    <h2>Spots Are Limited</h2>
+    <p>This $499 promotional offer is reserved for the first 12 people who claim it.</p>
+    <span class="urgency__spots">Only 3 of 12 Spots Left</span>
+    <div>
+      <button class="btn-cta" onclick="(function(){var el=document.querySelector('#form-l5uva8w_OS');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});}})()">Claim Your Spot Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="faq__inner">
+    <span class="eyebrow">Frequent Questions</span>
+    <h2 class="section-title">What You Should Know</h2>
+    <div style="margin-top:30px;">
+      <div class="faq-item">
+        <button class="faq-q">What is the Non-surgical facelift?<span class="ic">+</span></button>
+        <div class="faq-answer"><p>It's Full-Face Microneedling with PRF (Platelet-Rich Fibrin), which uses your body's own growth factors to stimulate collagen, tighten skin, and restore your glow without surgery or downtime. Your session finishes with a BONUS Red Light Therapy + Hydrating Mask for a luminous finish.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is it safe?<span class="ic">+</span></button>
+        <div class="faq-answer"><p>Yes. The treatment uses PRF from your own body and is performed by Julissa, a registered nurse with 4+ years of experience in advanced aesthetics. Disqualifying conditions are screened beforehand.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How many sessions do I need?<span class="ic">+</span></button>
+        <div class="faq-answer"><p>A series of 3 treatments is recommended for optimal results. The full package costs $1,600 after your first session promo price.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there downtime?<span class="ic">+</span></button>
+        <div class="faq-answer"><p>No. You can return to normal activities immediately after your appointment with no restrictions.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Where are you located?<span class="ic">+</span></button>
+        <div class="faq-answer"><p>Jules Fibroblast and Body Contour is located at 7049 Greenleaf Ave Suite 1, Whittier, CA 90602 (across from Coffee Bean, next to La Sexy Michalada Restaurant, inside J Anthony Salon, across from Whittier Village Cinemas and Madres Brunch).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="final-cta__inner">
+    <span class="eyebrow">Reserve Your Non-Surgical Facelift</span>
+    <h2>Ready To Look Lifted &amp; Refreshed?</h2>
+    <p>Claim your introductory session before all 12 spots are filled.</p>
+    <div class="final-cta__price">$499</div>
+    <div class="final-cta__was">Regularly $1,200</div>
+    <div>
+      <button class="btn-cta" onclick="(function(){var el=document.querySelector('#form-l5uva8w_OS');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});}})()">Claim Your Offer Today</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP SECTION ===== -->
+<section class="map-section">
+  <div class="blu-map-wrap">
+    <iframe
+      src="https://maps.google.com/maps?q=7049%20Greenleaf%20Ave.%20Suite%201%2C%20Whittier%20CA%2090602&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <style>
+  .map-section {
+    padding: 40px 20px 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--charcoal) !important;
+  }
+  .blu-map-wrap {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid var(--mocha);
+    background: #ffffff;
+  }
+  .blu-map-wrap iframe {
+    display: block;
+    width: 100% !important;
+    height: 350px;
+    margin: 0 auto;
+    border: 0;
+  }
+  @media (max-width: 767px) {
+    .map-section { padding: 30px 15px 40px; }
+    .blu-map-wrap iframe { height: 280px; }
+  }
+  </style>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<section class="footer">
+  <div class="footer__inner">
+    <div style="text-align:center!important;width:100%!important;display:block!important;margin:0 auto!important;">
+      <div style="display:inline-block;margin:0 auto;padding:8px 16px;">
+        <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/68fba2f08678a4d468968028.png" style="max-width:140px;max-height:50px;display:block;margin:0 auto;object-fit:contain;" onerror="this.parentElement.style.display='none'">
+      </div>
+    </div>
+    <p class="footer__addr">7049 Greenleaf Ave. Suite 1, Whittier, CA 90602</p>
+    <p><a href="#">Jules Fibroblast and Body Contour</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a></p>
+    <p style="margin-top:8px;">Copyright 2026. All Rights Reserved.</p>
+    <p class="footer__disc">Disclaimer: This website is not a part of Facebook or Facebook Inc. Additionally, this site is not endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK Inc.</p>
+  </div>
+</section>
+
+<script>
+/* Countdown Timer Script */
+(function() {
+  var totalSeconds = 10 * 60 + 23; // 10m 23s
+  var clockEl = document.getElementById('heroCountdown');
+  if (!clockEl) return;
+
+  function updateClock() {
+    var hrs = Math.floor(totalSeconds / 3600);
+    var mins = Math.floor((totalSeconds % 3600) / 60);
+    var secs = totalSeconds % 60;
+
+    clockEl.textContent =
+      (hrs < 10 ? '0' + hrs : hrs) + ':' +
+      (mins < 10 ? '0' + mins : mins) + ':' +
+      (secs < 10 ? '0' + secs : secs);
+
+    if (totalSeconds > 0) {
+      totalSeconds--;
+    } else {
+      totalSeconds = 10 * 60 + 23; // Loop timer
+    }
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+})();
+
+/* Results Carousel Script */
+(function () {
+  const stage = document.getElementById('biCarouselStage');
+  if (!stage) return;
+
+  const slides = Array.from(stage.querySelectorAll('.bi-result-slide'));
+  const prevButton = stage.querySelector('.bi-carousel-prev');
+  const nextButton = stage.querySelector('.bi-carousel-next');
+  const dotsContainer = document.getElementById('biCarouselDots');
+
+  let current = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  slides.forEach((slide, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'bi-carousel-dot';
+    dot.setAttribute('aria-label', 'View result ' + (index + 1));
+    dot.addEventListener('click', function () {
+      current = index;
+      updateCarousel();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsContainer.querySelectorAll('.bi-carousel-dot'));
+
+  function updateCarousel() {
+    const total = slides.length;
+    const previous = (current - 1 + total) % total;
+    const next = (current + 1) % total;
+
+    slides.forEach((slide, index) => {
+      slide.classList.remove('active', 'prev', 'next', 'hidden-left', 'hidden-right');
+      if (index === current) {
+        slide.classList.add('active');
+      } else if (index === previous) {
+        slide.classList.add('prev');
+      } else if (index === next) {
+        slide.classList.add('next');
+      } else {
+        let difference = (index - current + total) % total;
+        if (difference < total / 2) {
+          slide.classList.add('hidden-right');
+        } else {
+          slide.classList.add('hidden-left');
+        }
+      }
+    });
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === current);
+    });
+  }
+
+  function nextSlide() { current = (current + 1) % slides.length; updateCarousel(); }
+  function previousSlide() { current = (current - 1 + slides.length) % slides.length; updateCarousel(); }
+
+  if (nextButton) nextButton.addEventListener('click', nextSlide);
+  if (prevButton) prevButton.addEventListener('click', previousSlide);
+
+  slides.forEach(function (slide) {
+    slide.addEventListener('click', function () {
+      if (slide.classList.contains('prev')) previousSlide();
+      if (slide.classList.contains('next')) nextSlide();
+    });
+  });
+
+  stage.addEventListener('touchstart', function (e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+  stage.addEventListener('touchend', function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    const difference = touchStartX - touchEndX;
+    if (Math.abs(difference) < 45) return;
+    if (difference > 0) nextSlide(); else previousSlide();
+  }, { passive: true });
+
+  updateCarousel();
+})();
+
+/* FAQ accordion */
+(function(){
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=q.parentElement;
+      var ans=item.querySelector('.faq-answer');
+      var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(it){it.classList.remove('open');var a=it.querySelector('.faq-answer');if(a)a.style.maxHeight=null;});
+      if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+    });
+  });
+})();
+
+/* GHL DOM unpadding engine */
+(function(){
+  var SEL='.inner,.c-wrapper,.section,.row,.container,.inner-container,[id^="section-"],[id^="row-"],[id^="col-"],[class*="c-section"],[class*="c-row"],[class*="c-column"]';
+  function unpad(){
+    document.documentElement.style.setProperty('overflow-x','hidden','important');
+    document.body.style.setProperty('margin','0','important');
+    document.body.style.setProperty('padding','0','important');
+    document.body.style.setProperty('max-width','100%','important');
+    document.querySelectorAll(SEL).forEach(function(el){
+      el.style.setProperty('padding-left','0','important');
+      el.style.setProperty('padding-right','0','important');
+      el.style.setProperty('margin-left','0','important');
+      el.style.setProperty('margin-right','0','important');
+      el.style.setProperty('width','100%','important');
+      el.style.setProperty('max-width','100%','important');
+    });
+  }
+  document.addEventListener('DOMContentLoaded',unpad);
+  window.addEventListener('load',unpad);
+  setTimeout(unpad,400);setTimeout(unpad,1200);
+})();
+</script>
+
+</body>
+</html>

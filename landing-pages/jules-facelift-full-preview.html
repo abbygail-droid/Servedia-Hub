@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Surgical Facelift | Jule's Fibroblast and Body Contour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/qqj8vqy.css">
+<style>
+html,body{margin:0!important;padding:0!important;width:100%!important;max-width:100%!important;overflow-x:hidden!important;}
+</style>
+<style>
+/* ===== GHL container targeting (Layer 2) ===== */
+.inner,.c-wrapper,.section,.row,.container,.inner-container,
+[id^="section-"],[id^="row-"],[id^="col-"],[class*="c-section"],[class*="c-row"],[class*="c-column"]{
+  padding-left:0!important;padding-right:0!important;margin-left:0!important;margin-right:0!important;
+  width:100%!important;max-width:100%!important;}
+
+/* ===== Brand tokens (Jule's Fibroblast and Body Contour) ===== */
+:root{
+  --cream:#F6F2ED;         /* base white/cream */
+  --charcoal:#323232;      /* deep text/accent */
+  --mocha:#7C523C;         /* warm brown accent */
+  --blush:#E0BFB8;         /* dusty rose highlight */
+  --terracotta:#DEA193;    /* soft terracotta */
+  --surface:#FFFFFF;
+  --text:#323232;
+  --muted:#666666;
+  --line:#E5E0DA;
+}
+*{box-sizing:border-box;}
+body{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:300;color:var(--text);background:var(--cream);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased;letter-spacing:0.03em;}
+h1,h2,h3,h4{font-family:'ivypresto-display','Cormorant Garamond','Playfair Display',serif;font-weight:100;line-height:1.15;letter-spacing:0.03em;margin:0 0 .5em;color:var(--charcoal);}
+h1 i, h2 i, h3 i, h4 i{font-style:italic;}
+p{margin:0 0 1em;}
+img{max-width:100%;display:block;}
+
+/* ===== Layer 3 — Custom element standardization ===== */
+.scarcity-banner,.hero,.offer-strip,.benefits,.results,.how,.stats,.urgency,.faq,.final-cta,.footer{
+  display:block!important;width:100%!important;max-width:100%!important;clear:both!important;float:none!important;position:relative!important;
+  margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;}
+.scarcity-banner *,.hero *,.offer-strip *,.benefits *,.results *,.how *,.stats *,.urgency *,.faq *,.final-cta *,.footer *{box-sizing:border-box!important;}
+
+/* ===== Buttons ===== */
+.btn-cta{display:inline-block;background:var(--charcoal);color:var(--cream);font-family:'Montserrat',sans-serif;font-weight:500;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--charcoal);cursor:pointer;padding:18px 36px;border-radius:0px;transition:all .25s ease;}
+.btn-cta:hover{background:var(--mocha);border-color:var(--mocha);color:#fff;}
+
+/* ===== Scarcity banner ===== */
+.scarcity-banner{background:var(--charcoal);color:var(--cream);padding:12px 20px;font-family:'Montserrat',sans-serif;font-weight:300;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;}
+.scarcity-banner,.scarcity-banner p,.scarcity-banner span,.scarcity-banner strong{text-align:center!important;}
+.scarcity-banner strong{color:var(--terracotta);font-weight:600;}
+
+/* ===== Hero ===== */
+.hero{background:var(--cream);padding:40px 24px 60px;overflow:hidden;}
+.hero__bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;pointer-events:none;display:block;opacity:0.35;}
+.hero__overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(246,242,237,0.7),rgba(246,242,237,0.92));z-index:1;pointer-events:none;}
+.hero__inner{max-width:820px;margin:0 auto;position:relative;z-index:2;padding:0 15px;}
+.hero,.hero__inner,.hero__title,.hero__sub,.hero__desc,.hero__pricing,.hero__badge,.hero__price-was,.hero__price-label,.hero__trust,.hero h1,.hero h2,.hero h3,.hero p,.hero span{text-align:center!important;}
+.hero__badge{display:inline-block;background:rgba(224,191,184,0.3);border:1px solid var(--terracotta);color:var(--mocha);font-family:'Montserrat',sans-serif;font-weight:400;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 18px;margin-bottom:20px;}
+.hero__title{color:var(--charcoal);font-size:44px;line-height:1.15;margin-bottom:16px;}
+.hero__desc{color:var(--charcoal);font-size:16px;max-width:680px;margin:0 auto 24px;line-height:1.7;font-weight:300;}
+.hero__pricing{margin:10px auto 20px;}
+.hero__price{font-family:'ivypresto-display',serif;font-weight:100;font-size:42px;color:var(--mocha);line-height:1;}
+.hero__price-was{display:block;color:var(--muted);font-size:15px;margin-top:4px;text-decoration:line-through;}
+.hero__price-label{display:block;color:var(--charcoal);font-weight:400;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;}
+.hero__trust{color:var(--mocha);font-size:14px;letter-spacing:0.05em;margin-top:20px;font-weight:400;}
+
+/* Countdown Timer */
+.timer-container{margin:24px auto;padding:16px;background:rgba(255,255,255,0.6);border:1px solid var(--blush);max-width:480px;}
+.timer-title{font-family:'Montserrat',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--mocha);margin-bottom:8px;display:block;font-weight:500;}
+.timer-clock{font-family:'ivypresto-display',serif;font-size:28px;color:var(--charcoal);letter-spacing:0.05em;font-weight:100;}
+
+/* ===== Offer strip ===== */
+.offer-strip{background:var(--terracotta);color:var(--charcoal);padding:14px 24px;}
+.offer-strip,.offer-strip p,.offer-strip span,.offer-strip strong{text-align:center!important;}
+.offer-strip__inner{max-width:900px;margin:0 auto;font-family:'Montserrat',sans-serif;font-weight:400;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;}
+
+/* ===== Benefits ===== */
+.benefits{background:var(--surface);padding:70px 24px;}
+.benefits__inner{max-width:1080px;margin:0 auto;padding:0 15px;}
+.benefits,.benefits__inner,.benefits__title,.benefits__sub,.benefits__eyebrow,.benefits h2,.benefits h3,.benefits p{text-align:center!important;}
+.eyebrow{display:block;font-family:'Montserrat',sans-serif;font-weight:400;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mocha);margin-bottom:10px;}
+.section-title{font-size:36px;margin-bottom:14px;}
+.section-sub{color:var(--muted);max-width:660px;margin:0 auto 40px;font-size:16px;font-weight:300;}
+.benefit-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;}
+.benefit-card{flex:1 1 300px;max-width:340px;background:var(--cream);border:1px solid var(--line);padding:36px 28px;}
+.benefit-card,.benefit-card__title,.benefit-card h4{text-align:center!important;margin-left:auto!important;margin-right:auto!important;}
+.benefit-card__icon{width:44px;height:44px;border-radius:50%;background:var(--blush);color:var(--charcoal);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'ivypresto-display',serif;font-weight:100;font-size:20px;}
+.benefit-card__title{font-size:22px;margin-bottom:12px;}
+.benefit-card__desc{color:var(--muted);font-size:15px;line-height:1.6;font-weight:300;}
+
+/* ===== Results ===== */
+.results{background:var(--cream);padding:70px 24px;}
+.results__inner{max-width:900px;margin:0 auto;padding:0 15px;}
+.results,.results__inner,.results__title,.results__sub,.results__eyebrow,.results__disclaimer,.results h2,.results h3,.results p{text-align:center!important;}
+.results__disclaimer{color:var(--muted);font-size:13px;margin-top:24px;font-style:italic;}
+
+/* ===== How / Plan ===== */
+.how{background:var(--surface);padding:70px 24px;}
+.how__inner{max-width:820px;margin:0 auto;padding:0 15px;}
+.how,.how__inner,.how__title,.how__subtitle,.how__eyebrow,.how h2,.how h3,.how p{text-align:center!important;}
+.how__body{color:var(--muted);font-size:16px;max-width:720px;margin:0 auto;line-height:1.8;font-weight:300;}
+
+/* ===== Stats / Trust band ===== */
+.stats{background:var(--charcoal);padding:50px 24px;color:var(--cream);}
+.stats__inner{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:30px;justify-content:center;padding:0 15px;}
+.stats,.stats__inner,.stat,.stat__num,.stat__label,.stats h2,.stats p{text-align:center!important;}
+.stat{flex:1 1 240px;max-width:300px;}
+.stat__num{font-family:'ivypresto-display',serif;font-weight:100;font-size:24px;color:var(--terracotta);letter-spacing:0.05em;margin-bottom:6px;}
+.stat__label{color:#d5d5d5;font-size:14px;font-weight:300;}
+
+/* ===== Urgency ===== */
+.urgency{background:var(--cream);padding:56px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.urgency__inner{max-width:760px;margin:0 auto;padding:0 15px;}
+.urgency,.urgency__inner,.urgency h2,.urgency p,.urgency span{text-align:center!important;}
+.urgency h2{color:var(--charcoal);font-size:32px;margin-bottom:10px;}
+.urgency p{color:var(--muted);font-size:16px;margin-bottom:20px;}
+.urgency__spots{display:inline-block;background:rgba(224,191,184,0.3);border:1px solid var(--terracotta);color:var(--mocha);font-family:'Montserrat',sans-serif;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;font-size:13px;padding:8px 20px;margin-bottom:24px;}
+
+/* ===== FAQ ===== */
+.faq{background:var(--surface);padding:70px 24px;}
+.faq__inner{max-width:780px;margin:0 auto;padding:0 15px;}
+.faq,.faq__inner,.faq__title,.faq__sub,.faq__eyebrow,.faq h2,.faq h3{text-align:center!important;}
+.faq-item{background:var(--cream);border:1px solid var(--line);margin-bottom:12px;overflow:hidden;text-align:left;}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;padding:18px 22px;font-family:'Montserrat',sans-serif;font-weight:400;font-size:16px;color:var(--charcoal);display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;}
+.faq-q .ic{flex-shrink:0;font-size:20px;color:var(--mocha);transition:transform .25s ease;}
+.faq-item.open .faq-q .ic{transform:rotate(45deg);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-answer p{padding:0 22px 20px;margin:0;color:var(--muted);font-size:15px;text-align:left;font-weight:300;}
+
+/* ===== Final CTA ===== */
+.final-cta{background:var(--cream);padding:70px 24px;border-top:1px solid var(--line);}
+.final-cta__inner{max-width:760px;margin:0 auto;padding:0 15px;}
+.final-cta,.final-cta__inner,.final-cta__title,.final-cta__sub,.final-cta__eyebrow,.final-cta__was,.final-cta h2,.final-cta h3,.final-cta p{text-align:center!important;}
+.final-cta h2{color:var(--charcoal);font-size:36px;margin-bottom:12px;}
+.final-cta p{color:var(--muted);font-size:16px;margin-bottom:10px;}
+.final-cta__price{font-family:'ivypresto-display',serif;font-weight:100;font-size:38px;color:var(--mocha);margin:4px 0;}
+.final-cta__was{color:var(--muted);text-decoration:line-through;font-size:15px;margin-bottom:24px;}
+
+/* ===== Footer ===== */
+.footer{background:var(--charcoal);padding:48px 24px 40px;}
+.footer__inner{max-width:880px;margin:0 auto;padding:0 15px;}
+.footer,.footer p,.footer span,.footer a{text-align:center!important;color:#b0b0b0;font-size:13px;font-weight:300;}
+.footer a{color:#e0e0e0;text-decoration:none;}
+.footer__addr{color:var(--cream);font-size:14px;margin:18px 0 10px;}
+.footer__disc{font-size:11px;color:#888;max-width:680px;margin:18px auto 0;line-height:1.6;}
+
+/* ===== Responsive ===== */
+@media(max-width:900px){.section-title{font-size:30px;}.hero__title{font-size:36px;}}
+@media(max-width:660px){
+  body{font-size:15px;}
+  .hero{padding:36px 15px 48px;}
+  .hero__title{font-size:28px;}
+  .hero__desc{font-size:15px;}
+  .hero__price{font-size:34px;}
+  .section-title{font-size:24px;}
+  .final-cta h2{font-size:26px;}
+  .stat{flex:1 1 100%;}
+  .btn-cta{padding:16px 24px;font-size:13px;width:100%;max-width:100%;}
+}
+</style>
+</head>
+<body style="margin:0!important;padding:0!important;overflow-x:hidden!important;">
+
+<!-- ===== SCARCITY BANNER ===== -->
+<section class="scarcity-banner">
+  <span>ONLY FOR THE FIRST 12 PEOPLE WHO CLAIM IT — <strong>ONLY 3 SPOTS LEFT</strong></span>
+</section>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <img class="hero__bg" src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cbfe974a9da6eec6cd1a.png" alt="" aria-hidden="true">
+  <div class="hero__overlay"></div>
+  <div class="hero__inner">
+    <div style="text-align:center!important;width:100%!important;display:block!important;margin:0 auto 20px!important;">
+      <div style="display:inline-block;margin:0 auto;">
+        <img src="data:image/png;base64,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" alt="Jule's Fibroblast and Body Contour" width="237" height="184" style="width:auto;max-width:220px;height:auto;max-height:130px;display:block;margin:0 auto;object-fit:contain;mix-blend-mode:multiply;">
+      </div>
+    </div>
+    <span class="hero__badge">Non-Surgical Facelift · Microneedling + PRF</span>
+    <h1 class="hero__title">Look Lifted. Look Refreshed. <i>Naturally Beautiful.</i></h1>
+    <p class="hero__desc">Transform your appearance without surgery—our Full-Face Microneedling with PRF (Platelet-Rich Fibrin) uses your body's own growth factors to stimulate collagen, tighten skin, and restore your glow. No surgery, no downtime, plus a FREE customized consultation &amp; treatment plan and a BONUS Red Light Therapy + Hydrating Mask for a luminous finish.</p>
+
+    <div class="hero__pricing">
+      <span class="hero__price">$499</span>
+      <span class="hero__price-was">Regularly $1,200</span>
+      <span class="hero__price-label">Introductory Session</span>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="timer-container">
+      <span class="timer-title">Offer Expires In:</span>
+      <div class="timer-clock" id="heroCountdown">00:10:23</div>
+    </div>
+
+    <button class="btn-cta" onclick="(function(){var el=document.querySelector('#form-l5uva8w_OS');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});}})()">Claim Your Non-Surgical Facelift Now</button>
+
+    <p class="hero__trust">No. 1 in Whittier for Non-Surgical Facelifts · Whittier, CA</p>
+  </div>
+</section>
+
+<!-- ===== OFFER STRIP ===== -->
+<section class="offer-strip">
+  <div class="offer-strip__inner">Introductory Session $499 <span style="opacity:.75;">(Regularly $1,200)</span> · Only 3 of 12 Spots Left</div>
+</section>
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '704939249339808');
+fbq('track', 'PageView');
+</script>
+
+<!-- ===== BENEFITS ===== -->
+<section class="benefits">
+  <div class="benefits__inner">
+    <span class="eyebrow">Proven Anti-Aging Results</span>
+    <h2 class="section-title">Where You'll See The Difference</h2>
+    <p class="section-sub">Experience collagen stimulation, smooth tightening, and a naturally restored glow.</p>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="benefit-card__icon">1</div>
+        <h4 class="benefit-card__title">Firmer, Tighter Skin</h4>
+        <p class="benefit-card__desc">Skip the surgery and recovery time. Full-Face Microneedling with PRF stimulates collagen using your body's own growth factors to firm and tighten skin and restore your glow, all without a scalpel.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__icon">2</div>
+        <h4 class="benefit-card__title">No Downtime, Immediate Results</h4>
+        <p class="benefit-card__desc">Walk in, transform your skin, walk out—and get back to your life the same day. Return to work, workouts, and social events immediately without restrictions.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__icon">3</div>
+        <h4 class="benefit-card__title">Personalized Treatment Plan</h4>
+        <p class="benefit-card__desc">Every face is unique. Your session includes a FREE customized consultation &amp; treatment plan, plus a BONUS Red Light Therapy + Hydrating Mask for a luminous finish.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section class="results">
+  <div class="results__inner">
+    <style>
+    .bi-results-carousel {
+      width: 100%;
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 10px 0 25px;
+      box-sizing: border-box;
+    }
+    .bi-results-heading { text-align: center; margin-bottom: 24px; }
+    .bi-results-heading h2 { margin: 0 0 6px; font-size: 32px; }
+    .bi-results-heading p { margin: 0; color: var(--muted); font-size: 15px; font-weight: 300; }
+
+    .bi-carousel-stage {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bi-result-slide {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 54%;
+      max-width: 580px;
+      height: 440px;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(.72);
+      transition: transform .55s cubic-bezier(.22,.61,.36,1), opacity .45s ease;
+      z-index: 1;
+    }
+    .bi-result-image {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .bi-result-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background: #ffffff;
+    }
+    .bi-result-slide.active {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      z-index: 5;
+      pointer-events: auto;
+    }
+    .bi-result-slide.prev {
+      opacity: .35;
+      transform: translate(-112%, -50%) scale(.82);
+      z-index: 2;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    .bi-result-slide.next {
+      opacity: .35;
+      transform: translate(12%, -50%) scale(.82);
+      z-index: 2;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+    .bi-result-slide.hidden-left { opacity: 0; transform: translate(-145%, -50%) scale(.65); }
+    .bi-result-slide.hidden-right { opacity: 0; transform: translate(45%, -50%) scale(.65); }
+
+    .bi-carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border: none;
+      background: var(--charcoal);
+      color: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 20;
+      transition: background .2s ease;
+    }
+    .bi-carousel-arrow:hover { background: var(--mocha); }
+    .bi-carousel-prev { left: 2%; }
+    .bi-carousel-next { right: 2%; }
+
+    .bi-carousel-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .bi-carousel-dot {
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: var(--line);
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .bi-carousel-dot.active {
+      width: 22px;
+      border-radius: 10px;
+      background: var(--mocha);
+    }
+
+    @media (max-width: 767px) {
+      .bi-carousel-stage { height: 380px; }
+      .bi-result-slide { width: 85%; height: 340px; }
+      .bi-result-slide.prev { opacity: .2; transform: translate(-105%, -50%) scale(.78); }
+      .bi-result-slide.next { opacity: .2; transform: translate(5%, -50%) scale(.78); }
+    }
+    </style>
+
+    <div class="bi-results-carousel">
+      <div class="bi-results-heading">
+        <span class="eyebrow">Real Transformations</span>
+        <h2>Client Results</h2>
+        <p>Real results from Jule's Fibroblast and Body Contour.</p>
+      </div>
+
+      <div class="bi-carousel-stage" id="biCarouselStage">
+        <!-- IMAGE 1 -->
+        <div class="bi-result-slide">
+          <div class="bi-result-image">
+            <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cbfe15ef56c94e4d1a34.png" alt="Client treatment result" loading="lazy">
+          </div>
+        </div>
+
+        <!-- IMAGE 2 -->
+        <div class="bi-result-slide">
+          <div class="bi-result-image">
+            <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cbfe53ee44f56b3b9ebd.png" alt="Client treatment result" loading="lazy">
+          </div>
+        </div>
+
+        <!-- IMAGE 3 -->
+        <div class="bi-result-slide">
+          <div class="bi-result-image">
+            <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cbfe7e654f1003ca61ce.png" alt="Client treatment result" loading="lazy">
+          </div>
+        </div>
+
+        <button class="bi-carousel-arrow bi-carousel-prev" type="button" aria-label="Previous result">‹</button>
+        <button class="bi-carousel-arrow bi-carousel-next" type="button" aria-label="Next result">›</button>
+      </div>
+
+      <div class="bi-carousel-dots" id="biCarouselDots" aria-label="Result gallery navigation"></div>
+    </div>
+
+    <p class="results__disclaimer">Individual experiences and results may vary. Images represent actual client outcomes.</p>
+  </div>
+</section>
+
+<!-- ===== MEET THE FOUNDER ===== -->
+<section class="bi-founder-wrapper" style="padding: 60px 20px; background-color: var(--surface);">
+  <style>
+  .bi-founder-wrapper { display: flex; justify-content: center; }
+  .bi-founder {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 45px 35px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 50px;
+    background: var(--charcoal);
+    color: var(--cream);
+    box-sizing: border-box;
+  }
+  .bi-founder-image { width: 100%; display: flex; justify-content: center; }
+  .bi-founder-image img { width: 100%; max-width: 420px; height: auto; display: block; }
+  .bi-founder-eyebrow { margin-bottom: 8px; color: var(--terracotta); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; font-weight: 400; }
+  .bi-founder-name { margin: 0 0 4px; color: #ffffff; font-size: 36px; font-weight: 100; }
+  .bi-founder-credentials { margin-bottom: 20px; color: var(--blush); font-size: 14px; font-weight: 400; }
+  .bi-founder-copy { color: rgba(255,255,255,0.9); font-size: 15px; line-height: 1.75; font-weight: 300; }
+  .bi-founder-copy p { margin: 0 0 14px; }
+  .bi-founder-points { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 20px; }
+  .bi-founder-point { display: flex; align-items: center; gap: 8px; color: #ffffff; font-size: 13px; font-weight: 400; }
+  .bi-founder-check { color: var(--terracotta); font-size: 14px; }
+  .bi-founder-quote { margin-top: 22px; padding-left: 16px; border-left: 2px solid var(--terracotta); color: #ffffff; font-size: 15px; font-style: italic; font-weight: 300; }
+
+  @media (max-width: 767px) {
+    .bi-founder { grid-template-columns: 1fr; gap: 24px; padding: 30px 20px; text-align: center; }
+    .bi-founder-image img { width: 85%; max-width: 320px; }
+    .bi-founder-points { justify-content: center; }
+    .bi-founder-quote { padding-left: 0; border-left: none; }
+  }
+  </style>
+
+  <div class="bi-founder">
+    <div class="bi-founder-image">
+      <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cc3f15ef56c94e4d208a.webp" alt="Julissa Ejercito RN, BSN" loading="lazy">
+    </div>
+
+    <div class="bi-founder-content">
+      <div class="bi-founder-eyebrow">Meet Our Founder</div>
+      <h2 class="bi-founder-name">Julissa Ejercito <i>RN, BSN</i></h2>
+      <div class="bi-founder-credentials">Founder &amp; Advanced Aesthetic Nurse Practitioner</div>
+
+      <div class="bi-founder-copy">
+        <p>Julissa Ejercito is a Registered Nurse with over 4 years of dedicated experience in advanced non-surgical aesthetics and body contouring.</p>
+        <p>At Jule's Fibroblast and Body Contour, she specializes in creating personalized treatment strategies that prioritize safety, precision, and naturally enhanced results tailored to your unique features.</p>
+      </div>
+
+      <div class="bi-founder-points">
+        <div class="bi-founder-point"><span class="bi-founder-check">✓</span> Registered Nurse (RN, BSN)</div>
+        <div class="bi-founder-point"><span class="bi-founder-check">✓</span> 4+ Years Advanced Aesthetic Experience</div>
+        <div class="bi-founder-point"><span class="bi-founder-check">✓</span> Specialized in Non-Surgical Rejuvenation</div>
+      </div>
+
+      <div class="bi-founder-quote">“Enhancing your natural beauty with precision, medical expertise, and care.”</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENT REVIEWS ===== -->
+<section class="reviews-section-wrapper" style="background-color: var(--cream); padding: 60px 20px; display: flex; justify-content: center;">
+  <style>
+    .reviews-container { max-width: 1050px; width: 100%; text-align: center; padding: 0 15px; }
+    .reviews-header h2 { color: var(--charcoal); font-size: 32px; margin-bottom: 6px; }
+    .reviews-header p { color: var(--mocha); font-size: 14px; margin-bottom: 32px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .reviews-grid { grid-template-columns: 1fr; } }
+    .review-card { background: #ffffff; border: 1px solid var(--line); padding: 24px; display: flex; flex-direction: column; justify-content: space-between; text-align: left; }
+    .stars { color: #f59e0b; font-size: 14px; letter-spacing: 2px; margin-bottom: 14px; }
+    .review-text { color: var(--text); font-size: 14px; line-height: 1.6; font-style: italic; margin-bottom: 20px; flex-grow: 1; font-weight: 300; }
+    .card-footer { display: flex; justify-content: space-between; align-items: center; font-size: 13px; border-top: 1px solid var(--line); padding-top: 12px; }
+    .author-name { font-weight: 500; color: var(--charcoal); }
+    .google-logo { font-weight: 600; font-size: 12px; }
+    .g-blue { color: #4285F4; } .g-red { color: #EA4335; } .g-yellow { color: #FBBC05; } .g-green { color: #34A853; }
+  </style>
+
+  <div class="reviews-container">
+    <div class="reviews-header">
+      <h2>See What Our Clients Say</h2>
+      <p>★ ★ ★ ★ ★ 4.9 Rating from 34 Google Reviews</p>
+    </div>
+
+    <div class="reviews-grid">
+      <!-- Review 1 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"I recently had my first Perfect Derma Peel with Jules, and I'm loving the results so far. Jules is wonderful—she explains the entire process step by step, which made me feel very comfortable and confident throughout the treatment."</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">Ana G</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"Jules was wonderful. She thoroughly explained the procedure that she feels would work best for my skin. She's very knowledgeable and pricing is reasonable vs other places I've been to. I would definitely come back."</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">P Vee</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"My hyperpigmentation has cleared up, my skin feels a bit tighter, and I look more refreshed overall. She is friendly, professional, and made me feel completely comfortable throughout the entire process."</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">Karen L</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Review 4 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"Love coming to Jules... I'm obsessed with how much my skin has improved. It's been 3 weeks since my first treatment and I've noticed the difference in the texture and fine lines!"</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">Rochelle Alvarez</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Review 5 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"Had a great experience! My first time having treatment done and Jules was wonderful in comfort answering questions and providing real customer care."</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">Sandra Benites</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+
+      <!-- Review 6 -->
+      <div class="review-card">
+        <div>
+          <div class="stars">★ ★ ★ ★ ★</div>
+          <p class="review-text">"I received a facial peel from Jules's spa! And it was the best decision I ever made. I struggled with acne and inflammation but after this peel and with the guidance of Jules on my skincare routine, I have not had issues!"</p>
+        </div>
+        <div class="card-footer">
+          <span class="author-name">Brenda Garibay</span>
+          <span class="google-logo"><span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW / PLAN ===== -->
+<section class="how">
+  <div class="how__inner">
+    <span class="eyebrow">Your Personalized Experience</span>
+    <h2 class="section-title">Designed Around You</h2>
+    <p class="how__body">Your introductory session begins with a FREE customized consultation &amp; treatment plan. We evaluate your unique skin, areas of laxity, and facial contours. From there, we perform Full-Face Microneedling with PRF made from your own blood's growth factors to stimulate collagen, tighten, and restore your glow without surgery or downtime, finished with a BONUS Red Light Therapy + Hydrating Mask.</p>
+  </div>
+</section>
+
+<!-- ===== STATS / TRUST BAND ===== -->
+<section class="stats">
+  <div class="stats__inner">
+    <div class="stat">
+      <div class="stat__num">PRF Powered</div>
+      <div class="stat__label">Uses your body's own growth factors.</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num">Registered Nurse</div>
+      <div class="stat__label">Administered by an experienced RN with 4+ years in advanced aesthetics.</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num">Zero Downtime</div>
+      <div class="stat__label">Return to work, exercise, and daily life immediately.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== URGENCY ===== -->
+<section class="urgency">
+  <div class="urgency__inner">
+    <h2>Spots Are Limited</h2>
+    <p>This $499 promotional offer is reserved for the first 12 people who claim it.</p>
+    <span class="urgency__spots">Only 3 of 12 Spots Left</span>
+    <div>
+      <button class="btn-cta" onclick="(function(){var el=document.querySelector('#form-l5uva8w_OS');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});}})()">Claim Your Spot Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="faq__inner">
+    <span class="eyebrow">Frequent Questions</span>
+    <h2 class="section-title">What You Should Know</h2>
+    <div style="margin-top:30px;">
+      <div class="faq-item">
+        <button class="faq-q">What is the Non-surgical facelift?<span class="ic">+</span></button>
+        <div class="faq-answer"><p>It's Full-Face Microneedling with PRF (Platelet-Rich Fibrin), which uses your body's own growth factors to stimulate collagen, tighten skin, and restore your glow without surgery or downtime. Your session finishes with a BONUS Red Light Therapy + Hydrating Mask for a luminous finish.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is it safe?<span class="ic">+</span></button>
+        <div class="faq-answer"><p>Yes. The treatment uses PRF from your own body and is performed by Julissa, a registered nurse with 4+ years of experience in advanced aesthetics. Disqualifying conditions are screened beforehand.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How many sessions do I need?<span class="ic">+</span></button>
+        <div class="faq-answer"><p>A series of 3 treatments is recommended for optimal results. The full package costs $1,600 after your first session promo price.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is there downtime?<span class="ic">+</span></button>
+        <div class="faq-answer"><p>No. You can return to normal activities immediately after your appointment with no restrictions.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Where are you located?<span class="ic">+</span></button>
+        <div class="faq-answer"><p>Jules Fibroblast and Body Contour is located at 7049 Greenleaf Ave Suite 1, Whittier, CA 90602 (across from Coffee Bean, next to La Sexy Michalada Restaurant, inside J Anthony Salon, across from Whittier Village Cinemas and Madres Brunch).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="final-cta__inner">
+    <span class="eyebrow">Reserve Your Non-Surgical Facelift</span>
+    <h2>Ready To Look Lifted &amp; Refreshed?</h2>
+    <p>Claim your introductory session before all 12 spots are filled.</p>
+    <div class="final-cta__price">$499</div>
+    <div class="final-cta__was">Regularly $1,200</div>
+    <div>
+      <button class="btn-cta" onclick="(function(){var el=document.querySelector('#form-l5uva8w_OS');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});}})()">Claim Your Offer Today</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP SECTION ===== -->
+<section class="map-section">
+  <div class="blu-map-wrap">
+    <iframe
+      src="https://maps.google.com/maps?q=7049%20Greenleaf%20Ave.%20Suite%201%2C%20Whittier%20CA%2090602&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <style>
+  .map-section {
+    padding: 40px 20px 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--charcoal) !important;
+  }
+  .blu-map-wrap {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid var(--mocha);
+    background: #ffffff;
+  }
+  .blu-map-wrap iframe {
+    display: block;
+    width: 100% !important;
+    height: 350px;
+    margin: 0 auto;
+    border: 0;
+  }
+  @media (max-width: 767px) {
+    .map-section { padding: 30px 15px 40px; }
+    .blu-map-wrap iframe { height: 280px; }
+  }
+  </style>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<section class="footer">
+  <div class="footer__inner">
+    <div style="text-align:center!important;width:100%!important;display:block!important;margin:0 auto!important;">
+      <div style="display:inline-block;margin:0 auto;padding:8px 16px;">
+        <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/68fba2f08678a4d468968028.png" style="max-width:140px;max-height:50px;display:block;margin:0 auto;object-fit:contain;" onerror="this.parentElement.style.display='none'">
+      </div>
+    </div>
+    <p class="footer__addr">7049 Greenleaf Ave. Suite 1, Whittier, CA 90602</p>
+    <p><a href="#">Jules Fibroblast and Body Contour</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms &amp; Conditions</a></p>
+    <p style="margin-top:8px;">Copyright 2026. All Rights Reserved.</p>
+    <p class="footer__disc">Disclaimer: This website is not a part of Facebook or Facebook Inc. Additionally, this site is not endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK Inc.</p>
+  </div>
+</section>
+
+<script>
+/* Countdown Timer Script */
+(function() {
+  var totalSeconds = 10 * 60 + 23; // 10m 23s
+  var clockEl = document.getElementById('heroCountdown');
+  if (!clockEl) return;
+
+  function updateClock() {
+    var hrs = Math.floor(totalSeconds / 3600);
+    var mins = Math.floor((totalSeconds % 3600) / 60);
+    var secs = totalSeconds % 60;
+
+    clockEl.textContent =
+      (hrs < 10 ? '0' + hrs : hrs) + ':' +
+      (mins < 10 ? '0' + mins : mins) + ':' +
+      (secs < 10 ? '0' + secs : secs);
+
+    if (totalSeconds > 0) {
+      totalSeconds--;
+    } else {
+      totalSeconds = 10 * 60 + 23; // Loop timer
+    }
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+})();
+
+/* Results Carousel Script */
+(function () {
+  const stage = document.getElementById('biCarouselStage');
+  if (!stage) return;
+
+  const slides = Array.from(stage.querySelectorAll('.bi-result-slide'));
+  const prevButton = stage.querySelector('.bi-carousel-prev');
+  const nextButton = stage.querySelector('.bi-carousel-next');
+  const dotsContainer = document.getElementById('biCarouselDots');
+
+  let current = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  slides.forEach((slide, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'bi-carousel-dot';
+    dot.setAttribute('aria-label', 'View result ' + (index + 1));
+    dot.addEventListener('click', function () {
+      current = index;
+      updateCarousel();
+    });
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = Array.from(dotsContainer.querySelectorAll('.bi-carousel-dot'));
+
+  function updateCarousel() {
+    const total = slides.length;
+    const previous = (current - 1 + total) % total;
+    const next = (current + 1) % total;
+
+    slides.forEach((slide, index) => {
+      slide.classList.remove('active', 'prev', 'next', 'hidden-left', 'hidden-right');
+      if (index === current) {
+        slide.classList.add('active');
+      } else if (index === previous) {
+        slide.classList.add('prev');
+      } else if (index === next) {
+        slide.classList.add('next');
+      } else {
+        let difference = (index - current + total) % total;
+        if (difference < total / 2) {
+          slide.classList.add('hidden-right');
+        } else {
+          slide.classList.add('hidden-left');
+        }
+      }
+    });
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === current);
+    });
+  }
+
+  function nextSlide() { current = (current + 1) % slides.length; updateCarousel(); }
+  function previousSlide() { current = (current - 1 + slides.length) % slides.length; updateCarousel(); }
+
+  if (nextButton) nextButton.addEventListener('click', nextSlide);
+  if (prevButton) prevButton.addEventListener('click', previousSlide);
+
+  slides.forEach(function (slide) {
+    slide.addEventListener('click', function () {
+      if (slide.classList.contains('prev')) previousSlide();
+      if (slide.classList.contains('next')) nextSlide();
+    });
+  });
+
+  stage.addEventListener('touchstart', function (e) { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+  stage.addEventListener('touchend', function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    const difference = touchStartX - touchEndX;
+    if (Math.abs(difference) < 45) return;
+    if (difference > 0) nextSlide(); else previousSlide();
+  }, { passive: true });
+
+  updateCarousel();
+})();
+
+/* FAQ accordion */
+(function(){
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var item=q.parentElement;
+      var ans=item.querySelector('.faq-answer');
+      var open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(it){it.classList.remove('open');var a=it.querySelector('.faq-answer');if(a)a.style.maxHeight=null;});
+      if(!open){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px';}
+    });
+  });
+})();
+
+/* GHL DOM unpadding engine */
+(function(){
+  var SEL='.inner,.c-wrapper,.section,.row,.container,.inner-container,[id^="section-"],[id^="row-"],[id^="col-"],[class*="c-section"],[class*="c-row"],[class*="c-column"]';
+  function unpad(){
+    document.documentElement.style.setProperty('overflow-x','hidden','important');
+    document.body.style.setProperty('margin','0','important');
+    document.body.style.setProperty('padding','0','important');
+    document.body.style.setProperty('max-width','100%','important');
+    document.querySelectorAll(SEL).forEach(function(el){
+      el.style.setProperty('padding-left','0','important');
+      el.style.setProperty('padding-right','0','important');
+      el.style.setProperty('margin-left','0','important');
+      el.style.setProperty('margin-right','0','important');
+      el.style.setProperty('width','100%','important');
+      el.style.setProperty('max-width','100%','important');
+    });
+  }
+  document.addEventListener('DOMContentLoaded',unpad);
+  window.addEventListener('load',unpad);
+  setTimeout(unpad,400);setTimeout(unpad,1200);
+})();
+</script>
+
+</body>
+</html>
