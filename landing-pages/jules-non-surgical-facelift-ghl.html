@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Surgical Facelift | Jule's Fibroblast and Body Contour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.typekit.net/qqj8vqy.css">
+<style>
+html,body{margin:0!important;padding:0!important;width:100%!important;max-width:100%!important;overflow-x:hidden!important;}
+</style>
+<style>
+/* ===== GHL container targeting (Layer 2) ===== */
+.inner,.c-wrapper,.section,.row,.container,.inner-container,
+[id^="section-"],[id^="row-"],[id^="col-"],[class*="c-section"],[class*="c-row"],[class*="c-column"]{
+  padding-left:0!important;padding-right:0!important;margin-left:0!important;margin-right:0!important;
+  width:100%!important;max-width:100%!important;}
+
+/* ===== Brand tokens (Jule's Fibroblast and Body Contour) ===== */
+:root{
+  --cream:#F6F2ED;         /* base white/cream */
+  --charcoal:#323232;      /* deep text/accent */
+  --mocha:#7C523C;         /* warm brown accent */
+  --blush:#E0BFB8;         /* dusty rose highlight */
+  --terracotta:#DEA193;    /* soft terracotta */
+  --surface:#FFFFFF;
+  --text:#323232;
+  --muted:#666666;
+  --line:#E5E0DA;
+}
+*{box-sizing:border-box;}
+body{font-family:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:300;color:var(--text);background:var(--cream);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased;letter-spacing:0.03em;}
+h1,h2,h3,h4{font-family:'ivypresto-display','Cormorant Garamond','Playfair Display',serif;font-weight:100;line-height:1.15;letter-spacing:0.03em;margin:0 0 .5em;color:var(--charcoal);}
+h1 i, h2 i, h3 i, h4 i{font-style:italic;}
+p{margin:0 0 1em;}
+img{max-width:100%;display:block;}
+
+/* ===== Layer 3 — Custom element standardization ===== */
+.scarcity-banner,.hero,.offer-strip,.benefits,.results,.how,.stats,.urgency,.faq,.final-cta,.footer{
+  display:block!important;width:100%!important;max-width:100%!important;clear:both!important;float:none!important;position:relative!important;
+  margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;}
+.scarcity-banner *,.hero *,.offer-strip *,.benefits *,.results *,.how *,.stats *,.urgency *,.faq *,.final-cta *,.footer *{box-sizing:border-box!important;}
+
+/* ===== Buttons ===== */
+.btn-cta{display:inline-block;background:var(--charcoal);color:var(--cream);font-family:'Montserrat',sans-serif;font-weight:500;font-size:15px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;border:1px solid var(--charcoal);cursor:pointer;padding:18px 36px;border-radius:0px;transition:all .25s ease;}
+.btn-cta:hover{background:var(--mocha);border-color:var(--mocha);color:#fff;}
+
+/* ===== Scarcity banner ===== */
+.scarcity-banner{background:var(--charcoal);color:var(--cream);padding:12px 20px;font-family:'Montserrat',sans-serif;font-weight:300;font-size:13px;letter-spacing:0.15em;text-transform:uppercase;}
+.scarcity-banner,.scarcity-banner p,.scarcity-banner span,.scarcity-banner strong{text-align:center!important;}
+.scarcity-banner strong{color:var(--terracotta);font-weight:600;}
+
+/* ===== Hero ===== */
+.hero{background:var(--cream);padding:40px 24px 60px;overflow:hidden;}
+.hero__bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;pointer-events:none;display:block;opacity:0.35;}
+.hero__overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(rgba(246,242,237,0.7),rgba(246,242,237,0.92));z-index:1;pointer-events:none;}
+.hero__inner{max-width:820px;margin:0 auto;position:relative;z-index:2;padding:0 15px;}
+.hero,.hero__inner,.hero__title,.hero__sub,.hero__desc,.hero__pricing,.hero__badge,.hero__price-was,.hero__price-label,.hero__trust,.hero h1,.hero h2,.hero h3,.hero p,.hero span{text-align:center!important;}
+.hero__badge{display:inline-block;background:rgba(224,191,184,0.3);border:1px solid var(--terracotta);color:var(--mocha);font-family:'Montserrat',sans-serif;font-weight:400;font-size:12px;letter-spacing:0.15em;text-transform:uppercase;padding:6px 18px;margin-bottom:20px;}
+.hero__title{color:var(--charcoal);font-size:44px;line-height:1.15;margin-bottom:16px;}
+.hero__desc{color:var(--charcoal);font-size:16px;max-width:680px;margin:0 auto 24px;line-height:1.7;font-weight:300;}
+.hero__pricing{margin:10px auto 20px;}
+.hero__price{font-family:'ivypresto-display',serif;font-weight:100;font-size:42px;color:var(--mocha);line-height:1;}
+.hero__price-was{display:block;color:var(--muted);font-size:15px;margin-top:4px;text-decoration:line-through;}
+.hero__price-label{display:block;color:var(--charcoal);font-weight:400;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;}
+.hero__trust{color:var(--mocha);font-size:14px;letter-spacing:0.05em;margin-top:20px;font-weight:400;}
+
+/* Countdown Timer */
+.timer-container{margin:24px auto;padding:16px;background:rgba(255,255,255,0.6);border:1px solid var(--blush);max-width:480px;}
+.timer-title{font-family:'Montserrat',sans-serif;font-size:11px;text-transform:uppercase;letter-spacing:0.15em;color:var(--mocha);margin-bottom:8px;display:block;font-weight:500;}
+.timer-clock{font-family:'ivypresto-display',serif;font-size:28px;color:var(--charcoal);letter-spacing:0.05em;font-weight:100;}
+
+/* ===== Offer strip ===== */
+.offer-strip{background:var(--terracotta);color:var(--charcoal);padding:14px 24px;}
+.offer-strip,.offer-strip p,.offer-strip span,.offer-strip strong{text-align:center!important;}
+.offer-strip__inner{max-width:900px;margin:0 auto;font-family:'Montserrat',sans-serif;font-weight:400;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;}
+
+/* ===== Benefits ===== */
+.benefits{background:var(--surface);padding:70px 24px;}
+.benefits__inner{max-width:1080px;margin:0 auto;padding:0 15px;}
+.benefits,.benefits__inner,.benefits__title,.benefits__sub,.benefits__eyebrow,.benefits h2,.benefits h3,.benefits p{text-align:center!important;}
+.eyebrow{display:block;font-family:'Montserrat',sans-serif;font-weight:400;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:var(--mocha);margin-bottom:10px;}
+.section-title{font-size:36px;margin-bottom:14px;}
+.section-sub{color:var(--muted);max-width:660px;margin:0 auto 40px;font-size:16px;font-weight:300;}
+.benefit-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;}
+.benefit-card{flex:1 1 300px;max-width:340px;background:var(--cream);border:1px solid var(--line);padding:36px 28px;}
+.benefit-card,.benefit-card__title,.benefit-card h4{text-align:center!important;margin-left:auto!important;margin-right:auto!important;}
+.benefit-card__icon{width:44px;height:44px;border-radius:50%;background:var(--blush);color:var(--charcoal);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'ivypresto-display',serif;font-weight:100;font-size:20px;}
+.benefit-card__title{font-size:22px;margin-bottom:12px;}
+.benefit-card__desc{color:var(--muted);font-size:15px;line-height:1.6;font-weight:300;}
+
+/* ===== Results ===== */
+.results{background:var(--cream);padding:70px 24px;}
+.results__inner{max-width:900px;margin:0 auto;padding:0 15px;}
+.results,.results__inner,.results__title,.results__sub,.results__eyebrow,.results__disclaimer,.results h2,.results h3,.results p{text-align:center!important;}
+.results__disclaimer{color:var(--muted);font-size:13px;margin-top:24px;font-style:italic;}
+
+/* ===== How / Plan ===== */
+.how{background:var(--surface);padding:70px 24px;}
+.how__inner{max-width:820px;margin:0 auto;padding:0 15px;}
+.how,.how__inner,.how__title,.how__subtitle,.how__eyebrow,.how h2,.how h3,.how p{text-align:center!important;}
+.how__body{color:var(--muted);font-size:16px;max-width:720px;margin:0 auto;line-height:1.8;font-weight:300;}
+
+/* ===== Stats / Trust band ===== */
+.stats{background:var(--charcoal);padding:50px 24px;color:var(--cream);}
+.stats__inner{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:30px;justify-content:center;padding:0 15px;}
+.stats,.stats__inner,.stat,.stat__num,.stat__label,.stats h2,.stats p{text-align:center!important;}
+.stat{flex:1 1 240px;max-width:300px;}
+.stat__num{font-family:'ivypresto-display',serif;font-weight:100;font-size:24px;color:var(--terracotta);letter-spacing:0.05em;margin-bottom:6px;}
+.stat__label{color:#d5d5d5;font-size:14px;font-weight:300;}
+
+/* ===== Urgency ===== */
+.urgency{background:var(--cream);padding:56px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.urgency__inner{max-width:760px;margin:0 auto;padding:0 15px;}
+.urgency,.urgency__inner,.urgency h2,.urgency p,.urgency span{text-align:center!important;}
+.urgency h2{color:var(--charcoal);font-size:32px;margin-bottom:10px;}
+.urgency p{color:var(--muted);font-size:16px;margin-bottom:20px;}
+.urgency__spots{display:inline-block;background:rgba(224,191,184,0.3);border:1px solid var(--terracotta);color:var(--mocha);font-family:'Montserrat',sans-serif;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;font-size:13px;padding:8px 20px;margin-bottom:24px;}
+
+/* ===== FAQ ===== */
+.faq{background:var(--surface);padding:70px 24px;}
+.faq__inner{max-width:780px;margin:0 auto;padding:0 15px;}
+.faq,.faq__inner,.faq__title,.faq__sub,.faq__eyebrow,.faq h2,.faq h3{text-align:center!important;}
+.faq-item{background:var(--cream);border:1px solid var(--line);margin-bottom:12px;overflow:hidden;text-align:left;}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;padding:18px 22px;font-family:'Montserrat',sans-serif;font-weight:400;font-size:16px;color:var(--charcoal);display:flex;justify-content:space-between;align-items:center;gap:16px;text-align:left;}
+.faq-q .ic{flex-shrink:0;font-size:20px;color:var(--mocha);transition:transform .25s ease;}
+.faq-item.open .faq-q .ic{transform:rotate(45deg);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-answer p{padding:0 22px 20px;margin:0;color:var(--muted);font-size:15px;text-align:left;font-weight:300;}
+
+/* ===== Final CTA ===== */
+.final-cta{background:var(--cream);padding:70px 24px;border-top:1px solid var(--line);}
+.final-cta__inner{max-width:760px;margin:0 auto;padding:0 15px;}
+.final-cta,.final-cta__inner,.final-cta__title,.final-cta__sub,.final-cta__eyebrow,.final-cta__was,.final-cta h2,.final-cta h3,.final-cta p{text-align:center!important;}
+.final-cta h2{color:var(--charcoal);font-size:36px;margin-bottom:12px;}
+.final-cta p{color:var(--muted);font-size:16px;margin-bottom:10px;}
+.final-cta__price{font-family:'ivypresto-display',serif;font-weight:100;font-size:38px;color:var(--mocha);margin:4px 0;}
+.final-cta__was{color:var(--muted);text-decoration:line-through;font-size:15px;margin-bottom:24px;}
+
+/* ===== Footer ===== */
+.footer{background:var(--charcoal);padding:48px 24px 40px;}
+.footer__inner{max-width:880px;margin:0 auto;padding:0 15px;}
+.footer,.footer p,.footer span,.footer a{text-align:center!important;color:#b0b0b0;font-size:13px;font-weight:300;}
+.footer a{color:#e0e0e0;text-decoration:none;}
+.footer__addr{color:var(--cream);font-size:14px;margin:18px 0 10px;}
+.footer__disc{font-size:11px;color:#888;max-width:680px;margin:18px auto 0;line-height:1.6;}
+
+/* ===== Responsive ===== */
+@media(max-width:900px){.section-title{font-size:30px;}.hero__title{font-size:36px;}}
+@media(max-width:660px){
+  body{font-size:15px;}
+  .hero{padding:36px 15px 48px;}
+  .hero__title{font-size:28px;}
+  .hero__desc{font-size:15px;}
+  .hero__price{font-size:34px;}
+  .section-title{font-size:24px;}
+  .final-cta h2{font-size:26px;}
+  .stat{flex:1 1 100%;}
+  .btn-cta{padding:16px 24px;font-size:13px;width:100%;max-width:100%;}
+}
+</style>
+</head>
+<body style="margin:0!important;padding:0!important;overflow-x:hidden!important;">
+
+<!-- ===== SCARCITY BANNER ===== -->
+<section class="scarcity-banner">
+  <span>ONLY FOR THE FIRST 12 PEOPLE WHO CLAIM IT — <strong>ONLY 3 SPOTS LEFT</strong></span>
+</section>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <img class="hero__bg" src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/6ab6cbfe974a9da6eec6cd1a.png" alt="" aria-hidden="true">
+  <div class="hero__overlay"></div>
+  <div class="hero__inner">
+    <div style="text-align:center!important;width:100%!important;display:block!important;margin:0 auto 20px!important;">
+      <div style="display:inline-block;margin:0 auto;">
+        <img src="https://assets.cdn.filesafe.space/vXWuQ0hBPCxfJboRSs6R/media/68fba2f08678a4d468968028.png" alt="Jule's Fibroblast and Body Contour" width="237" height="184" style="width:auto;max-width:220px;height:auto;max-height:130px;display:block;margin:0 auto;object-fit:contain;mix-blend-mode:multiply;">
+      </div>
+    </div>
+    <span class="hero__badge">Non-Surgical Facelift · Microneedling + PRF</span>
+    <h1 class="hero__title">Look Lifted. Look Refreshed. <i>Naturally Beautiful.</i></h1>
+    <p class="hero__desc">Transform your appearance without surgery—our Full-Face Microneedling with PRF (Platelet-Rich Fibrin) uses your body's own growth factors to stimulate collagen, tighten skin, and restore your glow. No surgery, no downtime, plus a FREE customized consultation &amp; treatment plan and a BONUS Red Light Therapy + Hydrating Mask for a luminous finish.</p>
+
+    <div class="hero__pricing">
+      <span class="hero__price">$499</span>
+      <span class="hero__price-was">Regularly $1,200</span>
+      <span class="hero__price-label">Introductory Session</span>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="timer-container">
+      <span class="timer-title">Offer Expires In:</span>
+      <div class="timer-clock" id="heroCountdown">00:10:23</div>
+    </div>
+
+    <button class="btn-cta" onclick="scrollToForm()">Claim Your Non-Surgical Facelift Now</button>
+
+    <p class="hero__trust">No. 1 in Whittier for Non-Surgical Facelifts · Whittier, CA</p>
+  </div>
+</section>
+
+<!-- ===== OFFER STRIP ===== -->
+<section class="offer-strip">
+  <div class="offer-strip__inner">Introductory Session $499 <span style="opacity:.75;">(Regularly $1,200)</span> · Only 3 of 12 Spots Left</div>
+</section>
+
+<!-- ===== BENEFITS ===== -->
+<section class="benefits">
+  <div class="benefits__inner">
+    <span class="eyebrow">What's Included</span>
+    <h2 class="section-title">Everything You Need for a <i>Lifted, Rested Look</i></h2>
+    <p class="section-sub">One introductory session brings together three treatments designed to work as a complete facial refresh—no scalpels, no stitches, no recovery time.</p>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="benefit-card__icon">I</div>
+        <h4 class="benefit-card__title">Full-Face Microneedling + PRF</h4>
+        <p class="benefit-card__desc">Microneedling paired with PRF from your own body stimulates collagen for firmer, tighter skin and a restored glow—without surgery or downtime.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__icon">II</div>
+        <h4 class="benefit-card__title">BONUS: Red Light Therapy + Hydrating Mask</h4>
+        <p class="benefit-card__desc">A complimentary bonus to finish your session—Red Light Therapy followed by a Hydrating Mask for a luminous, glowing finish.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__icon">III</div>
+        <h4 class="benefit-card__title">FREE Customized Consultation</h4>
+        <p class="benefit-card__desc">A free customized consultation and treatment plan so your session is tailored to your skin and your goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section class="results">
+  <div class="results__inner">
+    <span class="eyebrow">Real Results</span>
+    <h2 class="section-title">Natural Results That Look Like <i>You</i>—Refreshed</h2>
+    <p class="section-sub">Because Microneedling with PRF uses your body's own growth factors, results look natural and blend seamlessly with your features. It stimulates collagen to tighten skin and restore your glow—without surgery or downtime.</p>
+    <p class="results__disclaimer">Individual results may vary. A consultation is required to confirm candidacy.</p>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how">
+  <div class="how__inner">
+    <span class="eyebrow">How It Works</span>
+    <h2 class="section-title">Your Path to a <i>Refreshed Face</i></h2>
+    <p class="how__body">
+      <strong>1. Claim your spot.</strong> Secure your introductory session at $499 before the remaining spots are gone.<br>
+      <strong>2. Consult &amp; plan.</strong> We start with your FREE customized consultation to build a treatment plan tailored to your skin.<br>
+      <strong>3. Treat &amp; glow.</strong> Your full-face Microneedling is paired with PRF made from your own blood's growth factors, followed by your bonus Red Light Therapy + Hydrating Mask. Walk out and get back to your day.
+    </p>
+  </div>
+</section>
+
+<!-- ===== STATS / TRUST BAND ===== -->
+<section class="stats">
+  <div class="stats__inner">
+    <div class="stat">
+      <div class="stat__num">Zero Downtime</div>
+      <div class="stat__label">Return to your routine right away</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num">PRF Powered</div>
+      <div class="stat__label">Uses your body's own growth factors</div>
+    </div>
+    <div class="stat">
+      <div class="stat__num">No. 1 in Whittier</div>
+      <div class="stat__label">For non-surgical facelifts</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== URGENCY ===== -->
+<section class="urgency">
+  <div class="urgency__inner">
+    <span class="urgency__spots">Only 3 of 12 Spots Left</span>
+    <h2>This Introductory Offer Won't Last</h2>
+    <p>We're opening just 12 introductory sessions at $499 (regularly $1,200). Once they're claimed, pricing returns to normal.</p>
+    <button class="btn-cta" onclick="scrollToForm()">Reserve My Spot</button>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="faq__inner">
+    <span class="eyebrow">Questions</span>
+    <h2 class="section-title">Frequently Asked <i>Questions</i></h2>
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">What is Microneedling with PRF?<span class="ic">+</span></button>
+      <div class="faq-answer"><p>Full-Face Microneedling with PRF (Platelet-Rich Fibrin) uses your body's own growth factors to stimulate collagen, tighten skin, and restore your glow—without surgery or downtime. Your session finishes with a BONUS Red Light Therapy + Hydrating Mask for a luminous finish.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">Is there any downtime?<span class="ic">+</span></button>
+      <div class="faq-answer"><p>Most clients return to their normal routine the same day. Mild swelling or redness can occur and typically settles within a few days.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">How long do results last?<span class="ic">+</span></button>
+      <div class="faq-answer"><p>Results vary by individual, skin condition, and lifestyle. We'll discuss what to expect and any recommended maintenance during your consultation.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">What's included in the $499 introductory session?<span class="ic">+</span></button>
+      <div class="faq-answer"><p>Your Full-Face Microneedling with PRF treatment, a FREE customized consultation &amp; treatment plan, and a BONUS Red Light Therapy + Hydrating Mask.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" type="button" aria-expanded="false">Am I a good candidate?<span class="ic">+</span></button>
+      <div class="faq-answer"><p>Many adults looking for a natural, non-surgical refresh are good candidates. Your consultation confirms candidacy and ensures the treatment is right for you.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="final-cta__inner">
+    <span class="eyebrow">Claim Your Introductory Session</span>
+    <h2>Ready to Look Lifted &amp; <i>Refreshed?</i></h2>
+    <p>Microneedling + PRF + FREE customized consultation + BONUS Red Light Therapy &amp; Hydrating Mask.</p>
+    <div class="final-cta__price">$499</div>
+    <p class="final-cta__was">Regularly $1,200</p>
+    <button class="btn-cta" onclick="scrollToForm()">Claim Your Non-Surgical Facelift Now</button>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<section class="footer">
+  <div class="footer__inner">
+    <p><strong style="color:var(--cream);font-weight:400;">Jule's Fibroblast and Body Contour</strong></p>
+    <p class="footer__addr">Whittier, CA</p>
+    <p>&copy; <span id="footerYear">2026</span> Jule's Fibroblast and Body Contour. All rights reserved.</p>
+    <p class="footer__disc">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is not endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc. Results may vary from person to person. Treatments are not intended to diagnose, treat, cure, or prevent any disease. Offer valid for new clients only while introductory spots remain.</p>
+  </div>
+</section>
+
+<script>
+// Scroll to the GHL form element on the page.
+function scrollToForm(){var el=document.querySelector('#form-l5uva8w_OS');if(el){el.scrollIntoView({behavior:'smooth',block:'center'});}}
+
+// Evergreen countdown: 10:23 per visitor, persisted across reloads.
+(function(){
+  var el=document.getElementById('heroCountdown');if(!el)return;
+  var KEY='jules_facelift_deadline',DURATION=(10*60+23)*1000,deadline=null;
+  try{deadline=parseInt(localStorage.getItem(KEY),10);}catch(e){}
+  if(!deadline||isNaN(deadline)){deadline=Date.now()+DURATION;try{localStorage.setItem(KEY,deadline);}catch(e){}}
+  function pad(n){return n<10?'0'+n:''+n;}
+  function tick(){
+    var ms=Math.max(0,deadline-Date.now()),s=Math.floor(ms/1000);
+    el.textContent=pad(Math.floor(s/3600))+':'+pad(Math.floor(s%3600/60))+':'+pad(s%60);
+    if(ms>0)setTimeout(tick,1000);
+  }
+  tick();
+})();
+
+// FAQ accordion
+(function(){
+  var items=document.querySelectorAll('.faq-item');
+  items.forEach(function(item){
+    var q=item.querySelector('.faq-q'),a=item.querySelector('.faq-answer');
+    q.addEventListener('click',function(){
+      var open=item.classList.toggle('open');
+      q.setAttribute('aria-expanded',open);
+      a.style.maxHeight=open?a.scrollHeight+'px':null;
+    });
+  });
+})();
+
+var yr=document.getElementById('footerYear');if(yr)yr.textContent=new Date().getFullYear();
+</script>
+
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '704939249339808');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=704939249339808&ev=PageView&noscript=1" alt=""></noscript>
+
+</body>
+</html>
