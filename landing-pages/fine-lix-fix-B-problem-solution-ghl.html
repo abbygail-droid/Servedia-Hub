@@ -38,15 +38,16 @@ p{margin:0 0 1em;}
 img{max-width:100%;display:block;}
 
 /* ===== Custom Element Standardization ===== */
-.scarcity-banner,.hero,.offer-strip,.ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-results,.ps-offer,.ps-steps,.ps-faq,.ps-final,.ps-sticky{
+.scarcity-banner,.hero,.offer-strip,.ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-results,.ps-offer,.ps-sticky{
   display:block!important;width:100%!important;max-width:100%!important;clear:both!important;float:none!important;
   margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;}
-.scarcity-banner,.hero,.offer-strip,.ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-results,.ps-offer,.ps-steps,.ps-faq,.ps-final{position:relative!important;}
-.scarcity-banner *,.hero *,.offer-strip *,.ps-problem *,.ps-agitate *,.ps-solution *,.ps-compare *,.ps-results *,.ps-offer *,.ps-steps *,.ps-faq *,.ps-final *,.ps-sticky *{box-sizing:border-box!important;}
+.scarcity-banner,.hero,.offer-strip,.ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-results,.ps-offer{position:relative!important;}
+.scarcity-banner *,.hero *,.offer-strip *,.ps-problem *,.ps-agitate *,.ps-solution *,.ps-compare *,.ps-results *,.ps-offer *,.ps-sticky *{box-sizing:border-box!important;}
 
 .wrap{max-width:1000px;margin:0 auto;padding:0 20px;}
 .wrap--narrow{max-width:760px;}
 .center,.center h2,.center p,.center span{text-align:center!important;}
+.pain-list li span,.compare__col li span,.offer-list li span{text-align:left!important;}
 .eyebrow{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:12px;}
 .section-title{font-size:32px;margin-bottom:14px;}
 .section-sub{color:var(--muted);max-width:640px;margin:0 auto 36px;font-size:16px;}
@@ -159,36 +160,6 @@ img{max-width:100%;display:block;}
 .timer-lbl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);}
 .timer-note{display:block;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--bronze);margin-bottom:8px;}
 
-/* ===== Steps ===== */
-.ps-steps{background:var(--cream);padding:64px 24px;}
-.steps{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
-.step{flex:1 1 260px;max-width:300px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:center!important;}
-.step__num{display:block;font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--bronze);margin-bottom:8px;}
-.step h3{font-size:18px;margin-bottom:8px;}
-.step p{color:var(--muted);font-size:15px;line-height:1.5;margin:0;}
-
-/* ===== FAQ (objection handling) ===== */
-.ps-faq{background:var(--surface);padding:64px 24px;}
-.faq-list{max-width:720px;margin:0 auto;}
-.faq-item{border-bottom:1px solid var(--line);}
-.faq-item summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;position:relative;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--primary);text-align:left!important;}
-.faq-item summary::-webkit-details-marker{display:none;}
-.faq-item summary::after{content:'+';position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:24px;font-weight:600;color:var(--bronze);}
-.faq-item[open] summary::after{content:'–';}
-.faq-item p{padding:0 0 20px;margin:0;color:var(--text);font-size:15px;line-height:1.6;text-align:left!important;}
-
-/* ===== Final CTA ===== */
-.ps-final{background:var(--primary-dark);padding:68px 24px 76px;}
-.ps-final .section-title{color:#fff;}
-.ps-final .section-sub{color:var(--cream);}
-.choice{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;max-width:720px;margin:0 auto 32px;}
-.choice__opt{flex:1 1 280px;border-radius:14px;padding:20px 22px;text-align:left!important;font-size:15px;line-height:1.5;}
-.choice__opt strong{display:block;font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;}
-.choice__opt--a{background:rgba(255,255,255,.06);border:1px solid rgba(243,239,229,.2);color:#A6B8BE;}
-.choice__opt--b{background:rgba(226,185,143,.12);border:1px solid #E2B98F;color:#fff;}
-.choice__opt--b strong{color:#E2B98F;}
-.ps-final .btn-note{color:#A6B8BE;}
-
 /* ===== Sticky mobile CTA ===== */
 .ps-sticky{position:fixed!important;left:0;right:0;bottom:0;z-index:9999;background:rgba(5,62,73,.97);padding:10px 16px calc(10px + env(safe-area-inset-bottom))!important;display:none!important;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -6px 20px rgba(0,0,0,.18);transform:translateY(110%);transition:transform .25s ease;}
 .ps-sticky.is-visible{transform:translateY(0);}
@@ -203,14 +174,13 @@ img{max-width:100%;display:block;}
   .hero__desc{font-size:16px;}
   .hero__offer-price{font-size:24px;}
   .section-title{font-size:25px;}
-  .ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-results,.ps-offer,.ps-steps,.ps-faq,.ps-final{padding-top:48px!important;padding-bottom:48px!important;}
+  .ps-problem,.ps-agitate,.ps-solution,.ps-compare,.ps-results,.ps-offer{padding-top:48px!important;padding-bottom:48px!important;}
   .wrap{padding:0 16px;}
   .offer-card__body{padding:26px 18px 28px;}
   .offer-price__now{font-size:42px;}
   .root-cause{padding:24px 20px;}
   .btn-cta{font-size:15px;padding:16px 24px;width:100%;max-width:340px;}
   .ps-sticky{display:flex!important;}
-  .ps-final{padding-bottom:110px!important;}
 }
 </style>
 </head>
@@ -360,9 +330,9 @@ img{max-width:100%;display:block;}
     <h2 class="section-title">See the Difference for Yourself</h2>
     <p class="section-sub">Smoother texture, more even tone and a fresher, firmer-looking complexion.</p>
     <div class="ba-grid">
-      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-1.jpg" alt="Before and after: smoother forehead and softer fine lines" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
-      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-2.jpg" alt="Before and after: refined texture and more even tone" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
-      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-3.jpg" alt="Before and after: fresher, brighter, firmer-looking skin" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
+      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-1.jpg" alt="Before and after: smoother forehead and softer fine lines" width="800" height="800" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
+      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-2.jpg" alt="Before and after: refined texture and more even tone" width="800" height="800" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
+      <figure class="ba-card"><img src="REPLACE-WITH-GHL-URL/before-after-3.jpg" alt="Before and after: fresher, brighter, firmer-looking skin" width="800" height="800" loading="lazy" onerror="psHideBa(this)"><span class="ba-tag ba-tag--before">Before</span><span class="ba-tag ba-tag--after">After</span></figure>
     </div>
     <span class="ba-note">Individual results vary.</span>
     <div style="margin-top:26px;"><button class="btn-cta js-cta">I Want Results Like These</button></div>
@@ -406,78 +376,7 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
-<!-- ===== 7. HOW IT WORKS — reduce friction ===== -->
-<section class="ps-steps">
-  <div class="wrap center">
-    <span class="eyebrow">How it works</span>
-    <h2 class="section-title">3 Simple Steps to Better Skin</h2>
-    <p class="section-sub">From claiming your spot to your first treatment.</p>
-    <div class="steps">
-      <div class="step">
-        <span class="step__num">Step 1</span>
-        <h3>Claim your spot</h3>
-        <p>Fill out the short form to lock in the $199 starter price before the spots are gone.</p>
-      </div>
-      <div class="step">
-        <span class="step__num">Step 2</span>
-        <h3>Get your VISIA scan</h3>
-        <p>We map what's happening below the surface and build your personalized 4-session plan.</p>
-      </div>
-      <div class="step">
-        <span class="step__num">Step 3</span>
-        <h3>Start your Fine Lix Fix</h3>
-        <p>Begin your treatments and watch your texture, tone and clarity improve session by session.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 8. FAQ — handle objections ===== -->
-<section class="ps-faq">
-  <div class="wrap wrap--narrow">
-    <div class="center">
-      <span class="eyebrow">Questions</span>
-      <h2 class="section-title">Before You Claim Your Spot</h2>
-    </div>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>Is Fine Lix Fix right for my skin?</summary>
-        <p>Fine Lix Fix is designed for fine lines, enlarged pores, rough or uneven texture, dullness and the look of acne scarring. Your consultation and VISIA scan confirm it's the right fit before you start.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How much downtime is there?</summary>
-        <p>Downtime is minimal. Most people see some redness for a short time afterward, similar to a mild sunburn. Your provider will walk you through aftercare so you know exactly what to expect.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Does it hurt?</summary>
-        <p>Most clients describe it as manageable. Your provider will talk through comfort options at your consultation so you feel at ease before your first session.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Why 4 sessions instead of 1?</summary>
-        <p>Collagen builds gradually. Spacing treatments out lets each session build on the last, which is why your plan is tailored to 4 sessions for the best results.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What's included for $199?</summary>
-        <p>A personalized consultation, advanced VISIA skin imaging, and a tailored 4-session Fine Lix Fix plan built for your skin. Regularly $399.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 9. FINAL CTA — the choice ===== -->
-<section class="ps-final">
-  <div class="wrap center">
-    <span class="eyebrow" style="color:#E2B98F;">Your choice</span>
-    <h2 class="section-title">Keep Covering It Up, or Finally Fix It</h2>
-    <p class="section-sub">Lines, pores and texture don't go away on their own. They get harder to treat the longer you wait.</p>
-    <div class="choice">
-      <div class="choice__opt choice__opt--a"><strong>Option 1</strong>Keep buying products that sit on the surface and hope this one is different.</div>
-      <div class="choice__opt choice__opt--b"><strong>Option 2</strong>Lock in your $199 Fine Lix Fix starter package and treat the cause.</div>
-    </div>
-    <button class="btn-cta js-cta">Yes, Claim My $199 Spot</button>
-    <span class="btn-note">Only 12 spots at this price · Regularly $399</span>
-  </div>
-</section>
+<!-- ===== GHL lead form (#form-HMC5o9FxCH) goes directly below this block ===== -->
 
 <!-- ===== Sticky mobile CTA ===== -->
 <div class="ps-sticky" id="psSticky">
