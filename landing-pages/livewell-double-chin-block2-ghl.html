@@ -1,0 +1,512 @@
+<!-- ============================================================
+     LIVE WELL CLINIC — DOUBLE CHIN RESCUE (V3 · PROBLEM → SOLUTION)
+     BLOCK 2 OF 2: BELOW FORM (BOTTOM OF FUNNEL)
+     Paste this as a Custom HTML element in GHL below your native form.
+     Picks up where Block 1 ends (Problem → Why Nothing Worked →
+     Solution → How It Works → Offer → FORM) and continues with:
+     Bonuses → Proof (Results · Stats · Reviews) → Side-by-Side
+     Comparison → Mid CTA → FAQ (objections) → Final CTA → Footer
+     All buttons jump to #form-ctXB10c6ts (same as Block 1).
+     ============================================================ -->
+
+<style>
+/* ============================================================
+   DESIGN TOKENS + SHARED STYLES
+   (identical to Block 1 so this block also works on its own)
+   ============================================================ */
+:root{
+  --brand:#2A6349;
+  --brand-dark:#1D4A35;
+  --brand-light:#3D7A5E;
+  --gold:#C9A55A;
+  --gold-light:#E3C47E;
+  --dark:#12181A;
+  --dark2:#1C2822;
+  --text:#1A1A1A;
+  --text-muted:#666;
+  --bg-light:#F8F5EF;
+  --danger:#B5483B;
+  --radius:12px;
+  --shadow:0 4px 24px rgba(0,0,0,0.12);
+}
+*,*::before,*::after{box-sizing:border-box;}
+.lw-wrap{max-width:980px;margin:0 auto;padding:0 20px;}
+.lw-section{padding:72px 0;text-align:center;font-family:'Lato','Helvetica Neue',Arial,sans-serif;line-height:1.6;}
+.lw-section h2,.lw-section h3{font-family:'Cormorant Garamond','Georgia',serif;line-height:1.2;}
+.lw-eyebrow{display:block;font-family:'Arial',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--brand);margin-bottom:12px!important;}
+.lw-h2{font-size:clamp(1.9rem,4.2vw,2.8rem);font-weight:700;color:var(--dark);margin-bottom:16px!important;}
+.lw-h2 span{color:var(--brand);}
+.lw-lead{font-size:1.1rem;color:#444;max-width:680px;margin:0 auto 40px!important;}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold) 0%,#B8860B 100%);color:#fff!important;font-size:1.05rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:18px 36px;border-radius:50px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(201,165,90,0.45);text-align:center;font-family:'Arial',sans-serif;max-width:100%;text-decoration:none;}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,165,90,0.55);}
+.btn--large{font-size:1.12rem;padding:22px 44px;}
+.btn--pulse{animation:lwPulse 2.2s infinite;}
+@keyframes lwPulse{0%,100%{box-shadow:0 4px 20px rgba(201,165,90,0.45);}50%{box-shadow:0 8px 40px rgba(201,165,90,0.75),0 0 0 8px rgba(201,165,90,0.12);}}
+.price-was{color:rgba(255,255,255,0.55);font-size:1.1rem;text-decoration:line-through;font-family:'Arial',sans-serif;display:inline-block;margin-right:10px;}
+.price-now{color:var(--gold-light);font-size:2.4rem;font-weight:700;font-family:'Arial',sans-serif;display:inline-block;}
+.countdown-label{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-family:'Arial',sans-serif;margin-bottom:10px!important;}
+.countdown{display:flex;justify-content:center;gap:12px;margin-bottom:30px;}
+.countdown__unit{border-radius:8px;padding:10px 16px;min-width:72px;text-align:center;}
+.countdown__num{display:block;font-size:2rem;font-weight:700;font-family:'Arial',sans-serif;line-height:1;}
+.countdown__lbl{display:block;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;font-family:'Arial',sans-serif;margin-top:4px;}
+.countdown--light .countdown__unit{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);}
+.countdown--light .countdown__num{color:#fff;}
+.countdown--light .countdown__lbl{color:rgba(255,255,255,0.6);}
+/* ============================================================
+   7. BONUSES — "Plus, when you claim today"
+   ============================================================ */
+.lwb-bonuses{background:#fff;}
+.lwb-bonus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:760px;margin:0 auto 36px;text-align:left;}
+.lwb-bonus{background:var(--bg-light);border-radius:var(--radius);border-top:3px solid var(--gold);padding:26px 24px;}
+.lwb-bonus__tag{display:inline-block;font-family:'Arial',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8A6A23;background:rgba(201,165,90,0.15);padding:4px 10px;border-radius:50px;margin-bottom:12px!important;}
+.lwb-bonus h3{font-size:1.5rem;color:var(--dark);margin-bottom:8px!important;}
+.lwb-bonus p{font-size:.97rem;color:#555;}
+.lwb-spots{color:var(--brand);font-family:'Arial',sans-serif;font-size:.85rem;font-weight:700;margin-top:16px!important;}
+/* ============================================================
+   8. PROOF — RESULTS
+   ============================================================ */
+.lwb-results{background:linear-gradient(135deg,#0D1A12 0%,#162415 50%,#0D1A12 100%);}
+.lwb-results .lw-eyebrow{color:var(--gold-light);}
+.lwb-results .lw-h2{color:#fff;}
+.lwb-results .lw-h2 span{color:var(--gold-light);}
+.lwb-results .lw-lead{color:rgba(255,255,255,0.75);}
+.lwb-results__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.lwb-result{aspect-ratio:2/1;max-width:100%;border-radius:var(--radius);overflow:hidden;position:relative;background:#1C2822;}
+.lwb-result img{width:100%!important;height:100%!important;object-fit:cover;display:block;transition:transform .4s;}
+.lwb-result:hover img{transform:scale(1.04);}
+.lwb-result__caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.75));color:#fff;font-family:'Arial',sans-serif;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:20px 12px 12px;}
+.lwb-results__note{color:rgba(255,255,255,0.45);font-family:'Arial',sans-serif;font-size:.75rem;margin-top:18px!important;}
+/* ============================================================
+   9. PROOF — STATS + BADGE
+   ============================================================ */
+.lwb-stats{background:var(--dark);padding:64px 0;text-align:center;}
+.lwb-stats__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.lwb-stat{padding:16px 8px;}
+.lwb-stat__num{display:block;color:var(--gold-light);font-size:clamp(2rem,4vw,3rem);font-weight:700;font-family:'Arial',sans-serif;line-height:1;margin-bottom:8px;}
+.lwb-stat__label{display:block;color:rgba(255,255,255,0.65);font-family:'Arial',sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;}
+/* ============================================================
+   10. PROOF — TESTIMONIALS
+   ============================================================ */
+.lwb-reviews{background:var(--bg-light);}
+.lwb-reviews__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:left;}
+.lwb-review{background:#fff;border-radius:var(--radius);padding:32px 26px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column;}
+.lwb-review::before{content:'\201C';position:absolute;top:12px;right:20px;font-size:4rem;color:var(--gold);font-family:'Georgia',serif;line-height:1;opacity:.3;}
+.lwb-review__stars{color:var(--gold);letter-spacing:2px;margin-bottom:12px!important;}
+.lwb-review__text{color:var(--text);font-size:.97rem;line-height:1.7;font-style:italic;margin-bottom:20px!important;flex:1;}
+.lwb-review__author{display:flex;align-items:center;gap:12px;}
+.lwb-review__avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--gold));display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Arial',sans-serif;font-weight:700;flex-shrink:0;}
+.lwb-review__name{font-family:'Arial',sans-serif;font-size:.9rem;font-weight:700;color:var(--dark);}
+.lwb-review__loc{font-family:'Arial',sans-serif;font-size:.78rem;color:var(--text-muted);}
+/* ============================================================
+   11. SIDE-BY-SIDE — closes the loop on "why nothing worked"
+   ============================================================ */
+.lwb-compare{background:#fff;}
+.lwb-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:860px;margin:0 auto;border-radius:var(--radius);box-shadow:var(--shadow);}
+.lwb-table{width:100%;min-width:560px;border-collapse:collapse;font-family:'Arial',sans-serif;font-size:.92rem;background:#fff;}
+.lwb-table th,.lwb-table td{padding:14px 12px;text-align:center;border-bottom:1px solid #EEE7D8;}
+.lwb-table thead th{background:var(--bg-light);color:var(--dark);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;}
+.lwb-table tbody th{text-align:left;color:#333;font-weight:700;}
+.lwb-table .lwb-col-win{background:rgba(42,99,73,0.07);}
+.lwb-table thead .lwb-col-win{background:var(--brand);color:#fff;}
+.lwb-yes{color:var(--brand);font-weight:700;}
+.lwb-no{color:var(--danger);font-weight:700;}
+.lwb-table tbody tr:last-child th,.lwb-table tbody tr:last-child td{border-bottom:none;}
+.lwb-table .lwb-price{color:var(--brand);font-weight:700;font-size:1.05rem;}
+.lwb-scroll-hint{display:none;font-family:'Arial',sans-serif;font-size:.75rem;color:var(--text-muted);margin-top:10px!important;}
+/* ============================================================
+   12. MID CTA
+   ============================================================ */
+.lwb-mid{background:linear-gradient(135deg,var(--brand-dark),var(--brand));padding:64px 0;text-align:center;}
+.lwb-mid h2{color:#fff;font-family:'Cormorant Garamond','Georgia',serif;font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.2;margin-bottom:14px!important;}
+.lwb-mid p{color:rgba(255,255,255,0.85);font-size:1.05rem;max-width:620px;margin:0 auto 28px!important;}
+.lwb-pill{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);color:#fff;font-family:'Arial',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 18px;border-radius:50px;margin-top:18px!important;}
+/* ============================================================
+   13. FAQ — handle the last objections
+   ============================================================ */
+.lwb-faq{background:var(--bg-light);}
+.lwb-faq__list{max-width:760px;margin:0 auto;text-align:left;}
+.lwb-faq__item{border-bottom:1px solid rgba(0,0,0,0.1);}
+.lwb-faq__item:first-child{border-top:1px solid rgba(0,0,0,0.1);}
+.lwb-faq__btn{width:100%;background:none;border:none;padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;text-align:left;font:inherit;color:inherit;}
+.lwb-faq__btn:focus-visible{outline:2px solid var(--gold);outline-offset:4px;}
+.lwb-faq__q{font-size:1rem;font-weight:700;color:var(--dark);font-family:'Arial',sans-serif;flex:1;}
+.lwb-faq__icon{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;transition:transform .3s,background .3s;font-family:'Arial',sans-serif;}
+.lwb-faq__item.open .lwb-faq__icon{transform:rotate(45deg);background:var(--gold);}
+.lwb-faq__answer{display:none;padding:0 0 20px;color:#555;font-size:.95rem;line-height:1.75;}
+.lwb-faq__item.open .lwb-faq__answer{display:block;}
+/* ============================================================
+   14. FINAL CTA — problem one last time, then the solution
+   ============================================================ */
+.lwb-final{background:linear-gradient(135deg,#0E1C14 0%,#1D3528 50%,#0E1C14 100%);padding:88px 0;text-align:center;}
+.lwb-final .lw-eyebrow{color:var(--gold-light);}
+.lwb-final h2{color:#fff;font-family:'Cormorant Garamond','Georgia',serif;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.15;margin-bottom:18px!important;}
+.lwb-final h2 span{color:var(--gold-light);}
+.lwb-choice{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:720px;margin:0 auto 36px;text-align:left;}
+.lwb-choice__card{border-radius:var(--radius);padding:22px 20px;}
+.lwb-choice__card h3{font-family:'Arial',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px!important;}
+.lwb-choice__card p{font-size:.97rem;}
+.lwb-choice__card--a{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);}
+.lwb-choice__card--a h3{color:#F0A89E;}
+.lwb-choice__card--a p{color:rgba(255,255,255,0.65);}
+.lwb-choice__card--b{background:rgba(201,165,90,0.12);border:1px solid var(--gold);}
+.lwb-choice__card--b h3{color:var(--gold-light);}
+.lwb-choice__card--b p{color:#fff;}
+.lwb-final__price{margin-bottom:22px!important;}
+.lwb-final .countdown-label{color:rgba(255,255,255,0.7);}
+.lwb-final__trust{color:rgba(255,255,255,0.55);font-family:'Arial',sans-serif;font-size:.8rem;margin-top:20px!important;letter-spacing:.04em;}
+/* ============================================================
+   15. FOOTER
+   ============================================================ */
+.lwb-footer{background:var(--dark);padding:48px 0 56px;text-align:center;}
+.lwb-footer__logo{display:inline-block;background:rgba(30,50,35,0.5);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:10px 20px;margin:0 auto 24px;}
+.lwb-footer__logo img{width:260px;margin:0 auto;}
+.lwb-footer__logo span{display:none;font-family:'Arial',sans-serif;font-size:.85rem;font-weight:700;color:#fff;letter-spacing:.12em;text-transform:uppercase;}
+.lwb-footer__address{color:rgba(255,255,255,0.6);font-family:'Arial',sans-serif;font-size:.85rem;line-height:1.7;margin-bottom:20px!important;}
+.lwb-footer__disclaimer{color:rgba(255,255,255,0.35);font-family:'Arial',sans-serif;font-size:.72rem;line-height:1.6;max-width:700px;margin:0 auto!important;}
+.lwb-footer__legal{margin-top:16px;}
+.lwb-footer__legal a{color:rgba(255,255,255,0.4);font-family:'Arial',sans-serif;font-size:.72rem;margin:0 8px;text-decoration:underline;}
+.lwb-footer__copy{color:rgba(255,255,255,0.25);font-family:'Arial',sans-serif;font-size:.7rem;margin-top:20px!important;}
+/* ============================================================
+   16. STICKY MOBILE CTA
+   ============================================================ */
+.lwb-sticky{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--dark);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));z-index:9999;box-shadow:0 -4px 20px rgba(0,0,0,0.4);text-align:center;transition:transform .3s;}
+.lwb-sticky.is-hidden{transform:translateY(110%);}
+.lwb-sticky a{display:block;background:linear-gradient(135deg,var(--gold),#B8860B);color:#fff;font-family:'Arial',sans-serif;font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:14px 20px;border-radius:50px;text-decoration:none;box-shadow:0 4px 16px rgba(201,165,90,0.5);}
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:900px){
+  .lwb-reviews__grid{grid-template-columns:1fr;max-width:560px;margin:0 auto;}
+  .lwb-stats__grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:660px){
+  .lw-section{padding:56px 0;}
+  .lw-wrap{padding:0 16px;}
+  .lwb-bonus-grid,.lwb-results__grid,.lwb-choice{grid-template-columns:1fr;}
+  .lwb-scroll-hint{display:block;}
+  .countdown{gap:8px;}
+  .countdown__unit{min-width:60px;padding:8px 10px;}
+  .countdown__num{font-size:1.6rem;}
+  .btn--large{font-size:1rem;padding:18px 26px;}
+  .lwb-sticky{display:block;}
+  .lwb-footer{padding-bottom:110px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .btn--pulse{animation:none;}
+  .lwb-result img,.lwb-sticky{transition:none;}
+}
+</style>
+
+<!-- ============================================================
+     7. BONUSES — "PLUS, WHEN YOU CLAIM TODAY"
+     ============================================================ -->
+<section class="lw-section lwb-bonuses">
+  <div class="lw-wrap">
+    <span class="lw-eyebrow">Included Free With Your Rescue</span>
+    <h2 class="lw-h2">Plus, These <span>Bonuses</span> When You Claim Today</h2>
+    <p class="lw-lead">We don't just treat your chin and send you home. You get a plan built around your face and your goals.</p>
+    <div class="lwb-bonus-grid">
+      <div class="lwb-bonus">
+        <span class="lwb-bonus__tag">Bonus #1</span>
+        <h3>Free Personal Consultation</h3>
+        <p>One-on-one time with our clinical team to review your chin, neck and jawline, talk through your goals and confirm Morpheus8 is right for you.</p>
+      </div>
+      <div class="lwb-bonus">
+        <span class="lwb-bonus__tag">Bonus #2</span>
+        <h3>Custom Treatment Plan</h3>
+        <p>A personalized plan for your skin and your goals, so you know exactly what to expect before your first session.</p>
+      </div>
+    </div>
+    <a href="#form-ctXB10c6ts" class="btn btn--pulse">CLAIM MY RESCUE + BONUSES →</a>
+    <p class="lwb-spots">⚡ Only 12 of 12 spots remaining at $499</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. PROOF — RESULTS
+     ============================================================ -->
+<section class="lw-section lwb-results">
+  <div class="lw-wrap">
+    <span class="lw-eyebrow">Proof It Works</span>
+    <h2 class="lw-h2">What Morpheus8 Can Do for a <span>Double Chin</span></h2>
+    <p class="lw-lead">Firmer skin, less fullness under the chin and a more defined jawline, without surgery.</p>
+    <div class="lwb-results__grid">
+      <div class="lwb-result">
+        <img src="https://www.realself.com/news/wp-content/uploads/2023/03/RS-morpheus8-BA_01-700x350.jpg" alt="Morpheus8 jowls and jawline before and after" loading="lazy">
+        <div class="lwb-result__caption">Jowls &amp; Jawline — Before &amp; After</div>
+      </div>
+      <div class="lwb-result">
+        <img src="https://www.realself.com/news/wp-content/uploads/2023/03/RS-morpheus8-BA_02-700x350.jpg" alt="Morpheus8 facial contouring before and after" loading="lazy">
+        <div class="lwb-result__caption">Facial Contouring — Before &amp; After</div>
+      </div>
+      <div class="lwb-result">
+        <img src="https://www.realself.com/news/wp-content/uploads/2023/03/RS-morpheus8-BA_08-700x350.jpg" alt="Morpheus8 neck tightening before and after" loading="lazy">
+        <div class="lwb-result__caption">Neck Tightening — Before &amp; After</div>
+      </div>
+    </div>
+    <p class="lwb-results__note">Illustrative Morpheus8 results. Individual results vary.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. PROOF — STATS
+     ============================================================ -->
+<section class="lwb-stats">
+  <div class="lw-wrap">
+    <div class="lwb-stats__grid">
+      <div class="lwb-stat"><span class="lwb-stat__num">30+</span><span class="lwb-stat__label">Years Combined Experience</span></div>
+      <div class="lwb-stat"><span class="lwb-stat__num">500+</span><span class="lwb-stat__label">Treatments Performed</span></div>
+      <div class="lwb-stat"><span class="lwb-stat__num">98%</span><span class="lwb-stat__label">Patient Satisfaction</span></div>
+      <div class="lwb-stat"><span class="lwb-stat__num">#1</span><span class="lwb-stat__label">In Lowell for Non-Surgical Rejuvenation</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. PROOF — TESTIMONIALS
+     ============================================================ -->
+<section class="lw-section lwb-reviews">
+  <div class="lw-wrap">
+    <span class="lw-eyebrow">Patient Stories</span>
+    <h2 class="lw-h2">They Were Tired of Hiding Too. <span>Here's What Changed.</span></h2>
+    <p class="lw-lead">Real words from patients across Northwest Arkansas.</p>
+    <div class="lwb-reviews__grid">
+      <div class="lwb-review">
+        <p class="lwb-review__stars">★★★★★</p>
+        <p class="lwb-review__text">"I was nervous about trying any kind of facial treatment, but the team at Live Well made me feel completely at ease. After my Morpheus8 session, my skin looks so much firmer and more refreshed — and it just keeps getting better each week!"</p>
+        <div class="lwb-review__author">
+          <div class="lwb-review__avatar">S</div>
+          <div><div class="lwb-review__name">Sarah M.</div><div class="lwb-review__loc">Rogers, AR</div></div>
+        </div>
+      </div>
+      <div class="lwb-review">
+        <p class="lwb-review__stars">★★★★★</p>
+        <p class="lwb-review__text">"The results genuinely surprised me. I expected subtle changes but my jawline looks lifted and my skin texture is noticeably smoother. Everyone at the clinic was professional, knowledgeable, and made the whole experience wonderful."</p>
+        <div class="lwb-review__author">
+          <div class="lwb-review__avatar">L</div>
+          <div><div class="lwb-review__name">Linda K.</div><div class="lwb-review__loc">Lowell, AR</div></div>
+        </div>
+      </div>
+      <div class="lwb-review">
+        <p class="lwb-review__stars">★★★★★</p>
+        <p class="lwb-review__text">"I've been wanting to try Morpheus8 for a while and this offer made it accessible. The process was comfortable, recovery was minimal, and within a few weeks I noticed my skin looking firmer and more radiant. Absolutely worth it."</p>
+        <div class="lwb-review__author">
+          <div class="lwb-review__avatar">D</div>
+          <div><div class="lwb-review__name">Diane R.</div><div class="lwb-review__loc">Bentonville, AR</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. SIDE-BY-SIDE — CLOSES THE LOOP ON "WHY NOTHING WORKED"
+     ============================================================ -->
+<section class="lw-section lwb-compare">
+  <div class="lw-wrap">
+    <span class="lw-eyebrow">Your Options, Side by Side</span>
+    <h2 class="lw-h2">Why the <span>Double Chin Rescue</span> Wins</h2>
+    <p class="lw-lead">Remember the two problems: stubborn fat and loose skin. Here's how each option handles them.</p>
+    <div class="lwb-table-wrap">
+      <table class="lwb-table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Diet &amp; Exercise</th>
+            <th scope="col">Creams &amp; Gadgets</th>
+            <th scope="col">Surgery</th>
+            <th scope="col" class="lwb-col-win">Morpheus8 Rescue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Targets under-chin fat</th><td class="lwb-no">✕</td><td class="lwb-no">✕</td><td class="lwb-yes">✓</td><td class="lwb-col-win lwb-yes">✓</td></tr>
+          <tr><th scope="row">Tightens loose skin</th><td class="lwb-no">✕</td><td class="lwb-no">✕</td><td class="lwb-yes">✓</td><td class="lwb-col-win lwb-yes">✓</td></tr>
+          <tr><th scope="row">No incisions or general anesthesia</th><td class="lwb-yes">✓</td><td class="lwb-yes">✓</td><td class="lwb-no">✕</td><td class="lwb-col-win lwb-yes">✓</td></tr>
+          <tr><th scope="row">Back to routine in days</th><td class="lwb-yes">✓</td><td class="lwb-yes">✓</td><td class="lwb-no">✕</td><td class="lwb-col-win lwb-yes">✓</td></tr>
+          <tr><th scope="row">Cost</th><td>Months of effort</td><td>Ongoing</td><td>$$$$</td><td class="lwb-col-win lwb-price">$499</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="lwb-scroll-hint">← Swipe to compare →</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     12. MID CTA
+     ============================================================ -->
+<section class="lwb-mid">
+  <div class="lw-wrap">
+    <h2>Ready to Stop Hiding Your Profile?</h2>
+    <p>This price is reserved for the first 12 patients. Claim yours now and we'll reach out to book your consultation.</p>
+    <a href="#form-ctXB10c6ts" class="btn btn--large btn--pulse">SECURE MY SPOT FOR $499 →</a>
+    <div><span class="lwb-pill">⚡ Only 12 spots available at this price</span></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     13. FAQ — HANDLE THE LAST OBJECTIONS
+     ============================================================ -->
+<section class="lw-section lwb-faq">
+  <div class="lw-wrap">
+    <span class="lw-eyebrow">Still Wondering?</span>
+    <h2 class="lw-h2">Your <span>Questions</span>, Answered</h2>
+    <p class="lw-lead">Everything patients usually ask before claiming their spot.</p>
+    <div class="lwb-faq__list">
+      <div class="lwb-faq__item">
+        <button class="lwb-faq__btn" type="button" aria-expanded="false"><span class="lwb-faq__q">What is the Double Chin Rescue?</span><span class="lwb-faq__icon">+</span></button>
+        <div class="lwb-faq__answer">The Double Chin Rescue is a non-surgical treatment for the chin and neck performed with Morpheus8, which combines microneedling with radiofrequency energy. It is designed to reduce the look of under-chin fullness, firm loose skin and define the jawline.</div>
+      </div>
+      <div class="lwb-faq__item">
+        <button class="lwb-faq__btn" type="button" aria-expanded="false"><span class="lwb-faq__q">I've tried everything. Why would this work when diet and creams didn't?</span><span class="lwb-faq__icon">+</span></button>
+        <div class="lwb-faq__answer">Diet can't spot-reduce the chin and creams stay on the surface. Morpheus8 delivers energy beneath the skin, where under-chin fat sits and where collagen is built, so it works on both the fat and the skin at the same time.</div>
+      </div>
+      <div class="lwb-faq__item">
+        <button class="lwb-faq__btn" type="button" aria-expanded="false"><span class="lwb-faq__q">Is it safe?</span><span class="lwb-faq__icon">+</span></button>
+        <div class="lwb-faq__answer">Morpheus8 is widely used by trained medical professionals and is designed with safety in mind. Your provider will evaluate your needs and determine whether the treatment is appropriate for you.</div>
+      </div>
+      <div class="lwb-faq__item">
+        <button class="lwb-faq__btn" type="button" aria-expanded="false"><span class="lwb-faq__q">Does it hurt? Is there downtime?</span><span class="lwb-faq__icon">+</span></button>
+        <div class="lwb-faq__answer">We apply a topical numbing cream before treatment for comfort. Most people have some redness, swelling or sensitivity afterwards, which typically improves within a few days. Your provider will go over aftercare and expected recovery during your consultation.</div>
+      </div>
+      <div class="lwb-faq__item">
+        <button class="lwb-faq__btn" type="button" aria-expanded="false"><span class="lwb-faq__q">How many sessions do I need?</span><span class="lwb-faq__icon">+</span></button>
+        <div class="lwb-faq__answer">It depends on your goals, skin and treatment plan. Many patients benefit from a series of treatments, while others reach their goal with fewer sessions. Your custom treatment plan will spell this out.</div>
+      </div>
+      <div class="lwb-faq__item">
+        <button class="lwb-faq__btn" type="button" aria-expanded="false"><span class="lwb-faq__q">When will I see results?</span><span class="lwb-faq__icon">+</span></button>
+        <div class="lwb-faq__answer">Some patients notice initial improvements within a few weeks, with continued improvement over the following months as new collagen develops. Individual results vary.</div>
+      </div>
+      <div class="lwb-faq__item">
+        <button class="lwb-faq__btn" type="button" aria-expanded="false"><span class="lwb-faq__q">Is it safe for all skin types?</span><span class="lwb-faq__icon">+</span></button>
+        <div class="lwb-faq__answer">Morpheus8 is designed to be suitable for a wide range of skin types and tones. Your provider will assess your skin and recommend the best approach for you.</div>
+      </div>
+      <div class="lwb-faq__item">
+        <button class="lwb-faq__btn" type="button" aria-expanded="false"><span class="lwb-faq__q">Where are you located?</span><span class="lwb-faq__icon">+</span></button>
+        <div class="lwb-faq__answer">We are located at 117 S. Dixieland St. Suite A, Lowell, AR 72745, near JB Hunt Corporate. We serve patients throughout Northwest Arkansas, including Rogers, Bentonville, Springdale and Fayetteville.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     14. FINAL CTA — THE CHOICE
+     ============================================================ -->
+<section class="lwb-final">
+  <div class="lw-wrap">
+    <span class="lw-eyebrow">The Choice Is Yours</span>
+    <h2>Keep Hiding Your Double Chin, or <span>Rescue Your Jawline</span> for $499</h2>
+    <div class="lwb-choice">
+      <div class="lwb-choice__card lwb-choice__card--a">
+        <h3>✕ Do nothing</h3>
+        <p>Keep dodging cameras, keep trying diets that can't reach your chin, and watch the skin loosen a little more each year.</p>
+      </div>
+      <div class="lwb-choice__card lwb-choice__card--b">
+        <h3>✓ Claim your spot</h3>
+        <p>Treat the fat and the loose skin together, with no surgery and little downtime, at $301 off.</p>
+      </div>
+    </div>
+    <div class="lwb-final__price">
+      <span class="price-was">$800</span>
+      <span class="price-now">$499</span>
+    </div>
+    <p class="countdown-label">⏰ This offer expires in:</p>
+    <div class="countdown countdown--light" data-countdown>
+      <div class="countdown__unit"><span class="countdown__num" data-cd="h">00</span><span class="countdown__lbl">Hours</span></div>
+      <div class="countdown__unit"><span class="countdown__num" data-cd="m">10</span><span class="countdown__lbl">Minutes</span></div>
+      <div class="countdown__unit"><span class="countdown__num" data-cd="s">23</span><span class="countdown__lbl">Seconds</span></div>
+    </div>
+    <a href="#form-ctXB10c6ts" class="btn btn--large btn--pulse">CLAIM YOUR DOUBLE CHIN RESCUE NOW →</a>
+    <p class="lwb-final__trust">🔒 100% Secure &nbsp;·&nbsp; No Commitment &nbsp;·&nbsp; Expert Team</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     15. FOOTER
+     ============================================================ -->
+<footer class="lwb-footer">
+  <div class="lw-wrap">
+    <div class="lwb-footer__logo">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/65cd1572919799764d52c93e/ad7788ed-231a-49ea-87db-be8412ba7522/Janice+-+Live+Well+Clinic+-+Logo+-+WHITE.png?format=1500w"
+        alt="The Live Well Clinic"
+        onerror="this.style.setProperty('display','none','important');this.nextElementSibling.style.display='block';"
+      >
+      <span>The Live Well Clinic</span>
+    </div>
+    <p class="lwb-footer__address">
+      The Live Well Clinic &nbsp;|&nbsp; 117 S. Dixieland St. Suite A &nbsp;|&nbsp; Lowell, AR 72745<br>
+      Near JB Hunt Corporate &nbsp;|&nbsp; Serving Northwest Arkansas
+    </p>
+    <p class="lwb-footer__disclaimer">
+      Results may vary. Individual outcomes depend on skin type, condition, treatment plan, and other factors. Images used for illustrative purposes only and are not representative of actual patient results unless otherwise noted. This offer is available to the first 12 qualifying patients and is subject to clinical suitability assessment. The Live Well Clinic reserves the right to modify or discontinue this offer at any time without prior notice. Not a guarantee of specific results.
+    </p>
+    <div class="lwb-footer__legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact</a>
+    </div>
+    <p class="lwb-footer__copy">© 2026 The Live Well Clinic. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     16. STICKY MOBILE CTA BAR (≤ 660px, hides while the form is on screen)
+     ============================================================ -->
+<div class="lwb-sticky" id="lwb-sticky">
+  <a href="#form-ctXB10c6ts">CLAIM YOUR SPOT — $499 (Only 12 Available) →</a>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT: FAQ Accordion · Smooth Scroll · Sticky Bar
+     ============================================================ -->
+<script>
+(function(){
+  /* ---------- FAQ ACCORDION ---------- */
+  var items = document.querySelectorAll('.lwb-faq__item');
+  for (var i = 0; i < items.length; i++) {
+    items[i].querySelector('.lwb-faq__btn').addEventListener('click', function(){
+      var item = this.parentNode;
+      var wasOpen = item.classList.contains('open');
+      for (var j = 0; j < items.length; j++) {
+        items[j].classList.remove('open');
+        items[j].querySelector('.lwb-faq__btn').setAttribute('aria-expanded', 'false');
+      }
+      if (!wasOpen) {
+        item.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  }
+
+  /* ---------- FIND THE GHL FORM ----------
+     Uses #form-ctXB10c6ts; if GHL gave the form a different id,
+     falls back to the first form on the page, then the offer strip. */
+  function findForm(hash){
+    return (hash && hash.length > 1 && document.querySelector(hash)) ||
+           document.querySelector('[id^="form-"]') ||
+           document.querySelector('form') ||
+           document.querySelector('.offer-strip');
+  }
+
+  /* ---------- SMOOTH SCROLL TO FORM ---------- */
+  var links = document.querySelectorAll('a[href^="#form-"]');
+  for (var k = 0; k < links.length; k++) {
+    links[k].addEventListener('click', function(e){
+      var target = findForm(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
+  /* ---------- HIDE STICKY BAR WHILE FORM IS VISIBLE ---------- */
+  var bar = document.getElementById('lwb-sticky');
+  var form = findForm('#form-ctXB10c6ts');
+  if (bar && form && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      bar.classList.toggle('is-hidden', entries[0].isIntersecting);
+    }, { threshold: 0.15 }).observe(form);
+  }
+})();
+</script>
