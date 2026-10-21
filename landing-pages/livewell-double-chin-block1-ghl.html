@@ -161,8 +161,7 @@ a{text-decoration:none;color:inherit;}
    4. SOLUTION — Morpheus8
    ============================================================ */
 .solution{background:var(--bg-light);}
-.solution__grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;text-align:left;}
-.solution__img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;background:#ddd url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;}
+.solution__grid{max-width:720px;margin:0 auto;text-align:left;}
 .solution__copy .lw-h2{text-align:left;}
 .solution__copy > p{font-size:1.05rem;color:#444;margin-bottom:22px!important;}
 .benefits li{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px!important;font-size:1rem;color:#333;}
@@ -209,8 +208,6 @@ a{text-decoration:none;color:inherit;}
    ============================================================ */
 @media(max-width:860px){
   .fail-grid,.steps{grid-template-columns:1fr;}
-  .solution__grid{grid-template-columns:1fr;gap:28px;}
-  .solution__img{aspect-ratio:16/11;}
 }
 @media(max-width:660px){
   .lw-section{padding:56px 0;}
@@ -334,7 +331,6 @@ a{text-decoration:none;color:inherit;}
 <section class="lw-section solution">
   <div class="lw-wrap">
     <div class="solution__grid">
-      <div class="solution__img" role="img" aria-label="Morpheus8 treatment at The Live Well Clinic"></div>
       <div class="solution__copy">
         <span class="lw-eyebrow" style="text-align:left;">The Solution</span>
         <h2 class="lw-h2">Introducing the <span>Double Chin Rescue</span> with Morpheus8</h2>
